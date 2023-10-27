@@ -1,10 +1,10 @@
 ---
 date: '2022-07-18'
-title: 'Doctoral Candidate'
+title: 'Doctorand'
 company: 'ETH Zurich'
 shorthandcompany: 'ETHZ'
 location: 'Zurich, Switzerland'
-range: 'July 2022 - July 2023'
+range: 'July 2022 - Now'
 url: 'https://infsec.ethz.ch/'
 type: 'edu'
 ---

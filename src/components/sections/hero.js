@@ -59,23 +59,24 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
+  const one = <h1>Hello, my name is</h1>;
   const two = <h2 className="big-heading">Ho&#224;ng.</h2>;
   const three = <h3 className="big-heading">I like to prove things.</h3>;
   const four = (
     <>
       <p>
-        I'm currently a doctoral candidate in the{' '} 
+        I'm currently a doctoral student in the{' '} 
         <a href="https://infsec.ethz.ch/" target="_blank" rel="noreferrer">
           Information Security Group
         </a> 
         {' '}at the ETH Zurich.
       </p>
       <p>
-        I have to do a lot of programming for my work, and I like it!
-        But, ... there's a special place in my heart for Mathematics: 
-        I'm easily triggered by puzzles and math problems, and 
-        I try to prove them, and if possible, mechanize them, in my own time.
+        I have a passion for both programming and mathematics. 
+        Though my work demands a lot of programming,
+        there's a special place in my heart for mathematics.
+        I find myself easily captivated by puzzles and math problems, and 
+        I enjoy the process of solving them.
       </p>
     </>
   );
