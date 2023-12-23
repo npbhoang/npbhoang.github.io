@@ -268,16 +268,11 @@ const Projects = () => {
     <StyledProjectsSection id="projects" ref={revealContainer}>
       <h2 className="numbered-heading" ref={revealTitle}>My Research</h2>
 
-      <p> I am working on a model-driven methodology for enforcing Fine-Grained Access Control policies on Database-centric applications.{' '}<a href="/vgu_poster.pdf">[Poster]</a>
+      <p> I have been working on a model-driven methodology for enforcing Fine-Grained Access Control policies on Database-centric applications{' '}<a href="/vgu_poster.pdf">[More]</a>.
       {/* View{' '}<a href="/4_publication_summary.pdf">this</a> for an up-to-date summary of my line of work. */}
+      At IMDEA, I worked on the security problem in software-hardware contracts w.r.t. speculation attacks and their countermeasures{' '}<a href="/imdea_poster.pdf">[More]</a>.
+      At ETH Zurich, I am working on a model-driven privacy project, focusing on new approach for data protection and usage.
       </p>
-      <p>
-      At IMDEA, I worked on the security problem in software-hardware contracts w.r.t. speculation attacks and their countermeasures.{' '}<a href="/imdea_poster.pdf">[Poster]</a>
-      </p>
-      <p>
-      At ETH Zurich, I am working on a model-driven privacy project, focusing on new approach to data protection and usage.
-      </p>
-      
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (

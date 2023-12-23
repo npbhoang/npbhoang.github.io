@@ -134,18 +134,19 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Greetings! I'm is Ho&#224;ng.
-                          I graduated from the{' '}<a href="https://vgu.edu.vn/">Vietnamese-German University</a>, in Computer Science.
-               </p>
-            <p>
-              After that, I enrolled in the{' '}<a href="https://www.fi.upm.es/?id=metodosformalesii&idioma=english">Master of Formal Methods</a> at the Aut&#243;noma &#124; Complutense &#124; Polit&#233;cnica Universidad de Madrid, Spain. Here, I did an intern at the{' '}<a href="https://software.imdea.org/">IMDEA Software Institute</a>. 
+            Greetings! My name is Hoang. 
+            I graduated in Computer Science from the Vietnamese-German University.
             </p>
-            
             <p>
-              Currently, I am a doctoral student in the{' '}<a href="https://infsec.ethz.ch/" target="_blank" rel="noreferrer">Information Security Group</a>{' '}at ETH Zurich. I will be focusing my research on Database security with the emphasis on data privacy and access control.
+            Following that, I pursued a Master of Formal Methods
+            at the Universidad Autónoma | Complutense | Politécnica de Madrid, Spain. 
+            During my time there, I completed an internship at the IMDEA Software Institute. 
+            </p>
+            <p>
+            Currently, I am a PhD candidate in the Information Security Group at ETH Zurich. 
+            Here, I am working on Database Security, specifically on data privacy and access control.
             </p>
           </div>
-
         </StyledText>
 
         <StyledPic>

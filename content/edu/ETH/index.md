@@ -1,6 +1,6 @@
 ---
 date: '2022-07-18'
-title: 'Doctorand'
+title: 'PhD Candidate'
 company: 'ETH Zurich'
 shorthandcompany: 'ETHZ'
 location: 'Zurich, Switzerland'

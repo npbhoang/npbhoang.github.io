@@ -9,4 +9,4 @@ company: '[Preprint]'
 showInProjects: true
 ---
 
-Compact version of the master thesis. 
+Compact version of my master thesis. 
