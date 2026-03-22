@@ -32,7 +32,7 @@ const Icon = ({ name }) => {
       return <IconFolder />;
     case 'Fork':
       return <IconFork />;
-    case 'Dblp':
+    case 'dblp':
       return <IconDblp />;
     case 'GitHub':
       return <IconGitHub />;
