@@ -9,7 +9,11 @@ module.exports = {
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/hoangnpb',
-    }
+    },
+    {
+      name: 'dblp',
+      url: 'https://dblp.org/pid/253/9933.html',
+    },
   ],
 
   navLinks: [
