@@ -3,19 +3,20 @@ import { css } from 'styled-components';
 const variables = css`
   :root {
     --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
+    --navy: #0f172a;
+    --light-navy: #1e293b;
+    --lightest-navy: #334155;
     --navy-shadow: rgba(2, 12, 27, 0.7);
-    --dark-slate: #495670;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green: #64ffda;
-    --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
+    --dark-slate: #475569;
+    --slate: #64748b;
+    --light-slate: #94a3b8;
+    --lightest-slate: #cbd5e1;
+    --white: #e2e8f0;
+    --green: #60a5fa;
+    --green-tint: rgba(96, 165, 250, 0.1);
+    --pink: #a78bfa;
+    --blue: #38bdf8;
+    --nav-bg: rgba(15, 23, 42, 0.85);
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
@@ -47,6 +48,24 @@ const variables = css`
     --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     --ham-after-active: bottom 0.1s ease-out,
       transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  }
+
+  [data-theme='light'] {
+    --dark-navy: #f8fafc;
+    --navy: #ffffff;
+    --light-navy: #f1f5f9;
+    --lightest-navy: #e2e8f0;
+    --navy-shadow: rgba(30, 41, 59, 0.15);
+    --dark-slate: #94a3b8;
+    --slate: #475569;
+    --light-slate: #334155;
+    --lightest-slate: #1e293b;
+    --white: #0f172a;
+    --green: #4a6fa5;
+    --green-tint: rgba(74, 111, 165, 0.1);
+    --pink: #7c3aed;
+    --blue: #0284c7;
+    --nav-bg: rgba(255, 255, 255, 0.9);
   }
 `;
 

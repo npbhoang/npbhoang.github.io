@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import { ThemeProvider as ColorThemeProvider } from '../context/ThemeContext';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -57,6 +58,7 @@ const Layout = ({ children, location }) => {
       <Head />
 
       <div id="root">
+        <ColorThemeProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
 
@@ -79,6 +81,7 @@ const Layout = ({ children, location }) => {
             </StyledContent>
           )}
         </ThemeProvider>
+        </ColorThemeProvider>
       </div>
     </>
   );
