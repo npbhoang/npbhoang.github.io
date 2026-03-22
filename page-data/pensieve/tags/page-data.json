@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-pages-pensieve-tags-js",
     "path": "/pensieve/tags/",
     "result": {"data":{"allMarkdownRemark":{"group":[{"fieldValue":"Accessibility","totalCount":1},{"fieldValue":"CSS","totalCount":1},{"fieldValue":"Dark Mode","totalCount":1},{"fieldValue":"Docker","totalCount":1},{"fieldValue":"Theming","totalCount":1},{"fieldValue":"WordPress","totalCount":2}]}},"pageContext":{}},
-    "staticQueryHashes": ["1994757851","3123413967","3391063840","3539500889"]}
+    "staticQueryHashes": ["1542113901","1994757851","3123413967","3539500889"]}
