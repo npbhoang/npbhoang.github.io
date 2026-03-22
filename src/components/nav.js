@@ -96,7 +96,6 @@ const StyledThemeToggle = styled.button`
   align-items: center;
   justify-content: center;
   padding: 8px;
-  margin-left: 10px;
   border-radius: 50%;
   transition: var(--transition);
 
@@ -120,6 +119,11 @@ const StyledLogoArea = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
+`;
+
+const StyledRightArea = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const StyledLinks = styled.div`
@@ -250,7 +254,6 @@ const Nav = ({ isHome }) => {
           <>
             <StyledLogoArea>
               {Logo}
-              {ThemeToggle}
             </StyledLogoArea>
 
             <StyledLinks>
@@ -265,7 +268,10 @@ const Nav = ({ isHome }) => {
               <div>{ResumeLink}</div>
             </StyledLinks>
 
-            <Menu />
+            <StyledRightArea>
+              {ThemeToggle}
+              <Menu />
+            </StyledRightArea>
           </>
         ) : (
           <>
@@ -277,7 +283,6 @@ const Nav = ({ isHome }) => {
                   </CSSTransition>
                 )}
               </TransitionGroup>
-              {ThemeToggle}
             </StyledLogoArea>
 
             <StyledLinks>
@@ -306,13 +311,16 @@ const Nav = ({ isHome }) => {
               </TransitionGroup>
             </StyledLinks>
 
-            <TransitionGroup component={null}>
-              {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <Menu />
-                </CSSTransition>
-              )}
-            </TransitionGroup>
+            <StyledRightArea>
+              {ThemeToggle}
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeClass} timeout={timeout}>
+                    <Menu />
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
+            </StyledRightArea>
           </>
         )}
       </StyledNav>
