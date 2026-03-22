@@ -57,17 +57,6 @@ const Contact = () => {
     <StyledContactSection id="contact" ref={revealContainer}>
       <h2 className="title">Get In Touch</h2>
 
-      <p>
-        I am not very active on the social media...
-      </p>
-      <p>
-        so the best way to reach me is to send me 
-        an email.
-      </p>
-      <p>
-        Cheers,
-      </p>
-
       <a className="email-link" href={`mailto:${email}`}>
         Contact me!
       </a>

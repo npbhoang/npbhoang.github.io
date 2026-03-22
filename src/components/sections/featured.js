@@ -43,6 +43,37 @@ const StyledProjectsSection = styled.section`
   }
 `;
 
+const StyledPosterLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    color: var(--green);
+    background: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 6px 14px;
+    text-decoration: none;
+    transition: var(--transition);
+
+    &:hover {
+      background: var(--green-tint);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+`;
+
 const StyledProject = styled.li`
   position: relative;
   cursor: default;
@@ -134,6 +165,18 @@ const StyledProject = styled.li`
     }
   }
 
+  .project-venue {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs);
+    color: #e8b4f8;
+    background: rgba(232, 180, 248, 0.08);
+    border: 1px solid rgba(232, 180, 248, 0.4);
+    border-radius: 20px;
+    padding: 3px 12px;
+  }
+
   .project-description {
     color: var(--light-slate);
     font-size: 17px;
@@ -181,6 +224,7 @@ const Projects = () => {
               tech
               github
               external
+              company
             }
             html
           }
@@ -214,7 +258,7 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, tech, company } = frontmatter;
 
     return (
       <div className="project-inner">
@@ -248,6 +292,8 @@ const Projects = () => {
             </a>
           </h3>
 
+          {company && <span className="project-venue">{company}</span>}
+
           <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
         </header>
 
@@ -268,11 +314,25 @@ const Projects = () => {
     <StyledProjectsSection id="projects" ref={revealContainer}>
       <h2 className="numbered-heading" ref={revealTitle}>My Research</h2>
 
-      <p> I have been working on a model-driven methodology for enforcing Fine-Grained Access Control policies on Database-centric applications{' '}<a href="/vgu_poster.pdf">[More]</a>.
-      {/* View{' '}<a href="/4_publication_summary.pdf">this</a> for an up-to-date summary of my line of work. */}
-      At IMDEA, I worked on the security problem in software-hardware contracts w.r.t. speculation attacks and their countermeasures{' '}<a href="/imdea_poster.pdf">[More]</a>.
-      At ETH Zurich, I am working on a model-driven privacy project, focusing on new approach for data protection and usage.
+      <p>
+        My research focuses on Security, Privacy, and Formal Methods. I develop model-driven approaches
+        for enforcing <strong>Fine-Grained Access Control</strong> on database-centric applications.
+        At IMDEA Software Institute, I investigate security vulnerabilities in software-hardware contracts,
+        specifically speculation attacks and their countermeasures.
+        At ETH Zurich, I am working on a model-driven approach for data privacy, focusing on how
+        protection and usage policies can be formally defined and enforced.
       </p>
+      <StyledPosterLinks>
+        <a href="/vgu_poster.pdf" target="_blank" rel="noreferrer">
+          <Icon name="External" /> Fine-Grained Access Control
+        </a>
+        <a href="/imdea_poster.pdf" target="_blank" rel="noreferrer">
+          <Icon name="External" /> Hardware-Software Contract
+        </a>
+        <a href="/eth_poster.pdf" target="_blank" rel="noreferrer">
+          <Icon name="External" /> Model-Driven Privacy
+        </a>
+      </StyledPosterLinks>
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (

@@ -134,17 +134,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Greetings! My name is Hoang. 
+            Hi there! My name is Hoang. 
             I graduated in Computer Science from the Vietnamese-German University.
             </p>
             <p>
-            Following that, I pursued a Master of Formal Methods
+            I did my Master of Formal Methods
             at the Universidad Autónoma | Complutense | Politécnica de Madrid, Spain. 
             During my time there, I completed an internship at the IMDEA Software Institute. 
             </p>
             <p>
             Currently, I am a PhD candidate in the Information Security Group at ETH Zurich. 
-            Here, I am working on Database Security, specifically on data privacy and access control.
+            Here, I am working on information security topics, specifically on data privacy and access control.
             </p>
           </div>
         </StyledText>

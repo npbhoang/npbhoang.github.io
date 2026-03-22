@@ -3,7 +3,6 @@ date: '2023-10-03'
 title: 'An extended model-based characterization of fine-grained access control for SQL queries'
 external: 'https://www.computer.org/csdl/proceedings-article/models/2023/248000a095/1SOLGGZqxvW'
 tech:
-  - Fine-grained access control
   - Model-driven security
   - Database security
 company: 'MoDELS'

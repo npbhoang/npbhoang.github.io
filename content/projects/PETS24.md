@@ -10,4 +10,4 @@ company: 'PoPETS'
 showInProjects: true
 ---
 
-We propose a model-driven development methodology that incorporates privacy policies into the system design. Namely, we define a system’s privacy model, which has precise semantics and is used to specify privacy policies. We provide semantic-preserving model transformations that generate system implementations that enforce the given privacy policies by design. We implement two such model transformations, targeting C# and Python system implementations. We evaluate our methodology on three substantial case studies and show the enforcement of privacy policies related to purpose limitation and consent.
+We propose a model-driven development methodology that integrates a formal privacy model specifies policies, and semantic-preserving transformations generate implementations that enforce them by design. We implement model transformations targeting C# and Python and evaluate the approach on three case studies.

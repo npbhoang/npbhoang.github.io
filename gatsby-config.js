@@ -5,7 +5,7 @@ module.exports = {
     title: 'Hoang Nguyen',
     description:
       'Hoang Nguyen personal website',
-    siteUrl: 'https://hoangnpb.com', // No trailing slash allowed!
+    siteUrl: 'https://npbhoang.github.io', // No trailing slash allowed!
     image: '/instasize.png'
   },
   plugins: [
@@ -28,7 +28,6 @@ module.exports = {
         icon: 'src/images/logo.png',
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

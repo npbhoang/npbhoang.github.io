@@ -9,6 +9,5 @@ url: 'https://vgu.edu.vn'
 type: 'edu'
 ---
 
-- majored in Computer Science,
-- double-degree programme with the Frankfurt University of Applied Sciences, in Germany,
-- Bachelor thesis: Critical configuration on Chip-Firing Games.
+- Computer Science
+- Dissertation: Critical Configuration on Chip-Firing Games.

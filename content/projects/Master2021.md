@@ -6,7 +6,7 @@ external: 'https://repositorio.uam.es/handle/10486/700263'
 tech:
   - Procedure optimization
   - Model-checking
-company: 'Autonoma Universidad de Madrid'
+company: 'Master thesis'
 showInProjects: true
 ---
 

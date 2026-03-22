@@ -9,6 +9,5 @@ url: 'https://www.uam.es/uam/inicio'
 type: 'edu'
 ---
 
-- majored in Formal Methods of Computer Engineering,
-- programme jointly organized with Complutense and Polit&#233;cnica Universidad de Madrid,
-- Master thesis: Intelligent enforcement of Fine-Grained Access Control for SQL queries.
+- Formal Methods of Computer Engineering
+- Dissertation: Intelligent Enforcement of Fine-Grained Access Control for SQL queries
