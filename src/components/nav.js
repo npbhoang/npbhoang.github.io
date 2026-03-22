@@ -116,6 +116,12 @@ const StyledThemeToggle = styled.button`
   }
 `;
 
+const StyledLogoArea = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+`;
+
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -242,7 +248,10 @@ const Nav = ({ isHome }) => {
       <StyledNav>
         {prefersReducedMotion ? (
           <>
-            {Logo}
+            <StyledLogoArea>
+              {Logo}
+              {ThemeToggle}
+            </StyledLogoArea>
 
             <StyledLinks>
               <ol>
@@ -254,20 +263,22 @@ const Nav = ({ isHome }) => {
                   ))}
               </ol>
               <div>{ResumeLink}</div>
-              {ThemeToggle}
             </StyledLinks>
 
             <Menu />
           </>
         ) : (
           <>
-            <TransitionGroup component={null}>
-              {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <>{Logo}</>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
+            <StyledLogoArea>
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeClass} timeout={timeout}>
+                    <>{Logo}</>
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
+              {ThemeToggle}
+            </StyledLogoArea>
 
             <StyledLinks>
               <ol>
@@ -293,7 +304,6 @@ const Nav = ({ isHome }) => {
                   </CSSTransition>
                 )}
               </TransitionGroup>
-              {ThemeToggle}
             </StyledLinks>
 
             <TransitionGroup component={null}>
