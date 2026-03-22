@@ -4,7 +4,6 @@ import {
   IconAppStore,
   IconBookmark,
   IconCodepen,
-  IconDblp,
   IconExternal,
   IconFolder,
   IconFork,
@@ -32,8 +31,6 @@ const Icon = ({ name }) => {
       return <IconFolder />;
     case 'Fork':
       return <IconFork />;
-    case 'dblp':
-      return <IconDblp />;
     case 'GitHub':
       return <IconGitHub />;
     case 'Instagram':
