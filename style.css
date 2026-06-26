@@ -1,0 +1,336 @@
+/* ---------------------------------------------------------------------------
+   Hoang Nguyen — personal academic page
+   Plain HTML/CSS. Light + dark themes via the [data-theme] attribute on <html>.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --max-width: 820px;
+
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --text: #1b1d21;
+  --muted: #5d636d;
+  --border: #e4e7ec;
+  --accent: #0b5fb0;
+  --accent-hover: #084a8a;
+}
+
+[data-theme='dark'] {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #e6e8eb;
+  --muted: #99a1ac;
+  --border: #272c35;
+  --accent: #6cb2ff;
+  --accent-hover: #9bcbff;
+}
+
+/* No-JS fallback: honour the OS preference when no explicit theme is set. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --text: #e6e8eb;
+    --muted: #99a1ac;
+    --border: #272c35;
+    --accent: #6cb2ff;
+    --accent-hover: #9bcbff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ---- Header ------------------------------------------------------------- */
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.fullname {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.affil {
+  margin: 0.9rem 0 0;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  font-size: 0.97rem;
+}
+
+/* ---- Sections ----------------------------------------------------------- */
+
+section {
+  margin-top: 2.6rem;
+}
+
+h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.lead {
+  margin-bottom: 0;
+}
+
+/* Education-style entries: title + date on one line, details below. */
+
+.entry {
+  margin-bottom: 1.4rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+}
+
+.entry-title {
+  font-weight: 600;
+}
+
+.entry-date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry-sub {
+  color: var(--text);
+}
+
+.entry-detail {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Two-column rows: employment, awards. */
+
+.row {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 0.2rem 1.1rem;
+  padding: 0.32rem 0;
+}
+
+.row-key {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* People lists: supervision, mentoring. */
+
+.people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.people li {
+  margin-bottom: 1.05rem;
+  line-height: 1.45;
+}
+
+.people li:last-child {
+  margin-bottom: 0;
+}
+
+.person {
+  font-weight: 600;
+}
+
+.proj {
+  font-style: italic;
+}
+
+.supervision .person,
+.supervision .proj {
+  display: block;
+}
+
+.svp-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.mentees li {
+  margin-bottom: 0.35rem;
+}
+
+/* Publications. */
+
+.pubs {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.pubs li {
+  margin-bottom: 1.15rem;
+  padding-left: 0.2rem;
+  line-height: 1.5;
+}
+
+.pubs li:last-child {
+  margin-bottom: 0;
+}
+
+.pub-authors {
+  display: block;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 600;
+  margin: 0.1rem 0;
+}
+
+.venue {
+  display: block;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+.pub-link {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.subhead {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.8rem;
+}
+
+.subhead:first-child {
+  margin-top: 0;
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ---- Theme toggle ------------------------------------------------------- */
+
+.theme-toggle {
+  display: none; /* shown only when JS is available */
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.7rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+html.js .theme-toggle {
+  display: inline-flex;
+}
+
+/* ---- Print -------------------------------------------------------------- */
+
+@media print {
+  .theme-toggle {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  a {
+    color: #000;
+  }
+
+  .wrap {
+    max-width: none;
+    padding: 0;
+  }
+}

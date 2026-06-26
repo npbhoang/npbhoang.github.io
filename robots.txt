@@ -1,0 +1,46 @@
+# Keep this site out of search engines and away from crawlers.
+# Note: well-behaved bots obey these rules; malicious scrapers may ignore them.
+
+# All compliant crawlers: do not crawl anything.
+User-agent: *
+Disallow: /
+
+# Explicitly opt out of known AI / data-harvesting crawlers.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
