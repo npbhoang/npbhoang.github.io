@@ -52,12 +52,182 @@
 
       <section id="research">
         <h2>Research Interests</h2>
-        <!-- TODO: replace this placeholder with the research interests and
-             Bachelor's thesis topics. -->
-        <div class="construction">
-          <p class="construction-icon" aria-hidden="true">🚧</p>
-          <p class="lead">Under construction — check back soon.</p>
+        <p class="lead">
+          My research lies at the intersection of formal methods, software
+          engineering, and security &amp; privacy. I build software engineering
+          methodologies, using formal methods, with the goal of improving the security
+          and privacy of software systems.
+        </p>
+
+        <figure class="venn-fig">
+          <svg class="venn" viewBox="0 0 360 300" role="img"
+               aria-label="Venn diagram: my research sits where formal methods, software engineering, and IT security overlap.">
+            <title>Formal methods, software engineering, and IT security</title>
+            <circle cx="180" cy="112" r="74" />
+            <circle cx="138" cy="188" r="74" />
+            <circle cx="222" cy="188" r="74" />
+            <text x="180" y="86">
+              <tspan x="180">Formal</tspan>
+              <tspan x="180" dy="18">Methods</tspan>
+            </text>
+            <text x="112" y="196">
+              <tspan x="112">Software</tspan>
+              <tspan x="112" dy="18">Engineering</tspan>
+            </text>
+            <text x="248" y="196">
+              <tspan x="248">IT</tspan>
+              <tspan x="248" dy="18">Security</tspan>
+            </text>
+          </svg>
+        </figure>
+
+        <p style="margin-top: 1rem;">
+          Model-driven engineering (MDE) is a software development methodology
+          that puts models at the centre of the development process. In my work,
+          MDE promotes <strong>security and privacy by design</strong>. 
+          Modelling security and privacy policies makes
+          them precise, well-documented, and amenable to automatic analysis. With
+          the appropriate model transformations in place, these models can
+          further be compiled into an <strong>enforcement mechanism</strong>.
+        </p>
+      </section>
+
+      <section id="properties">
+        <h2>Security &amp; Privacy Properties</h2>
+
+        <div class="propfig">
+          <figure>
+            <svg viewBox="0 0 300 210" role="img"
+                 aria-label="Confidentiality: an attacker C tries to read the message m sent from A to B.">
+              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="48" cy="150" r="24" />
+              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
+              <ellipse class="halo" cx="252" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="252" cy="150" r="24" />
+              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
+              <line class="link" x1="74" y1="150" x2="216" y2="150" />
+              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
+              <rect class="env-box" x="120" y="100" width="60" height="40" />
+              <path class="env-flap" d="M120 100 L150 122 L180 100" />
+              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
+              <path class="threat-fill" d="M139 23 L132 9 L148 19 Z" />
+              <path class="threat-fill" d="M161 23 L168 9 L152 19 Z" />
+              <circle class="threat-node" cx="150" cy="36" r="21" />
+              <text class="threat-label" x="150" y="36" text-anchor="middle" dominant-baseline="central">C</text>
+              <line class="dash threat" x1="150" y1="59" x2="150" y2="90" />
+              <path class="threat-fill" d="M144 91 L156 91 L150 100 Z" />
+            </svg>
+            <figcaption>Confidentiality</figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 300 210" role="img"
+                 aria-label="Anonymity: an attacker C tries to identify who A and B are.">
+              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="48" cy="150" r="24" />
+              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
+              <ellipse class="halo" cx="252" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="252" cy="150" r="24" />
+              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
+              <line class="link" x1="74" y1="150" x2="216" y2="150" />
+              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
+              <rect class="env-box" x="120" y="100" width="60" height="40" />
+              <path class="env-flap" d="M120 100 L150 122 L180 100" />
+              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
+              <path class="threat-fill" d="M139 23 L132 9 L148 19 Z" />
+              <path class="threat-fill" d="M161 23 L168 9 L152 19 Z" />
+              <circle class="threat-node" cx="150" cy="36" r="21" />
+              <text class="threat-label" x="150" y="36" text-anchor="middle" dominant-baseline="central">C</text>
+              <line class="dash threat" x1="132" y1="56" x2="72" y2="118" />
+              <path class="threat-fill" d="M64 125 L69 113 L76 121 Z" />
+              <line class="dash threat" x1="168" y1="56" x2="228" y2="118" />
+              <path class="threat-fill" d="M236 125 L231 113 L224 121 Z" />
+            </svg>
+            <figcaption>Anonymity</figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 300 210" role="img"
+                 aria-label="Data protection: end user A entrusts personal data a to developer B's system, which must not misuse it.">
+              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="48" cy="150" r="24" />
+              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
+              <text class="stereo" x="48" y="102" text-anchor="middle">&#171;end user&#187;</text>
+              <text class="stereo" x="252" y="102" text-anchor="middle">&#171;developer&#187;</text>
+              <ellipse class="halo" cx="252" cy="118" rx="17" ry="5" />
+              <circle class="node" cx="252" cy="150" r="24" />
+              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
+              <line class="link" x1="74" y1="150" x2="216" y2="150" />
+              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
+              <rect class="env-box" x="120" y="100" width="60" height="40" />
+              <path class="env-flap" d="M120 100 L150 122 L180 100" />
+              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
+              <rect class="rec" x="258" y="171" width="26" height="17" />
+              <rect class="rec" x="264" y="166" width="26" height="17" />
+              <text class="glyph" x="277" y="178" text-anchor="middle">a</text>
+            </svg>
+            <figcaption>Data protection</figcaption>
+          </figure>
         </div>
+        <p class="propfig-note">
+          A, B &mdash; communicating parties &middot; C &mdash; adversary
+          &middot; m &mdash; message &middot; a &mdash; personal data
+        </p>
+
+        <p class="subhead">Some of the data protection principles</p>
+        <ul class="deflist">
+          <li><span class="term">Lawfulness, fairness &amp; transparency</span> — personal data is processed lawfully, fairly, and in a transparent manner. <span class="ref">GDPR Art. 5(1)(a)</span></li>
+          <li><span class="term">Purpose limitation</span> — personal data is used only for the purposes for which it was collected. <span class="ref">Art. 5(1)(b)</span></li>
+          <li><span class="term">Data minimisation</span> — only the personal data necessary for a purpose is collected. <span class="ref">Art. 5(1)(c)</span></li>
+          <li><span class="term">Accuracy</span> — personal data is kept accurate and, where needed, up to date. <span class="ref">Art. 5(1)(d)</span></li>
+          <li><span class="term">Storage limitation</span> — personal data is kept only as long as the purpose requires. <span class="ref">Art. 5(1)(e)</span></li>
+          <li><span class="term">Integrity &amp; confidentiality</span> — personal data is protected against unauthorised access, loss, or damage. <span class="ref">Art. 5(1)(f)</span></li>
+          <li><span class="term">Accountability</span> — the controller can demonstrate compliance with these principles. <span class="ref">Art. 5(2)</span></li>
+          <li><span class="term">Lawful basis &amp; consent</span> — processing requires a lawful basis; consent must be freely given and specific. <span class="ref">Art. 6(1)(a), 7</span></li>
+          <li><span class="term">Data subject rights</span> — access, rectification, erasure, restriction, portability, and objection. <span class="ref">Art. 15&ndash;21</span></li>
+          <li><span class="term">Data protection by design &amp; by default</span> — protections are built into systems from the outset. <span class="ref">Art. 25</span></li>
+        </ul>
+      </section>
+
+      <section id="directions">
+        <h2>Some directions</h2>
+
+        <p class="subhead">Securing data at the source</p>
+        <p>
+          Databases are where sensitive data ultimately stores, so access control
+          policies are best enforced there, i.e., at the source. I develop model-driven
+          techniques and tools that rewrites SQL queries into security- and privacy-aware stored procedures 
+          that enforces data protetion and fine-grained
+          access-control policies.
+        </p>
+
+        <p class="subhead">Privacy-aware programming/modeling languages</p>
+        <p>
+          Enforcement should not stop at the database. I am interested in
+          programming languages that treat privacy as a first-class concern,
+          where privacy policies are expressed in the language itself and the
+          compiler or runtime guarantees that programs cannot violate them.
+        </p>
+
+        <p class="subhead">Fighting online scams</p>
+        <p>
+          Beyond the lab, I work on protecting ordinary users from online fraud.
+          I am interested
+          in how software engineering, security, and public education can be
+          combined to detect scams and raise digital-safety awareness across
+          Vietnam and the wider region.
+        </p>
+      </section>
+
+      <section id="students">
+        <h2>For Prospective Students</h2>
+        <p class="note">
+          If any of the <a href="#directions">directions above</a> interest
+          you and you are looking for a Bachelor's thesis, I
+          would be glad to hear from you. And if you already have a topic of
+          your own that you believe is closely related, then get in touch. I am
+          happy to discuss it.
+        </p>
       </section>
 
       <footer>
@@ -114,12 +284,14 @@
         if (f) f.textContent = full;
         var mine = document.getElementsByClassName('me');
         for (var i = 0; i < mine.length; i++) mine[i].textContent = name;
+        var addr = user + '@' + domain;
         var em = document.getElementById('email');
         if (em) {
-          var addr = user + '@' + domain;
           em.href = 'mail' + 'to:' + addr;
           em.textContent = addr;
         }
+        var em2 = document.getElementById('email-2');
+        if (em2) em2.href = 'mail' + 'to:' + addr;
       })();
     </script>
   </body>

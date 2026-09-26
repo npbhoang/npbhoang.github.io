@@ -13,6 +13,7 @@
   --border: #e4e7ec;
   --accent: #0b5fb0;
   --accent-hover: #084a8a;
+  --fig-threat: #c0392b;
 }
 
 [data-theme='dark'] {
@@ -23,6 +24,7 @@
   --border: #272c35;
   --accent: #6cb2ff;
   --accent-hover: #9bcbff;
+  --fig-threat: #f0796b;
 }
 
 /* No-JS fallback: honour the OS preference when no explicit theme is set. */
@@ -35,6 +37,7 @@
     --border: #272c35;
     --accent: #6cb2ff;
     --accent-hover: #9bcbff;
+    --fig-threat: #f0796b;
   }
 }
 
@@ -235,6 +238,188 @@ p {
 .note {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+/* Definition-style lists: security / privacy properties. */
+.deflist {
+  margin: 0.2rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.deflist li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.deflist li:last-child {
+  margin-bottom: 0;
+}
+
+.deflist .term {
+  font-weight: 600;
+}
+
+.deflist .ref {
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+/* Research Venn: formal methods ∩ software engineering ∩ IT security. */
+.venn-fig {
+  margin: 1.7rem 0 0.4rem;
+}
+
+.venn {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.venn circle {
+  fill: var(--accent);
+  fill-opacity: 0.16;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.venn text {
+  fill: var(--text);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  text-anchor: middle;
+}
+
+/* Security & privacy property figure (ported from the defense slides). */
+.propfig {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem 1.2rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.propfig figure {
+  margin: 0;
+  text-align: center;
+}
+
+.propfig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--text);
+}
+
+.propfig figcaption {
+  margin-top: 0.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.propfig .node {
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
+
+.propfig .rec {
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.propfig .link {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
+
+.propfig .link-head {
+  fill: currentColor;
+  stroke: none;
+}
+
+.propfig .env-box {
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.propfig .env-flap {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.propfig .label {
+  fill: currentColor;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.propfig .glyph {
+  fill: currentColor;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.propfig .stereo {
+  fill: var(--muted);
+  font-style: italic;
+  font-size: 11px;
+}
+
+.propfig .halo {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+}
+
+.propfig .dash {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-dasharray: 1.5 6;
+  stroke-linecap: round;
+}
+
+.propfig .threat {
+  stroke: var(--fig-threat);
+}
+
+.propfig .threat-fill {
+  fill: var(--fig-threat);
+  stroke: none;
+}
+
+.propfig .threat-node {
+  fill: var(--bg);
+  stroke: var(--fig-threat);
+  stroke-width: 2.5;
+}
+
+.propfig .threat-label {
+  fill: var(--fig-threat);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.propfig-note {
+  margin: 0 0 0.4rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .propfig {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+    margin-inline: auto;
+    gap: 1.1rem;
+  }
 }
 
 /* Under-construction placeholder. */
