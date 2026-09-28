@@ -1116,13 +1116,6 @@
         </div>
       </div>
     </div>
-    <aside class="notes">
-      Thank you for coming to the defense. 
-      
-      Today I will present my doctoral thesis on model-driven privacy.
-
-      Let's start by defining our scope. 
-    </aside>
   </section>
 
   <!-- ============ PRIVACY - WHAT WE MEAN (adapted from ccs-talk p6-10) ============ -->
@@ -1215,9 +1208,6 @@
       <!-- step 5: empty fragment; drives the zoom-in state -->
       <div class="pvzoom fragment" data-fragment-index="5" aria-hidden="true" data-notes=""></div>
     </div>
-    <aside class="notes">
-      What do we mean by privacy? Privacy is a very broad term and it can mean different things.
-    </aside>
   </section>
 
   <!-- ============ MOTIVATION - THE SETTING ============ -->
@@ -1257,9 +1247,6 @@
         </div>
       </div>
     </div>
-    <aside class="notes">
-      Why is this already an important goal? If you look at the software landscape recently, everything is just fines.
-    </aside>
   </section>
 
   <!-- ============ DATA PROTECTION REQUIREMENTS (ccs-talk p11) ============ -->
@@ -1298,8 +1285,6 @@
         </div>
       </div>
     </div>
-    <aside class="notes">
-    </aside>
   </section>
 
   <!-- ============ PURPOSE LIMITATION & USER CONSENT (ccs-talk p12) ============ -->
@@ -1378,9 +1363,6 @@ def view_event(id):
 
       </div>
     </div>
-    <aside class="notes">
-      In this talk, we also refer to this traditional approach as the code-centric approach.
-    </aside>
   </section>
 
   <!-- ============ CODE-CENTRIC → PRIVACY, part A: plain template + the privacy policy (auto-animate pair) ============ -->
@@ -1428,9 +1410,6 @@ def view_event(id):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      Now suppose we need to add data protection to this application. Let's say we want to add user consent.
-    </aside>
   </section>
 
   <!-- ============ CODE-CENTRIC → PRIVACY, part B: consent checks morph into the template (auto-animate pair) ============ -->
@@ -1520,9 +1499,6 @@ def view_event(id):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      Moreover, it must be enforced everywhere that data is used. Here the view_event template is rewritten to include the consent checking before showing each name.
-    </aside>
   </section>
 
   <!-- ============ MDD → MDS → MDP: title + caption + same-size figure swap together across steps (white slide to match the white figures) ============ -->
@@ -1549,11 +1525,6 @@ def view_event(id):
       <small class="footnote fragment fade-in-then-out" data-fragment-index="0">D. Basin, J. Doser, T. Lodderstedt. <i>Model Driven Security: From UML Models to Access Control Infrastructures</i>. ACM TOSEM, 2006.</small>
       <small class="footnote fragment fade-in-then-out" data-fragment-index="1">D. Basin, M. Clavel, M. Egea, M. A. G. de Dios, and C. Dania. <i>A model-driven methodology for developing secure data-management applications</i>. IEEE TSE, 2014.<br>H. Nguyen, M. Clavel <i>A Model-Driven Approach for Enforcing Fine-Grained Access Control for SQL Queries</i>. SNCS, 2021.</small>
     </div>
-    <aside class="notes">
-      In our thesis, we apply another development methodology called model-driven development. In this approach, the developer define models instead of writing code directly. 
-      
-      Models defines aspects of the system at a higher level of abstraction, and then rely on predefined model transformation to generate automatically the application code.
-    </aside>
   </section>
 
   <!-- ============ CONTRIBUTIONS - two model branches (security / privacy), each with its contributions + venues ============ -->
@@ -1608,18 +1579,12 @@ def view_event(id):
       <!-- final step: highlight the privacy line -->
       <div class="cfocus-on fragment" data-fragment-index="7" aria-hidden="true" data-notes="In this talk, let's focus on the privacy contributions."></div>
     </div>
-    <aside class="notes">
-      In this thesis, we make contributions on both the security and privacy side. 
-    </aside>
   </section>
 
   <section class="es-standout" data-background-color="#215caf">
     <div class="wrap">
       <h2 class="q" style="font-size:56px;white-space:nowrap;">Privacy model and its enforcement</h2>
     </div>
-    <aside class="notes">
-      First, let's look at the privacy model and its enforcement.
-    </aside>
   </section>
 
   <!-- ============ DATA MODEL - full definition; tuple elements light up as each bullet is revealed ============ -->
@@ -1640,9 +1605,6 @@ def view_event(id):
         <div class="dmex fragment fade-in-then-out" data-fragment-index="4"><i>E</i> = &#8709;</div>
       </div>
     </div>
-    <aside class="notes">
-      In our approach, we first define the data model. This model captures the application's data domain. For our running example, consider an event platform.
-    </aside>
   </section>
 
   <!-- ============ DATA ATOMIC ACTIONS - five aligned build snapshots exported from dataactions.pdf ============ -->
@@ -1658,9 +1620,6 @@ def view_event(id):
       <img class="dafig fragment fade-in-then-out" data-fragment-index="2" data-notes="read, add, and remove on a many association end;" src="dataactions-4.png" alt="read / add / remove on a many-valued association end">
       <img class="dafig fragment fade-in" data-fragment-index="3" data-notes="and execute on a method." src="dataactions-5.png" alt="execute on a method">
     </div>
-    <aside class="notes">
-      On top of the data model, we define the atomic data actions. These includes to create and delete an instance of a class;
-    </aside>
   </section>
 
   <!-- ============ MODEL DEFINITION + PRIVACY DETAILS - vertical stack: overview on top, per-element details below (down-arrow) ============ -->
@@ -1698,9 +1657,6 @@ def view_event(id):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      To define privacy model, we need to define several concepts.
-    </aside>
   </section>
 
   <!-- ============ PRIVACY MODEL · 1 - Personal data ============ -->
@@ -1854,9 +1810,6 @@ def view_event(id):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      In practice, the developer defines these models using our textual modeling languages.
-    </aside>
   </section>
 
   <!-- ============ DEV METHODOLOGY · consolidated build ============ -->
@@ -1986,9 +1939,6 @@ def view_event(request):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      Putting it all together, our model-driven development methodology has three development steps.
-    </aside>
   </section>
 
   <!-- ============ PRIVACY ENFORCEMENT - what the generated system enforces at run time ============ -->
@@ -2078,9 +2028,6 @@ def view_event(request):
 
       </div>
     </div>
-    <aside class="notes">
-      The generated system provides the following enforcement.
-    </aside>
   </section>
 
   <!-- ============ THE TOOL - nuActionGUI ============ -->
@@ -2104,9 +2051,6 @@ def view_event(request):
         <div class="qcap">nuactiongui.github.io</div>
       </div>
     </div>
-    <aside class="notes">
-      We realized our methodology in a tool.
-    </aside>
   </section>
 
   <!-- ============ EMPIRICAL STUDY - big question ============ -->
@@ -2116,9 +2060,6 @@ def view_event(request):
     <div class="wrap">
       <h2 class="q">Is modeling privacy <em>worth it?</em></h2>
     </div>
-    <aside class="notes">
-      That was the overview of our methodology and tool. But does this approach actually help in practice? To answer that, we ran an empirical study.
-    </aside>
   </section>
 
   <!-- ============ PRIVACY ENFORCEMENT & CRITERIA ============ -->
@@ -2179,11 +2120,6 @@ def view_event(request):
         </li>
       </ul>
     </div>
-    <aside class="notes">
-      We ran a controlled study with 194 graduate developers at ETH Zürich, over two iterations of the SecEng course. 
-      Each participant implemented the same privacy requirements twice, once code-centric with Flask, 
-      and once model-driven with νActionGUI, on a simple web application with realistic privacy requirements.
-    </aside>
   </section>
 
   <!-- ============ EMPIRICAL STUDY - selected research questions ============ -->
@@ -2205,9 +2141,6 @@ def view_event(request):
         <div class="card sel fragment" data-fragment-index="2"><div class="n">Other</div><div class="t">Qualitative aspects: approach preferences and justification</div></div>
       </div>
     </div>
-    <aside class="notes">
-      We investigated several research questions.
-    </aside>
   </section>
 
   <!-- ###################################################################### -->
@@ -2317,9 +2250,6 @@ def view_event(request):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      For the study, we designed a project.
-    </aside>
   </section>
 
   <!-- ============ [CCS p39] PROJECT ORGANIZATION - PHASE 0 · TRAINING ============ -->
@@ -2442,9 +2372,6 @@ def view_event(request):
 
       </div>
     </div>
-    <aside class="notes">
-      The study was organized in phases.
-    </aside>
   </section>
 
   <!-- Privacy requirements slide moved up to directly follow the Event management app slide. -->
@@ -2500,12 +2427,6 @@ def view_event(request):
         </tbody>
       </table>
     </div>
-    <aside class="notes">
-      Here we show the participation statistics of the study. 
-      In total, 194 students enrolled in the course. With more students in the second year of the study.
-      ~ 70% of them participated in the development phases, 
-      66% in the evolution phase. At the end, 37 students filled out the survey questionnaire.
-    </aside>
   </section>
 
   <!-- ============ EMPIRICAL STUDY - evaluation methodology ============ -->
@@ -2544,9 +2465,6 @@ def view_event(request):
         </ul>
       </div>
     </div>
-    <aside class="notes">
-      To evaluate both approaches:
-    </aside>
   </section>
 
   <!-- ============ EMPIRICAL STUDY - results: privacy correctness (RQ3, RQ4, RQ5) ============ -->
@@ -2566,15 +2484,6 @@ def view_event(request):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      As a proxy for privacy compliance, we run the submissions through our set of privacy tests.
-      The plot shows the average percentage of failed tests, 
-      calculated as the total number of failed tests divided by the total number of tests.
-
-      νActionGUI produces far fewer failed privacy tests. 
-      In development, about 3.5 times fewer than Flask. 
-      In evolution the model-driven number is also lower.
-    </aside>
   </section>
 
   <!-- vertical stack: effort on top, challenges below (down-arrow) -->
@@ -2596,11 +2505,6 @@ def view_event(request):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      For development time and effort, 
-      using model-driven approach needs about five times fewer lines of code per passing test, in all phases. 
-      It also tends to take less time as well, though that difference is not statistically significant.
-    </aside>
   </section>
 
   <!-- ============ EMPIRICAL STUDY - results: challenges (privacy hotspots) ============ -->
@@ -2649,9 +2553,6 @@ def view_event(request):
         </div>
       </div>
     </div>
-    <aside class="notes">
-      In the survey, we asked one more question.
-    </aside>
   </section>
 
   <!-- ============ SUMMARY (ccs-talk slide 55 style) ============ -->
@@ -2669,15 +2570,6 @@ def view_event(request):
         </ul>
       </div>
     </div>
-    <aside class="notes">
-      So we have proposed a model-driven methodology for data-protection requirements, 
-      particularly the purpose limitation and user consent. 
-      
-      Requirements are first defined as formal models, and predefined transformations generate the enforcement automatically. 
-      
-      We conducted an empirical study on the effectiveness of this approach, 
-      and the results show that it reduces the development effort while resulting in fewer privacy violations than code-centric development.
-    </aside>
   </section>
 
   <!-- thank you -->
@@ -2693,9 +2585,6 @@ def view_event(request):
       </div>
       <p class="thanks-foot">Model-driven Privacy &nbsp;<span style="color:#cfd5df;">/</span>&nbsp; Hoàng Nguyễn &nbsp;<span style="color:#cfd5df;">/</span>&nbsp; ETH Zürich</p>
     </div>
-    <aside class="notes">
-      Thank you for your attention. This is the end of my presentation. Now, I am happy to take your questions. 
-    </aside>
   </section>
 
 </div>
