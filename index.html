@@ -3,9 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Homepage</title>
-    <meta name="description" content="Personal academic homepage." />
-    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
+    <title>Hoang Nguyen — Academic Homepage</title>
+    <meta
+      name="description"
+      content="Hoang Nguyen is a lecturer in Computer Science at the Vietnamese-German University, working on formal methods, software engineering, information security and privacy. PhD from ETH Zurich."
+    />
+    <link rel="canonical" href="https://npbhoang.github.io/" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Hoang Nguyen" />
+    <meta property="og:title" content="Hoang Nguyen — Academic Homepage" />
+    <meta
+      property="og:description"
+      content="Lecturer in Computer Science at the Vietnamese-German University. Formal methods, software engineering, information security and privacy. PhD from ETH Zurich."
+    />
+    <meta property="og:url" content="https://npbhoang.github.io/" />
+    <meta property="og:image" content="https://npbhoang.github.io/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Hoang Nguyen — Lecturer, Computer Science, Vietnamese-German University"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="Hoang" />
+    <meta property="profile:last_name" content="Nguyen" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hoang Nguyen — Academic Homepage" />
+    <meta
+      name="twitter:description"
+      content="Lecturer in Computer Science at the Vietnamese-German University. Formal methods, software engineering, security & privacy."
+    />
+    <meta name="twitter:image" content="https://npbhoang.github.io/og-image.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="stylesheet" href="style.css" />
@@ -154,7 +185,7 @@
             <span class="entry-date">Bachelor's, ETH Zurich</span>
           </div>
           <p class="entry-detail">
-            Lab Assistant — Winter 2026.
+            Lab Assistant — Fall 2026.
           </p>
         </div>
         <div class="entry">
@@ -245,7 +276,7 @@
         var user = dec('aG9hbmcubmd1eWVu');
         var domain = dec('aW5mLmV0aHouY2g=');
 
-        document.title = name;
+        document.title = name + ' — Academic Homepage';
         var n = document.getElementById('name');
         if (n) n.textContent = name;
         var f = document.getElementById('fullname');

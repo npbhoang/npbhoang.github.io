@@ -1,9 +1,12 @@
-# Keep this site out of search engines and away from crawlers.
+# Allow search engines to crawl and index the site.
 # Note: well-behaved bots obey these rules; malicious scrapers may ignore them.
 
-# All compliant crawlers: do not crawl anything.
+# Sitemap for search engines.
+Sitemap: https://npbhoang.github.io/sitemap.xml
+
+# All compliant crawlers (including Googlebot, Bingbot, etc.): crawl everything.
 User-agent: *
-Disallow: /
+Disallow:
 
 # Explicitly opt out of known AI / data-harvesting crawlers.
 User-agent: GPTBot
