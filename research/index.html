@@ -82,15 +82,13 @@
       <section id="research">
         <h2>Research Interests</h2>
         <p class="lead">
-          My research lies at the intersection of formal methods, software
-          engineering, and security &amp; privacy. I build software engineering
-          methodologies, using formal methods, with the goal of improving the security
-          and privacy of software systems.
+          My research lies at the intersection of <strong>formal methods</strong>, <strong>software
+          engineering</strong>, and <strong>IT security &amp; privacy</strong>. I develop software engineering methodologies and 
+          tools that use formal methods to make security and privacy requirements precise, analyzable, and enforceable.
         </p>
 
         <figure class="venn-fig">
-          <svg class="venn" viewBox="0 0 360 300" role="img"
-               aria-label="Venn diagram: my research sits where formal methods, software engineering, and IT security overlap.">
+          <svg class="venn" viewBox="0 0 360 300" role="img">
             <title>Formal methods, software engineering, and IT security</title>
             <circle cx="180" cy="112" r="74" />
             <circle cx="138" cy="188" r="74" />
@@ -109,25 +107,19 @@
             </text>
           </svg>
         </figure>
-
-        <p style="margin-top: 1rem;">
-          Model-driven engineering (MDE) is a software development methodology
-          that puts models at the centre of the development process. In my work,
-          MDE promotes <strong>security and privacy by design</strong>. 
-          Modelling security and privacy policies makes
-          them precise, well-documented, and amenable to automatic analysis. With
-          the appropriate model transformations in place, these models can
-          further be compiled into an <strong>enforcement mechanism</strong>.
-        </p>
       </section>
 
-      <section id="properties">
-        <h2>Security &amp; Privacy Properties</h2>
+      <section id="directions">
+
+        <p>I investigate how model-driven engineering can be used to develop secure and privacy-by-design software systems. 
+          In this approach, security and privacy requirements are specified formally as models in the design phase.
+          These models can then be analyzed and used to generate automatically implementation artifacts.</p>
+
+        <p>For example,</p>
 
         <div class="propfig">
           <figure>
-            <svg viewBox="0 0 300 210" role="img"
-                 aria-label="Confidentiality: an attacker C tries to read the message m sent from A to B.">
+            <svg viewBox="0 0 300 210" role="img">
               <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
               <circle class="node" cx="48" cy="150" r="24" />
               <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
@@ -150,8 +142,7 @@
           </figure>
 
           <figure>
-            <svg viewBox="0 0 300 210" role="img"
-                 aria-label="Anonymity: an attacker C tries to identify who A and B are.">
+            <svg viewBox="0 0 300 210" role="img">
               <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
               <circle class="node" cx="48" cy="150" r="24" />
               <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
@@ -176,8 +167,7 @@
           </figure>
 
           <figure>
-            <svg viewBox="0 0 300 210" role="img"
-                 aria-label="Data protection: end user A entrusts personal data a to developer B's system, which must not misuse it.">
+            <svg viewBox="0 0 300 210" role="img">
               <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
               <circle class="node" cx="48" cy="150" r="24" />
               <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
@@ -193,68 +183,47 @@
               <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
               <rect class="rec" x="258" y="171" width="26" height="17" />
               <rect class="rec" x="264" y="166" width="26" height="17" />
-              <text class="glyph" x="277" y="178" text-anchor="middle">a</text>
+              <text class="glyph" x="277" y="178" text-anchor="middle">pd</text>
             </svg>
             <figcaption>Data protection</figcaption>
           </figure>
         </div>
         <p class="propfig-note">
-          A, B &mdash; communicating parties &middot; C &mdash; adversary
-          &middot; m &mdash; message &middot; a &mdash; personal data
+          A, B &mdash; communicating parties, C &mdash; adversary, m &mdash; message, pd &mdash; personal data
         </p>
 
-        <p class="subhead">Some of the data protection principles (mapped to the General Data Protection Regulation - GDPR)</p>
+        <p class="subhead">Security properties</p>
         <ul class="deflist">
-          <li><span class="term">Lawfulness, fairness &amp; transparency</span> — personal data is processed lawfully, fairly, and in a transparent manner. <span class="ref">GDPR Art. 5(1)(a)</span></li>
-          <li><span class="term">Purpose limitation</span> — personal data is used only for the purposes for which it was collected. <span class="ref">Art. 5(1)(b)</span></li>
-          <li><span class="term">Data minimisation</span> — only the personal data necessary for a purpose is collected. <span class="ref">Art. 5(1)(c)</span></li>
-          <li><span class="term">Accuracy</span> — personal data is kept accurate and, where needed, up to date. <span class="ref">Art. 5(1)(d)</span></li>
-          <li><span class="term">Storage limitation</span> — personal data is kept only as long as the purpose requires. <span class="ref">Art. 5(1)(e)</span></li>
-          <li><span class="term">Integrity &amp; confidentiality</span> — personal data is protected against unauthorised access, loss, or damage. <span class="ref">Art. 5(1)(f)</span></li>
-          <li><span class="term">Accountability</span> — the controller can demonstrate compliance with these principles. <span class="ref">Art. 5(2)</span></li>
-          <li><span class="term">Lawful basis &amp; consent</span> — processing requires a lawful basis; consent must be freely given and specific. <span class="ref">Art. 6(1)(a), 7</span></li>
-          <li><span class="term">Data subject rights</span> — access, rectification, erasure, restriction, portability, and objection. <span class="ref">Art. 15&ndash;21</span></li>
-          <li><span class="term">Data protection by design &amp; by default</span> — protections are built into systems from the outset. <span class="ref">Art. 25</span></li>
+          <li><span class="term">Identification</span> — establishing the identity claimed by a user, device, or system.</li>
+          <li><span class="term">Authentication</span> — verifying that a user, device, or system is who or what it claims to be.</li>
+          <li><span class="term">Authorization</span> — determining what a user, device, or system is permitted to do.</li>
+          <li><span class="term">Accountability</span> — ensuring that actions can be attributed to the responsible user, device, or system.</li>
         </ul>
-      </section>
 
-      <section id="directions">
-        <h2>Some research directions</h2>
+        <p class="subhead">Privacy regulations</p>
+        <ul class="deflist">
+          <li><span class="term">Lawfulness, fairness &amp; transparency</span> — data is processed lawfully, fairly, and in a transparent manner.</li>
+          <li><span class="term">Purpose limitation</span> — data is used only for the purposes for which it was collected.</li>
+          <li><span class="term">Data minimisation</span> — only the data necessary for a purpose is collected.</li>
+          <li><span class="term">Accuracy</span> — data is kept accurate and, where needed, up to date.</li>
+          <li><span class="term">Storage limitation</span> — data is kept only as long as the purpose requires.</li>
+          <li><span class="term">Integrity &amp; confidentiality</span> — data is protected against unauthorised access, loss, or damage.</li>
+          <li><span class="term">Accountability</span> — the controller can demonstrate compliance with these principles.</li>
+          <li><span class="term">Lawful basis &amp; consent</span> — processing requires a lawful basis; consent must be freely given and specific.</li>
+          <li><span class="term">Data subject rights</span> — access, rectification, erasure, restriction, portability, and objection.</li>
+          <li><span class="term">Data protection by design &amp; by default</span> — protections are built into systems from the outset.</li>
+        </ul>
 
-        <p class="subhead">Securing data at the source</p>
-        <p>
-          Databases are where sensitive data is ultimately stored, so access control
-          policies are best enforced there, i.e., at the source. I develop model-driven
-          techniques and tools that rewrite SQL queries into security- and privacy-aware stored procedures 
-          that enforce data protection and fine-grained
-          access-control policies.
-        </p>
-
-        <p class="subhead">Privacy-aware programming/modeling languages</p>
-        <p>
-          Enforcement should not stop at the database. I am interested in
-          programming languages that treat privacy as a first-class concern,
-          where privacy policies are expressed in the language itself and the
-          compiler or runtime guarantees that programs cannot violate them.
-        </p>
-
-        <p class="subhead">Fighting online scams</p>
-        <p>
-          Beyond the lab, I work on protecting ordinary users from online fraud.
-          I am interested
-          in how software engineering, security, and public education can be
-          combined to detect scams and raise digital-safety awareness across
-          Vietnam and the wider region.
-        </p>
+  
       </section>
 
       <section id="students">
         <h2>For Prospective Students</h2>
         <p class="note">
-          If any of the <a href="#directions">directions above</a> interest
+          If any of the points above interest
           you and you are looking for a Bachelor's thesis, I
-          would be glad to hear from you. And if you already have a topic of
-          your own that you believe is closely related, then get in touch. I am
+          would be glad to hear from you. If you already have a topic of
+          your own that you believe is closely related, then also get in touch. I am
           happy to discuss it.
         </p>
       </section>
