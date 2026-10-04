@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hoang Nguyen — Bachelor's Thesis Topics</title>
+    <meta
+      name="description"
+      content="Open Bachelor's thesis topics offered by Hoang Nguyen at the Vietnamese-German University: extending model-driven privacy to unauthenticated users and to shared data ownership, and code scanning for personal data."
+    />
+    <link rel="canonical" href="https://npbhoang.github.io/research/topics/" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hoang Nguyen" />
+    <meta property="og:title" content="Hoang Nguyen — Bachelor's Thesis Topics" />
+    <meta
+      property="og:description"
+      content="Open Bachelor's thesis topics: extending model-driven privacy to unauthenticated users and to shared data ownership, and code scanning for personal data."
+    />
+    <meta property="og:url" content="https://npbhoang.github.io/research/topics/" />
+    <meta property="og:image" content="https://npbhoang.github.io/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Hoang Nguyen — Research and Teaching Assistant, Computer Science, Vietnamese-German University"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hoang Nguyen — Bachelor's Thesis Topics" />
+    <meta
+      name="twitter:description"
+      content="Open Bachelor's thesis topics in model-driven privacy and static analysis for personal data."
+    />
+    <meta name="twitter:image" content="https://npbhoang.github.io/og-image.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="stylesheet" href="../../style.css" />
+
+    <!-- Set the theme before paint to avoid a flash of the wrong colors. -->
+    <script>
+      (function () {
+        var el = document.documentElement;
+        el.classList.add('js');
+        try {
+          var forced = new URLSearchParams(location.search).get('theme');
+          var theme = forced || localStorage.getItem('theme');
+          if (theme !== 'light' && theme !== 'dark') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          }
+          el.setAttribute('data-theme', theme);
+        } catch (e) {
+          el.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <button id="theme-toggle" class="theme-toggle" type="button">Dark</button>
+
+    <div class="wrap">
+      <header>
+        <h1 id="name"></h1>
+        <p class="fullname" id="fullname"></p>
+        <p class="affil">
+          Research and Teaching Assistant, Computer Science Program<br />
+          Faculty of Engineering, Vietnamese-German University
+        </p>
+        <ul class="links">
+          <li><a href="../">← Research interests</a></li>
+          <li><a href="../../">Homepage</a></li>
+          <li><a id="email" href="#">Email</a></li>
+          <li><a href="https://github.com/npbhoang">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/hoangnpb">LinkedIn</a></li>
+        </ul>
+      </header>
+
+      <section id="topics">
+        <h2>Bachelor's Thesis Topics</h2>
+        <p style="margin-top: 1rem;">
+          Model-driven privacy (MDP) is a software development methodology in
+          which privacy requirements are specified as models and enforcement
+          mechanisms are generated automatically via model transformations. A
+          developer writes three interconnected declarative models — a
+          <em>data model</em> describing the state space, a <em>security
+          model</em> capturing fine-grained access control, and a <em>privacy
+          model</em> expressing data-protection requirements — and the
+          methodology generates a web application that is security- and
+          privacy-aware by design.
+          <a href="../../publications/PETS24.pdf">Read the MDP paper (PETS&nbsp;2024, PDF) &rarr;</a>
+        </p>
+      </section>
+
+      <section id="list">
+        <h2>Open Topics</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Extending Model-Driven Privacy to Unauthenticated Users</span>
+            <span class="entry-date">Model-driven enginnering, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="visitor.pdf">Read the proposal</a>
+          </p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Extending Model-Driven Privacy to Shared Data Ownership</span>
+            <span class="entry-date">Model-driven enginnering, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="owners.pdf">Read the proposal</a>
+          </p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Code Scanning for Personal Data</span>
+            <span class="entry-date">Static analysis, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="code-scanning.pdf">Read the proposal</a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p><a href="../">← Back to research interests</a> · Last updated October 2026.</p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        var root = document.documentElement;
+        function sync() {
+          var dark = root.getAttribute('data-theme') === 'dark';
+          btn.textContent = dark ? '☀ Light' : '☾ Dark';
+          btn.setAttribute(
+            'aria-label',
+            dark ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+        }
+        sync();
+        btn.addEventListener('click', function () {
+          var next =
+            root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('theme', next);
+          } catch (e) {}
+          sync();
+        });
+      })();
+    </script>
+
+    <!-- Identity is injected at runtime so it is not present in the static
+         HTML source that simple scrapers / harvesters read. -->
+    <script>
+      (function () {
+        function dec(b) {
+          return new TextDecoder().decode(
+            Uint8Array.from(atob(b), function (c) {
+              return c.charCodeAt(0);
+            })
+          );
+        }
+        var name = dec('SG9hbmcgTmd1eWVu');
+        var full = dec('Tmd1eeG7hW4gUGjGsOG7m2MgQuG6o28gSG/DoG5n');
+        var user = dec('aG9hbmcubnBi');
+        var domain = dec('dmd1LmVkdS52bg==');
+
+        document.title = name + " — Bachelor's Thesis Topics";
+        var n = document.getElementById('name');
+        if (n) n.textContent = name;
+        var f = document.getElementById('fullname');
+        if (f) f.textContent = full;
+        var mine = document.getElementsByClassName('me');
+        for (var i = 0; i < mine.length; i++) mine[i].textContent = name;
+        var addr = user + '@' + domain;
+        var em = document.getElementById('email');
+        if (em) {
+          em.href = 'mail' + 'to:' + addr;
+          em.textContent = addr;
+        }
+        var em2 = document.getElementById('email-2');
+        if (em2) em2.href = 'mail' + 'to:' + addr;
+      })();
+    </script>
+  </body>
+</html>
