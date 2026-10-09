@@ -38,6 +38,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="stylesheet" href="../../style.css" />
+    <style>
+      /* Put each topic's keywords on their own line under the title. */
+      .entry-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    </style>
 
     <!-- Set the theme before paint to avoid a flash of the wrong colors. -->
     <script>
@@ -89,7 +96,7 @@
       </section>
 
       <section id="privacy">
-        <h2>Security and Privacy Engineering</h2>
+        <h2>Model-driven Security and Privacy</h2>
         <p style="margin-top: 1rem;">
           Model-driven privacy (MDP) is a software development methodology in
           which privacy requirements are specified as models and enforcement
@@ -145,6 +152,16 @@
             <a href="dsl-bpmn.pdf">Read</a>
           </p>
         </div>
+        
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Applying Model-driven Security and Privacy for Developing Data-centric Web Applications</span>
+            <span class="entry-date">Software Engineering, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="mdp-sport-center.pdf">Read</a>
+          </p>
+        </div>
       </section>
 
       <section id="formal-methods">
@@ -184,8 +201,6 @@
             <a href="privacy-policy-graph.pdf">Read</a>
           </p>
         </div>
-
-
       </section>
 
       <section id="scams">
@@ -209,6 +224,16 @@
           </div>
           <p class="entry-detail">
             <a href="scam-taxonomy.pdf">Read the proposal</a>
+          </p>
+        </div>
+        
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Modeling the Information Accountability in Software Systems</span>
+            <span class="entry-date">Accountability, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="inf-accountability.pdf">Read the proposal</a>
           </p>
         </div>
       </section>
