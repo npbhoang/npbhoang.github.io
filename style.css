@@ -14,6 +14,11 @@
   --accent: #0b5fb0;
   --accent-hover: #084a8a;
   --fig-threat: #c0392b;
+
+  /* Research areas: formal methods, software engineering, IT security. */
+  --area-fm: #6b3fa0;
+  --area-se: #1f7a44;
+  --area-sec: #c2410c;
 }
 
 [data-theme='dark'] {
@@ -25,6 +30,9 @@
   --accent: #6cb2ff;
   --accent-hover: #9bcbff;
   --fig-threat: #f0796b;
+  --area-fm: #c9a3ff;
+  --area-se: #5fd08a;
+  --area-sec: #f59e6b;
 }
 
 /* No-JS fallback: honour the OS preference when no explicit theme is set. */
@@ -38,6 +46,9 @@
     --accent: #6cb2ff;
     --accent-hover: #9bcbff;
     --fig-threat: #f0796b;
+    --area-fm: #c9a3ff;
+    --area-se: #5fd08a;
+    --area-sec: #f59e6b;
   }
 }
 
@@ -279,26 +290,78 @@ p {
 }
 
 .venn circle {
-  fill: var(--accent);
+  fill: var(--area);
   fill-opacity: 0.16;
-  stroke: var(--accent);
+  stroke: var(--area);
   stroke-width: 1.5;
 }
 
 .venn text {
-  fill: var(--text);
+  fill: var(--area);
   font-family: inherit;
   font-weight: 600;
   font-size: 15px;
   text-anchor: middle;
 }
 
+/* Research-area colours, shared by the Venn, inline terms and topic chips. */
+.area-fm {
+  --area: var(--area-fm);
+}
+
+.area-se {
+  --area: var(--area-se);
+}
+
+.area-sec {
+  --area: var(--area-sec);
+}
+
+strong.area {
+  color: var(--area);
+}
+
+.entry-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.3rem 0 0.15rem;
+}
+
+.area-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.area-legend .area-chip {
+  margin-right: 0.3rem;
+}
+
+.area-chip {
+  padding: 0.05rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--area) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--area) 12%, transparent);
+  color: var(--area);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Security & privacy property figure (ported from the defense slides). */
 .propfig {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem 1.2rem;
-  margin: 0.2rem 0 0.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 2rem;
+  max-width: 600px;
+  margin: 0.2rem auto 0.6rem;
 }
 
 .propfig figure {

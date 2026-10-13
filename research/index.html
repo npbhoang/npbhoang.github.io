@@ -72,7 +72,7 @@
           Faculty of Engineering, Vietnamese-German University
         </p>
         <ul class="links">
-          <li><a href="../">Back to homepage</a></li>
+          <li><a href="../">About me</a></li>
           <li><a id="email" href="#">Email</a></li>
           <li><a href="https://github.com/npbhoang">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/hoangnpb">LinkedIn</a></li>
@@ -82,28 +82,28 @@
       <section id="research">
         <h2>Research Interests</h2>
         <p class="lead">
-          My research lies at the intersection of <strong>formal methods</strong>, <strong>software
-          engineering</strong>, and <strong>IT security &amp; privacy</strong>. I develop software engineering methodologies and 
+          My research lies at the intersection of <strong class="area area-fm">formal methods</strong>, <strong class="area area-se">software
+          engineering</strong>, and <strong class="area area-sec">IT security &amp; privacy</strong>. I develop software engineering methodologies and 
           tools that use formal methods to make security and privacy requirements precise, analyzable, and enforceable.
         </p>
 
         <figure class="venn-fig">
           <svg class="venn" viewBox="0 0 360 300" role="img">
             <title>Formal methods, software engineering, and IT security</title>
-            <circle cx="180" cy="112" r="74" />
-            <circle cx="138" cy="188" r="74" />
-            <circle cx="222" cy="188" r="74" />
-            <text x="180" y="86">
+            <circle class="area-fm" cx="180" cy="105" r="84" />
+            <circle class="area-se" cx="132" cy="191" r="84" />
+            <circle class="area-sec" cx="228" cy="191" r="84" />
+            <text class="area-fm" x="180" y="76">
               <tspan x="180">Formal</tspan>
               <tspan x="180" dy="18">Methods</tspan>
             </text>
-            <text x="112" y="196">
-              <tspan x="112">Software</tspan>
-              <tspan x="112" dy="18">Engineering</tspan>
+            <text class="area-se" x="103" y="200">
+              <tspan x="103">Software</tspan>
+              <tspan x="103" dy="18">Engineering</tspan>
             </text>
-            <text x="248" y="196">
-              <tspan x="248">IT</tspan>
-              <tspan x="248" dy="18">Security</tspan>
+            <text class="area-sec" x="257" y="200">
+              <tspan x="257">IT</tspan>
+              <tspan x="257" dy="18">Security</tspan>
             </text>
           </svg>
         </figure>
@@ -111,8 +111,8 @@
 
       <section id="directions">
 
-        <p>I investigate how model-driven engineering can be used to develop secure and privacy-by-design software systems. 
-          In this approach, security and privacy requirements are specified formally as models in the design phase.
+        <p>During my master and doctorate study, I investigated how model-driven engineering can be used to develop secure and privacy-by-design software systems. 
+          In our approach, security and privacy requirements are specified formally as models in the design phase.
           These models can then be analyzed and used to generate automatically implementation artifacts.</p>
 
         <p>For example,</p>
@@ -123,47 +123,31 @@
               <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
               <circle class="node" cx="48" cy="150" r="24" />
               <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
-              <ellipse class="halo" cx="252" cy="120" rx="17" ry="5" />
-              <circle class="node" cx="252" cy="150" r="24" />
-              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
-              <line class="link" x1="74" y1="150" x2="216" y2="150" />
-              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
-              <rect class="env-box" x="120" y="100" width="60" height="40" />
-              <path class="env-flap" d="M120 100 L150 122 L180 100" />
-              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
+              <text class="stereo" x="48" y="102" text-anchor="middle">&#171;end user&#187;</text>
+              <line class="link" x1="74" y1="150" x2="120" y2="150" />
+              <path class="link-head" d="M130 150 L120 145 L120 155 Z" />
+              <path class="link" d="M138 135 V125 A12 12 0 0 1 162 125 V135" />
+              <rect class="env-box" x="130" y="135" width="40" height="32" rx="4" />
+              <circle class="link-head" cx="150" cy="148" r="3.5" />
+              <path class="link-head" d="M148 150 L152 150 L153 158 L147 158 Z" />
+              <text class="stereo" x="150" y="192" text-anchor="middle">&#171;enforcement mechanism&#187;</text>
+              <line class="link" x1="170" y1="150" x2="214" y2="150" />
+              <path class="link-head" d="M224 150 L214 145 L214 155 Z" />
+              <rect class="rec" x="238" y="132" width="40" height="28" />
+              <rect class="rec" x="232" y="138" width="40" height="28" />
+              <rect class="rec" x="226" y="144" width="40" height="28" />
+              <text class="glyph" x="246" y="162" text-anchor="middle">pd</text>
               <path class="threat-fill" d="M139 23 L132 9 L148 19 Z" />
               <path class="threat-fill" d="M161 23 L168 9 L152 19 Z" />
               <circle class="threat-node" cx="150" cy="36" r="21" />
               <text class="threat-label" x="150" y="36" text-anchor="middle" dominant-baseline="central">C</text>
-              <line class="dash threat" x1="150" y1="59" x2="150" y2="90" />
-              <path class="threat-fill" d="M144 91 L156 91 L150 100 Z" />
+              <text class="stereo" x="178" y="40" text-anchor="start">&#171;attacker&#187;</text>
+              <line class="dash threat" x1="150" y1="59" x2="150" y2="74" />
+              <path class="threat-fill" d="M144 75 L156 75 L150 84 Z" />
+              <line class="link threat" x1="143" y1="91" x2="157" y2="105" />
+              <line class="link threat" x1="157" y1="91" x2="143" y2="105" />
             </svg>
-            <figcaption>Confidentiality</figcaption>
-          </figure>
-
-          <figure>
-            <svg viewBox="0 0 300 210" role="img">
-              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
-              <circle class="node" cx="48" cy="150" r="24" />
-              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
-              <ellipse class="halo" cx="252" cy="120" rx="17" ry="5" />
-              <circle class="node" cx="252" cy="150" r="24" />
-              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
-              <line class="link" x1="74" y1="150" x2="216" y2="150" />
-              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
-              <rect class="env-box" x="120" y="100" width="60" height="40" />
-              <path class="env-flap" d="M120 100 L150 122 L180 100" />
-              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
-              <path class="threat-fill" d="M139 23 L132 9 L148 19 Z" />
-              <path class="threat-fill" d="M161 23 L168 9 L152 19 Z" />
-              <circle class="threat-node" cx="150" cy="36" r="21" />
-              <text class="threat-label" x="150" y="36" text-anchor="middle" dominant-baseline="central">C</text>
-              <line class="dash threat" x1="132" y1="56" x2="72" y2="118" />
-              <path class="threat-fill" d="M64 125 L69 113 L76 121 Z" />
-              <line class="dash threat" x1="168" y1="56" x2="228" y2="118" />
-              <path class="threat-fill" d="M236 125 L231 113 L224 121 Z" />
-            </svg>
-            <figcaption>Anonymity</figcaption>
+            <figcaption>Access control</figcaption>
           </figure>
 
           <figure>
@@ -173,7 +157,8 @@
               <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
               <text class="stereo" x="48" y="102" text-anchor="middle">&#171;end user&#187;</text>
               <text class="stereo" x="252" y="102" text-anchor="middle">&#171;developer&#187;</text>
-              <ellipse class="halo" cx="252" cy="118" rx="17" ry="5" />
+              <path class="threat-fill" d="M239 136 L231 120 L250 131 Z" />
+              <path class="threat-fill" d="M265 136 L273 120 L254 131 Z" />
               <circle class="node" cx="252" cy="150" r="24" />
               <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
               <line class="link" x1="74" y1="150" x2="216" y2="150" />
@@ -189,8 +174,12 @@
           </figure>
         </div>
         <p class="propfig-note">
-          A, B are the communicating parties, C is the adversary, m denotes the message, pd denotes personal data
+          A, B are the communicating parties, C is an unauthorized party, m denotes the message, pd denotes personal data
         </p>
+
+        <br>
+
+        <p>I am also interested in different security and privacy properties.</p>
 
         <p class="subhead">Security properties</p>
         <ul class="deflist">
@@ -229,7 +218,7 @@
       </section>
 
       <footer>
-        <p><a href="../">Back to homepage</a> · Last updated September 2026.</p>
+        <p><a href="../">About me</a> · Last updated September 2026.</p>
       </footer>
     </div>
 
