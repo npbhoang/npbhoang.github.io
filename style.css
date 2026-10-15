@@ -19,6 +19,12 @@
   --area-fm: #6b3fa0;
   --area-se: #1f7a44;
   --area-sec: #c2410c;
+
+  /* Topic status (traffic-light) and degree-level chips. */
+  --status-open: #0b5fb0;
+  --status-ongoing: #b26a00;
+  --status-completed: #1f7a44;
+  --level-color: #5d636d;
 }
 
 [data-theme='dark'] {
@@ -33,6 +39,10 @@
   --area-fm: #c9a3ff;
   --area-se: #5fd08a;
   --area-sec: #f59e6b;
+  --status-open: #6cb2ff;
+  --status-ongoing: #e0a458;
+  --status-completed: #5fd08a;
+  --level-color: #99a1ac;
 }
 
 /* No-JS fallback: honour the OS preference when no explicit theme is set. */
@@ -49,6 +59,10 @@
     --area-fm: #c9a3ff;
     --area-se: #5fd08a;
     --area-sec: #f59e6b;
+    --status-open: #6cb2ff;
+    --status-ongoing: #e0a458;
+    --status-completed: #5fd08a;
+    --level-color: #99a1ac;
   }
 }
 
@@ -353,6 +367,115 @@ strong.area {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Degree level, shown as plain descriptor text on the topic's meta row. */
+.entry-level {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Status chip: traffic-light pill, shown as a prefix to the topic title. */
+.status-chip {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--status) 42%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--status) 13%, transparent);
+  color: var(--status);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-open {
+  --status: var(--status-open);
+}
+
+.status-ongoing {
+  --status: var(--status-ongoing);
+}
+
+.status-completed {
+  --status: var(--status-completed);
+}
+
+/* Legend: three stacked rows (area, level, status). */
+.topic-legend {
+  margin-top: 1rem;
+}
+
+.topic-legend .area-legend {
+  margin-top: 0.4rem;
+}
+
+.topic-legend .area-legend:first-child {
+  margin-top: 0;
+}
+
+/* Filter bar — progressive enhancement, shown only with JS. */
+.topic-filters {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1.4rem 0 0;
+}
+
+html.js .topic-filters {
+  display: flex;
+}
+
+.topic-filters .filter-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.topic-filters .filter-label:not(:first-child) {
+  margin-left: 0.8rem;
+}
+
+.filter-btn {
+  padding: 0.12rem 0.62rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.filter-btn[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.topic-count {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+html:not(.js) .topic-count {
+  display: none;
+}
+
+.entry[hidden],
+section[hidden] {
+  display: none;
 }
 
 /* Security & privacy property figure (ported from the defense slides). */
@@ -666,7 +789,9 @@ html.js .theme-toggle {
 /* ---- Print -------------------------------------------------------------- */
 
 @media print {
-  .theme-toggle {
+  .theme-toggle,
+  .topic-filters,
+  .topic-count {
     display: none !important;
   }
 

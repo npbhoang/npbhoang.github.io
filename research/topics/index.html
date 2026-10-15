@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hoang Nguyen — Bachelor's Thesis Topics</title>
+    <title>Hoang Nguyen — Thesis Topics</title>
     <meta
       name="description"
-      content="Open Bachelor's thesis topics"
+      content="Bachelor's and Master's thesis topics."
     />
     <link rel="canonical" href="https://npbhoang.github.io/research/topics/" />
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hoang Nguyen" />
-    <meta property="og:title" content="Hoang Nguyen — Bachelor's Thesis Topics" />
+    <meta property="og:title" content="Hoang Nguyen — Thesis Topics" />
     <meta
       property="og:description"
-      content="Open Bachelor's thesis topics."
+      content="Bachelor's and Master's thesis topics."
     />
     <meta property="og:url" content="https://npbhoang.github.io/research/topics/" />
     <meta property="og:image" content="https://npbhoang.github.io/og-image.png" />
@@ -29,20 +29,26 @@
     />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hoang Nguyen — Bachelor's Thesis Topics" />
+    <meta name="twitter:title" content="Hoang Nguyen — Thesis Topics" />
     <meta
       name="twitter:description"
-      content="Open Bachelor's thesis topics."
+      content="Bachelor's and Master's thesis topics."
     />
     <meta name="twitter:image" content="https://npbhoang.github.io/og-image.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="stylesheet" href="../../style.css" />
     <style>
-      /* Put each topic's keywords on their own line under the title. */
+      /* Title on its own line; tags on the next row with the keywords
+         pushed to the right edge of that same row. */
       .entry-head {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+      }
+      .entry-head .entry-title {
+        flex: 1 1 100%;
+      }
+      .entry-head .entry-date {
+        margin-left: auto;
       }
     </style>
 
@@ -88,20 +94,39 @@
       </header>
 
       <section id="topics">
-        <h2>Bachelor's Thesis Topics</h2>
+        <h2>Thesis Topics</h2>
         <p class="lead">
-          The following topics are open for Bachelor's theses in Computer
-          Science at the Vietnamese-German University.
+          Topics I supervise or have supervised — Bachelor's and Master's
+          theses at the Vietnamese-German University and previously at
+          ETH&nbsp;Zürich. <strong>Open</strong> topics are
+          available for new students; <strong>ongoing</strong> and
+          <strong>completed</strong> ones are listed for context.
         </p>
-        <ul class="area-legend">
-          <li><span class="area-chip area-fm">FM</span> Formal Methods</li>
-          <li><span class="area-chip area-se">SWE</span> Software Engineering</li>
-          <li><span class="area-chip area-sec">ITS</span> IT Security</li>
-        </ul>
+
+        <div class="topic-legend">
+          <ul class="area-legend">
+            <li><span class="status-chip status-open">Open</span> available</li>
+            <li><span class="status-chip status-ongoing">Ongoing</span> in progress</li>
+            <li><span class="status-chip status-completed">Completed</span> finished</li>
+          </ul>
+        </div>
+
+        <div class="topic-filters" role="group" aria-label="Filter topics">
+          <span class="filter-label">Status</span>
+          <button type="button" class="filter-btn" data-filter="status" data-value="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="status" data-value="open" aria-pressed="false">Open</button>
+          <button type="button" class="filter-btn" data-filter="status" data-value="ongoing" aria-pressed="false">Ongoing</button>
+          <button type="button" class="filter-btn" data-filter="status" data-value="completed" aria-pressed="false">Completed</button>
+          <span class="filter-label">Level</span>
+          <button type="button" class="filter-btn" data-filter="level" data-value="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="level" data-value="bsc" aria-pressed="false">Bachelor's</button>
+          <button type="button" class="filter-btn" data-filter="level" data-value="msc" aria-pressed="false">Master's</button>
+        </div>
+        <p class="topic-count" id="topic-count"></p>
       </section>
 
       <section id="privacy">
-        <h2>Model-driven Security and Privacy</h2>
+        <h2>Model-driven Privacy</h2>
         <p style="margin-top: 1rem;">
           Model-driven privacy (MDP) is a software development methodology in
           which privacy requirements are specified as models and enforcement
@@ -116,14 +141,11 @@
           <a href="../../publications/PETS24.pdf">Read our paper</a>
         </p>
 
-        <h3 class="subhead">Open topics</h3>
-
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Modeling and Enforcing Data Subject Rights for Unauthenticated Users</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Modeling and Enforcing Data Subject Rights for Unauthenticated Users</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Modeling, Privacy</span>
           </div>
@@ -132,12 +154,11 @@
           </p>
         </div>
 
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Modeling and Enforcing Shared Ownership of Personal Data</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Modeling and Enforcing Shared Ownership of Personal Data</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Modeling, Privacy</span>
           </div>
@@ -146,12 +167,11 @@
           </p>
         </div>
 
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">A Domain-Specific Language for Privacy-Aware Business Processes</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> A Domain-Specific Language for Privacy-Aware Business Processes</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Modeling, Privacy</span>
           </div>
@@ -160,26 +180,11 @@
           </p>
         </div>
 
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Purpose-based Access Control for Relational Database Management System</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Applying Model-driven Security and Privacy for Developing Data-centric Web Applications</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
-            </span>
-            <span class="entry-date">Databases, Privacy</span>
-          </div>
-          <p class="entry-detail">
-            <a href="purpose-mysql.pdf">Read</a>
-          </p>
-        </div>
-        
-        <div class="entry">
-          <div class="entry-head">
-            <span class="entry-title">Applying Model-driven Security and Privacy for Developing Data-centric Web Applications</span>
-            <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Software Engineering, Privacy</span>
           </div>
@@ -188,12 +193,11 @@
           </p>
         </div>
 
-         <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">A Web-based Code Editor for Model-driven Privacy</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> A Web-based Code Editor for Model-driven Privacy</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Software Engineering, Privacy</span>
           </div>
@@ -201,18 +205,69 @@
             <a href="mdp-web-editor.pdf">Read</a>
           </p>
         </div>
-        
-        <div class="entry">
+
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Well-formedness for the νActionGUI Modeling Languages</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Well-formedness for the νActionGUI Modeling Languages</span>
             <span class="entry-areas">
-              <span class="area-chip area-fm" title="Formal Methods">FM</span>
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Software Engineering, Privacy</span>
           </div>
           <p class="entry-detail">
             <a href="mdp-language-constraints.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="bsc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> Model Transformations for Privacy by Design</span>
+            <span class="entry-areas">
+              <span class="entry-level">Bachelor's thesis</span>
+            </span>
+            <span class="entry-date">Model transformation, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="model-transformations-privacy.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="msc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> νActionGUI: A Model DSL and Language Server</span>
+            <span class="entry-areas">
+              <span class="entry-level">Master's project</span>
+            </span>
+            <span class="entry-date">DSL, Tooling</span>
+          </div>
+          <p class="entry-detail">
+            <a href="nuactiongui-dsl.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="msc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> Privacy-aware Object Relational Mappers</span>
+            <span class="entry-areas">
+              <span class="entry-level">Master's thesis</span>
+            </span>
+            <span class="entry-date">Databases, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="privacy-aware-orm.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="msc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> νActionGUI: Process Permissions and Data Subject Rights</span>
+            <span class="entry-areas">
+              <span class="entry-level">Master's project</span>
+            </span>
+            <span class="entry-date">Modeling, GDPR</span>
+          </div>
+          <p class="entry-detail">
+            <a href="nuactiongui-process-permissions.pdf">Read</a>
           </p>
         </div>
       </section>
@@ -223,14 +278,24 @@
           Formal methods are mathematically rigorous techniques for specifying, modeling, 
           and verifying systems. </p>
 
-        <h3 class="subhead">Open topics</h3>
-
-        <div class="entry">
+        <div class="entry" data-level="msc" data-status="ongoing">
           <div class="entry-head">
-            <span class="entry-title">Formalizable Vietnam's Personal Data Protection Law</span>
+            <span class="entry-title"><span class="status-chip status-ongoing" title="Ongoing — a student is working on it">Ongoing</span> Data Protection Formal Reasoning</span>
             <span class="entry-areas">
-              <span class="area-chip area-fm" title="Formal Methods">FM</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Master's thesis</span>
+            </span>
+            <span class="entry-date">Formal methods, SMT</span>
+          </div>
+          <p class="entry-detail">
+            <a href="data-protection-formal-reasoning.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="bsc" data-status="open">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Formalizable Vietnam's Personal Data Protection Law</span>
+            <span class="entry-areas">
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Formal Methods, Privacy</span>
           </div>
@@ -239,13 +304,11 @@
           </p>
         </div>
 
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Static Analysis for Personal Data</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Static Analysis for Personal Data</span>
             <span class="entry-areas">
-              <span class="area-chip area-fm" title="Formal Methods">FM</span>
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Static analysis, Privacy</span>
           </div>
@@ -254,12 +317,11 @@
           </p>
         </div>
 
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Personal Data Analysis of Website Privacy Notices</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Personal Data Analysis of Website Privacy Notices</span>
             <span class="entry-areas">
-              <span class="area-chip area-fm" title="Formal Methods">FM</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Graph theory, Privacy</span>
           </div>
@@ -281,32 +343,86 @@
           <a href="https://saferinternetlab.org/wp-content/uploads/2025/06/Research-Report-A4_Fraud-Vietnam.pdf">Read the Safer Internet Lab report</a>
         </p>
 
-        <h3 class="subhead">Open topics</h3>
-
-        <div class="entry">
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">A Taxonomy of Online Scams in Vietnam</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> A Taxonomy of Online Scams in Vietnam</span>
             <span class="entry-areas">
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Online fraud, Classification</span>
           </div>
           <p class="entry-detail">
-            <a href="scam-taxonomy.pdf">Read the proposal</a>
+            <a href="scam-taxonomy.pdf">Read</a>
           </p>
         </div>
-        
-        <div class="entry">
+
+        <div class="entry" data-level="bsc" data-status="open">
           <div class="entry-head">
-            <span class="entry-title">Modeling the Information Accountability in Software Systems</span>
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Modeling the Information Accountability in Software Systems</span>
             <span class="entry-areas">
-              <span class="area-chip area-se" title="Software Engineering">SWE</span>
-              <span class="area-chip area-sec" title="IT Security">ITS</span>
+              <span class="entry-level">Bachelor's thesis</span>
             </span>
             <span class="entry-date">Accountability, Privacy</span>
           </div>
           <p class="entry-detail">
-            <a href="inf-accountability.pdf">Read the proposal</a>
+            <a href="inf-accountability.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="msc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> Automated and Agile Threat Modeling for Industrial Control Systems</span>
+            <span class="entry-areas">
+              <span class="entry-level">Master's thesis</span>
+            </span>
+            <span class="entry-date">Threat modeling, Security</span>
+          </div>
+          <p class="entry-detail">
+            <a href="threat-modeling-ics.pdf">Read</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="access-control">
+        <h2>Enforcing Fine-grained Access Control on Data-centric Applications</h2>
+        <p style="margin-top: 1rem;">
+          Fine-grained access control (FGAC) policies are policies that authorization decisions
+          based not only on a user's role and the data they are permitted to act on, 
+          but also on contextual conditions that may depend on the current state of the application. 
+          Enforcing such policies in
+          data-centric applications is challenging becauese access control rules are often manually implemented
+          and scattered across the codebase, making them error-prone
+          and difficult to maintain. To address this challenge, we aim to make FGAC
+          policies explicit and enforce them systematically at the data
+          layer, e.g., by rewriting SQL queries or intercepting the object-relational
+          mapper so that personal data never leaves the database unchecked.
+          <br>
+          <a href="../../publications/SNCS20.pdf">Read our paper</a>
+        </p>
+
+        <div class="entry" data-level="bsc" data-status="open">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-open" title="Open — available for a new student">Open</span> Purpose-based Access Control for Relational Database Management System</span>
+            <span class="entry-areas">
+              <span class="entry-level">Bachelor's thesis</span>
+            </span>
+            <span class="entry-date">Databases, Privacy</span>
+          </div>
+          <p class="entry-detail">
+            <a href="purpose-mysql.pdf">Read</a>
+          </p>
+        </div>
+
+        <div class="entry" data-level="bsc" data-status="completed">
+          <div class="entry-head">
+            <span class="entry-title"><span class="status-chip status-completed" title="Completed">Completed</span> Secure Object-Relational Mappers</span>
+            <span class="entry-areas">
+              <span class="entry-level">Bachelor's thesis</span>
+            </span>
+            <span class="entry-date">Databases, Access control</span>
+          </div>
+          <p class="entry-detail">
+            <a href="secure-orm.pdf">Read</a>
           </p>
         </div>
       </section>
@@ -342,6 +458,61 @@
       })();
     </script>
 
+    <!-- Topic filtering: show entries matching the active status + level. -->
+    <script>
+      (function () {
+        var entries = [].slice.call(
+          document.querySelectorAll('.entry[data-status]')
+        );
+        if (!entries.length) return;
+
+        var sections = [].slice
+          .call(document.querySelectorAll('section'))
+          .filter(function (s) {
+            return s.querySelector('.entry[data-status]');
+          });
+        var buttons = [].slice.call(document.querySelectorAll('.filter-btn'));
+        var countEl = document.getElementById('topic-count');
+        var total = entries.length;
+        var filters = { status: 'all', level: 'all' };
+
+        function apply() {
+          var shown = 0;
+          entries.forEach(function (e) {
+            var ok =
+              (filters.status === 'all' ||
+                e.getAttribute('data-status') === filters.status) &&
+              (filters.level === 'all' ||
+                e.getAttribute('data-level') === filters.level);
+            e.hidden = !ok;
+            if (ok) shown++;
+          });
+          sections.forEach(function (s) {
+            s.hidden = !s.querySelector('.entry[data-status]:not([hidden])');
+          });
+          if (countEl) {
+            countEl.textContent =
+              'Showing ' + shown + ' of ' + total + ' topics';
+          }
+        }
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var group = btn.getAttribute('data-filter');
+            filters[group] = btn.getAttribute('data-value');
+            buttons.forEach(function (b) {
+              if (b.getAttribute('data-filter') === group) {
+                b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+              }
+            });
+            apply();
+          });
+        });
+
+        apply();
+      })();
+    </script>
+
     <!-- Identity is injected at runtime so it is not present in the static
          HTML source that simple scrapers / harvesters read. -->
     <script>
@@ -358,7 +529,7 @@
         var user = dec('aG9hbmcubnBi');
         var domain = dec('dmd1LmVkdS52bg==');
 
-        document.title = name + " — Bachelor's Thesis Topics";
+        document.title = name + ' — Thesis Topics';
         var n = document.getElementById('name');
         if (n) n.textContent = name;
         var f = document.getElementById('fullname');
