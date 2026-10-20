@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hoang Nguyen – Well-formedness for the νActionGUI Modeling Languages</title>
+    <meta name="description" content="Bachelor's thesis topic: Well-formedness for the νActionGUI Modeling Languages." />
+    <link rel="canonical" href="https://npbhoang.github.io/research/topics/mdp-language-constraints.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hoang Nguyen" />
+    <meta property="og:title" content="Well-formedness for the νActionGUI Modeling Languages" />
+    <meta property="og:description" content="Bachelor's thesis topic: Well-formedness for the νActionGUI Modeling Languages." />
+    <meta property="og:url" content="https://npbhoang.github.io/research/topics/mdp-language-constraints.html" />
+    <meta property="og:image" content="https://npbhoang.github.io/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      .topic-meta {
+        margin: 0.2rem 0 1.2rem;
+      }
+      .motivation ul {
+        margin: 0.4rem 0 1rem;
+        padding-left: 1.4rem;
+      }
+      .refs {
+        list-style: none;
+        padding-left: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .refs li {
+        margin-bottom: 0.4rem;
+        padding-left: 2.6rem;
+        text-indent: -2.6rem;
+        overflow-wrap: anywhere;
+      }
+      .refs .ref-num {
+        display: inline-block;
+        width: 2.6rem;
+        text-indent: 0;
+      }
+      .contact-box {
+        margin-top: 1.8rem;
+        padding: 0.9rem 1.1rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        border-radius: 6px;
+      }
+    </style>
+
+    <!-- Set the theme before paint to avoid a flash of the wrong colors. -->
+    <script>
+      (function () {
+        var el = document.documentElement;
+        el.classList.add('js');
+        try {
+          var forced = new URLSearchParams(location.search).get('theme');
+          var theme = forced || localStorage.getItem('theme');
+          if (theme !== 'light' && theme !== 'dark') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          }
+          el.setAttribute('data-theme', theme);
+        } catch (e) {
+          el.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <button id="theme-toggle" class="theme-toggle" type="button">Dark</button>
+
+    <div class="wrap">
+      <header>
+        <h1 id="name"></h1>
+        <p class="fullname" id="fullname"></p>
+        <p class="affil">
+          Research and Teaching Assistant, Computer Science Program<br />
+          Faculty of Engineering, Vietnamese-German University
+        </p>
+        <ul class="links">
+          <li><a href="./">Thesis topics</a></li>
+          <li><a href="../">Research interests</a></li>
+          <li><a href="../../">Homepage</a></li>
+          <li><a id="email" href="#">Email</a></li>
+        </ul>
+      </header>
+
+      <section id="topic">
+        <h2>Well-formedness for the νActionGUI Modeling Languages</h2>
+        <p class="topic-meta">
+          <span class="status-chip status-open" title="Available">Open</span>
+          <span class="entry-level">Bachelor's thesis</span>
+          <span class="note">· Model validation, Data protection</span>
+        </p>
+
+        <h3>Motivation</h3>
+        <div class="motivation">
+        <p>
+          Model-driven privacy [1] (MDP) is a software development methodology in
+          which privacy requirements are specified as models, and enforcement
+          mechanisms are generated automatically via model transformations. MDP
+          enables developers to specify three interconnected declarative models:
+          a data model describing the state space of the system, a security
+          model capturing fine-grained access control requirements (building on
+          SecureUML [2]), and a privacy model expressing data protection
+          requirements. From these models, the methodology automatically
+          generates a web application together with enforcement mechanisms that
+          make it security- and privacy-aware by design. The approach is
+          implemented in a tool called νActionGUI [3], in which the three models are
+          written as plain text files and fed to a generator.
+        </p>
+        <p>
+          Each modeling language has a grammar that defines which texts are
+          syntactically valid. But being grammatically correct is not enough: a
+          model must also satisfy a number of well-formedness constraints before
+          it denotes a meaningful system. For example,
+        </p>
+        <ul>
+          <li>
+            for any data model, two entities must not share the same name,
+            and an attribute name must be unique within its entity;
+          </li>
+          <li>
+            given a data model, for any security model, an authorization
+            rule in the security model must not reference an entity or
+            attribute that does not exist in the data model; and
+          </li>
+          <li>
+            given a data model and security model, for any privacy model, a
+            personal data declaration in the privacy model must be a subset
+            of the data model resource.
+          </li>
+        </ul>
+        <p>
+          Such rules are typically captured as well-formedness constraints over
+          the abstract syntax. For the νActionGUI modeling languages, some of
+          these constraints are currently enforced in the tool but are not
+          documented systematically. As a result, many violations are not
+          caught. A precise, complete catalog of well-formedness constraints and
+          informative violation reporting would make the approach more robust.
+        </p>
+        </div>
+
+        <h3>References</h3>
+        <ul class="refs">
+          <li><span class="ref-num">[1]</span> Srdan Krstic, Hoang Nguyen, and David Basin. Model-driven privacy. <em>Proc. Priv. Enhancing Technol.</em>, 2024(1):314–329, 2024.</li>
+          <li><span class="ref-num">[2]</span> Torsten Lodderstedt, David Basin, and Jürgen Doser. SecureUML: A UML-based modeling language for model-driven security. In <em>UML 2002 — The Unified Modeling Language</em>, volume 2460 of <em>Lecture Notes in Computer Science</em>, pages 426–441. Springer, 2002.</li>
+          <li><span class="ref-num">[3]</span> Hoang Nguyen, Srdan Krstic, and David Basin. νActionGUI: Model-driven security and privacy, 2024.</li>
+        </ul>
+
+        <p class="contact-box">
+          If you are interested in this topic, <a class="contact" href="#">contact
+          Dr. Hoang Nguyen</a> to arrange further discussion and for a
+          complete thesis topic.
+        </p>
+      </section>
+
+      <footer>
+        <p><a href="./">Back to thesis topics</a> · Last updated October 2026.</p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        var root = document.documentElement;
+        function sync() {
+          var dark = root.getAttribute('data-theme') === 'dark';
+          btn.textContent = dark ? '☀ Light' : '☾ Dark';
+          btn.setAttribute(
+            'aria-label',
+            dark ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+        }
+        sync();
+        btn.addEventListener('click', function () {
+          var next =
+            root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('theme', next);
+          } catch (e) {}
+          sync();
+        });
+      })();
+    </script>
+
+    <!-- Identity is injected at runtime so it is not present in the static
+         HTML source that simple scrapers / harvesters read. -->
+    <script>
+      (function () {
+        function dec(b) {
+          return new TextDecoder().decode(
+            Uint8Array.from(atob(b), function (c) {
+              return c.charCodeAt(0);
+            })
+          );
+        }
+        var name = dec('SG9hbmcgTmd1eWVu');
+        var full = dec('Tmd1eeG7hW4gUGjGsOG7m2MgQuG6o28gSG/DoG5n');
+        var user = dec('aG9hbmcubnBi');
+        var domain = dec('dmd1LmVkdS52bg==');
+
+        var n = document.getElementById('name');
+        if (n) n.textContent = name;
+        var f = document.getElementById('fullname');
+        if (f) f.textContent = full;
+        var addr = user + '@' + domain;
+        var em = document.getElementById('email');
+        if (em) {
+          em.href = 'mail' + 'to:' + addr;
+          em.textContent = addr;
+        }
+        var contacts = document.getElementsByClassName('contact');
+        for (var i = 0; i < contacts.length; i++) {
+          contacts[i].href = 'mail' + 'to:' + addr;
+        }
+      })();
+    </script>
+  </body>
+</html>
