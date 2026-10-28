@@ -10,7 +10,6 @@
     />
     <link rel="canonical" href="https://npbhoang.github.io/research/topics/" />
 
-    <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hoang Nguyen" />
     <meta property="og:title" content="Hoang Nguyen – Thesis Topics" />
@@ -39,8 +38,6 @@
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="stylesheet" href="../../style.css" />
     <style>
-      /* Title on its own line; tags on the next row with the keywords
-         pushed to the right edge of that same row. */
       .entry-head {
         align-items: center;
       }
@@ -52,7 +49,6 @@
       }
     </style>
 
-    <!-- Set the theme before paint to avoid a flash of the wrong colors. -->
     <script>
       (function () {
         var el = document.documentElement;
@@ -92,6 +88,131 @@
           <li><a href="https://www.linkedin.com/in/hoangnpb">LinkedIn</a></li>
         </ul>
       </header>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <p class="lead">
+          My research lies at the intersection of <strong class="area area-fm">formal methods</strong>, <strong class="area area-se">software
+          engineering</strong>, and <strong class="area area-sec">IT security &amp; privacy</strong>. I develop software engineering methodologies and 
+          tools that use formal methods to make security and privacy requirements precise, analyzable, and enforceable.
+        </p>
+
+        <figure class="venn-fig">
+          <svg class="venn" viewBox="0 0 360 300" role="img">
+            <title>Formal methods, software engineering, and IT security</title>
+            <circle class="area-fm" cx="180" cy="105" r="84" />
+            <circle class="area-se" cx="132" cy="191" r="84" />
+            <circle class="area-sec" cx="228" cy="191" r="84" />
+            <text class="area-fm" x="180" y="76">
+              <tspan x="180">Formal</tspan>
+              <tspan x="180" dy="18">Methods</tspan>
+            </text>
+            <text class="area-se" x="103" y="200">
+              <tspan x="103">Software</tspan>
+              <tspan x="103" dy="18">Engineering</tspan>
+            </text>
+            <text class="area-sec" x="257" y="200">
+              <tspan x="257">IT</tspan>
+              <tspan x="257" dy="18">Security</tspan>
+            </text>
+          </svg>
+        </figure>
+      </section>
+
+      <section id="directions">
+
+        <p>During my master and doctorate study, I investigated how model-driven engineering can be used to develop secure and privacy-by-design software systems. 
+          In our approach, security and privacy requirements are specified formally as models in the design phase.
+          These models can then be analyzed and used to generate automatically implementation artifacts.</p>
+
+        <p>For example,</p>
+
+        <div class="propfig">
+          <figure>
+            <svg viewBox="0 0 300 210" role="img">
+              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="48" cy="150" r="24" />
+              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
+              <text class="stereo" x="48" y="102" text-anchor="middle">&#171;end user&#187;</text>
+              <line class="link" x1="74" y1="150" x2="120" y2="150" />
+              <path class="link-head" d="M130 150 L120 145 L120 155 Z" />
+              <path class="link" d="M138 135 V125 A12 12 0 0 1 162 125 V135" />
+              <rect class="env-box" x="130" y="135" width="40" height="32" rx="4" />
+              <circle class="link-head" cx="150" cy="148" r="3.5" />
+              <path class="link-head" d="M148 150 L152 150 L153 158 L147 158 Z" />
+              <text class="stereo" x="150" y="192" text-anchor="middle">&#171;enforcement mechanism&#187;</text>
+              <line class="link" x1="170" y1="150" x2="214" y2="150" />
+              <path class="link-head" d="M224 150 L214 145 L214 155 Z" />
+              <rect class="rec" x="238" y="132" width="40" height="28" />
+              <rect class="rec" x="232" y="138" width="40" height="28" />
+              <rect class="rec" x="226" y="144" width="40" height="28" />
+              <text class="glyph" x="246" y="162" text-anchor="middle">pd</text>
+              <path class="threat-fill" d="M139 23 L132 9 L148 19 Z" />
+              <path class="threat-fill" d="M161 23 L168 9 L152 19 Z" />
+              <circle class="threat-node" cx="150" cy="36" r="21" />
+              <text class="threat-label" x="150" y="36" text-anchor="middle" dominant-baseline="central">C</text>
+              <text class="stereo" x="178" y="40" text-anchor="start">&#171;attacker&#187;</text>
+              <line class="dash threat" x1="150" y1="59" x2="150" y2="74" />
+              <path class="threat-fill" d="M144 75 L156 75 L150 84 Z" />
+              <line class="link threat" x1="143" y1="91" x2="157" y2="105" />
+              <line class="link threat" x1="157" y1="91" x2="143" y2="105" />
+            </svg>
+            <figcaption>Access control</figcaption>
+          </figure>
+
+          <figure>
+            <svg viewBox="0 0 300 210" role="img">
+              <ellipse class="halo" cx="48" cy="120" rx="17" ry="5" />
+              <circle class="node" cx="48" cy="150" r="24" />
+              <text class="label" x="48" y="150" text-anchor="middle" dominant-baseline="central">A</text>
+              <text class="stereo" x="48" y="102" text-anchor="middle">&#171;end user&#187;</text>
+              <text class="stereo" x="252" y="102" text-anchor="middle">&#171;developer&#187;</text>
+              <path class="threat-fill" d="M239 136 L231 120 L250 131 Z" />
+              <path class="threat-fill" d="M265 136 L273 120 L254 131 Z" />
+              <circle class="node" cx="252" cy="150" r="24" />
+              <text class="label" x="252" y="150" text-anchor="middle" dominant-baseline="central">B</text>
+              <line class="link" x1="74" y1="150" x2="216" y2="150" />
+              <path class="link-head" d="M226 150 L216 145 L216 155 Z" />
+              <rect class="env-box" x="120" y="100" width="60" height="40" />
+              <path class="env-flap" d="M120 100 L150 122 L180 100" />
+              <text class="glyph" x="150" y="132" text-anchor="middle">m</text>
+              <rect class="rec" x="258" y="171" width="26" height="17" />
+              <rect class="rec" x="264" y="166" width="26" height="17" />
+              <text class="glyph" x="277" y="178" text-anchor="middle">pd</text>
+            </svg>
+            <figcaption>Data protection</figcaption>
+          </figure>
+        </div>
+        <p class="propfig-note">
+          A, B are the communicating parties, C is an unauthorized party, m denotes the message, pd denotes personal data
+        </p>
+
+        <br>
+
+        <p>I am also interested in different security and privacy properties.</p>
+
+        <p class="subhead">Security properties</p>
+        <ul class="deflist">
+          <li><span class="term">Identification</span>: establishing the identity claimed by a user, device, or system.</li>
+          <li><span class="term">Authentication</span>: verifying that a user, device, or system is who or what it claims to be.</li>
+          <li><span class="term">Authorization</span>: determining what a user, device, or system is permitted to do.</li>
+          <li><span class="term">Accountability</span>: ensuring that actions can be attributed to the responsible user, device, or system.</li>
+        </ul>
+
+        <p class="subhead">Privacy regulations</p>
+        <ul class="deflist">
+          <li><span class="term">Lawfulness, fairness &amp; transparency</span>: data is processed lawfully, fairly, and in a transparent manner.</li>
+          <li><span class="term">Purpose limitation</span>: data is used only for the purposes for which it was collected.</li>
+          <li><span class="term">Data minimisation</span>: only the data necessary for a purpose is collected.</li>
+          <li><span class="term">Accuracy</span>: data is kept accurate and, where needed, up to date.</li>
+          <li><span class="term">Storage limitation</span>: data is kept only as long as the purpose requires.</li>
+          <li><span class="term">Integrity &amp; confidentiality</span>: data is protected against unauthorised access, loss, or damage.</li>
+          <li><span class="term">Accountability</span>: the controller can demonstrate compliance with these principles.</li>
+          <li><span class="term">Lawful basis &amp; consent</span>: processing requires a lawful basis; consent must be freely given and specific.</li>
+          <li><span class="term">Data subject rights</span>: access, rectification, erasure, restriction, portability, and objection.</li>
+          <li><span class="term">Data protection by design &amp; by default</span>: protections are built into systems from the outset.</li>
+        </ul>
+      </section>
 
       <section id="topics">
         <h2>Thesis Topics</h2>
@@ -464,7 +585,6 @@
       })();
     </script>
 
-    <!-- Topic filtering: show entries matching the active status + level. -->
     <script>
       (function () {
         var entries = [].slice.call(
@@ -519,8 +639,6 @@
       })();
     </script>
 
-    <!-- Identity is injected at runtime so it is not present in the static
-         HTML source that simple scrapers / harvesters read. -->
     <script>
       (function () {
         function dec(b) {

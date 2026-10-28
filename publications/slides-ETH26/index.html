@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Model-driven Privacy defense</title>
 
-<!-- reveal.js core + theme (vendored locally for offline use) -->
 <link rel="stylesheet" href="dist/reveal.css">
 <link rel="stylesheet" href="dist/theme/white.css" id="theme">
 <link rel="stylesheet" href="plugin/highlight/monokai.css">
 <link rel="stylesheet" href="fonts/fonts.css">
 
 <style>
-/* --- light academic custom theme on top of white.css --- */
 :root{
   --r-background-color:#fbfaf7;
   --r-main-font:'Noto Sans',system-ui,sans-serif;
@@ -31,7 +29,6 @@
 .reveal section{text-align:left}
 .reveal .slides section .fragment.highlight-current-blue.current-fragment{color:var(--accent)}
 
-/* ===== custom ETH-style title slide ===== */
 .reveal .slides section.title-slide{padding:0;text-align:left;}
 .title-slide .tl-wrap{position:relative;width:100%;height:720px;overflow:hidden;font-family:'Noto Sans',system-ui,sans-serif;background:#fbfaf7;}
 .title-slide .tl-blue{position:absolute;inset:0;background:#215caf;clip-path:polygon(69% 0,100% 0,100% 100%,57% 100%);}
@@ -49,7 +46,6 @@
 .title-slide .tl-meta .place{margin-top:8px;}
 .title-slide .tl-meta .slash{color:#1e2b45;margin:0 8px;}
 
-/* ===== Motivation - "The Setting" ===== */
 .reveal .slides section.mot{padding:0;text-align:left;}
 .mot .mot-wrap{position:relative;width:100%;height:720px;box-sizing:border-box;padding:46px 60px 0;font-family:'Noto Sans',system-ui,sans-serif;color:#1e2b45;}
 .mot .mot-head{display:flex;gap:22px;align-items:flex-start;}
@@ -80,7 +76,6 @@
 .mot .mot-gap em{font-style:italic;}
 .mot .mot-gap b{color:#1e2b45;font-weight:800;}
 
-/* ===== The code-centric approach ===== */
 .reveal .slides section.cc{padding:0;text-align:left;}
 .cc .cc-wrap{position:relative;width:100%;height:720px;box-sizing:border-box;padding:46px 60px 0;font-family:'Noto Sans',system-ui,sans-serif;color:#1e2b45;}
 .cc .cc-kick,.mot .cc-kick{color:#215caf;font-weight:700;font-size:14px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px;}
@@ -113,7 +108,6 @@
 .cc .browser .page .att{font-size:14px;color:#6b7482;margin-bottom:14px;}
 .cc .browser .page .att b{color:#1e2b45;}
 .cc .browser .page .adbox{background:#eceae4;color:#6b7482;font-weight:600;font-size:14px;border-radius:8px;padding:9px 14px;display:inline-block;}
-/* flow diagram (intro code-centric slide) */
 .cc .flow{position:relative;width:100%;height:480px;}
 .cc .flow pre code{font-size:12px;}
 .cc .flow > *{position:absolute;}
@@ -135,13 +129,11 @@
 .cc .flow .dev-bubble{position:absolute;z-index:3;background:#eef3fb;border:1px solid #d6e2f4;border-radius:12px;padding:9px 14px;font-size:14.5px;font-weight:500;color:#1e2b45;line-height:1.32;text-align:center;box-shadow:0 8px 20px -14px rgba(20,30,50,.5);box-sizing:border-box;}
 .cc .flow .dev-bubble b{color:#1e2b45;font-weight:800;}
 .cc .flow .dev-bubble:before{content:"";position:absolute;top:-10px;left:96px;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #eef3fb;}
-/* code-centric intro slide (cc-ink): black labels, arrows, decorators */
 .cc.cc-ink .flow .appframe-lbl,
 .cc.cc-ink .code-lbl,
 .cc.cc-ink .hljs-meta,
 .cc.cc-ink .flow .actor-name,
 .cc.cc-ink .flow .arlbl{color:#1e2b45;}
-/* privacy-principle build (code-centric privacy slide, right side) */
 .cc .flow .pp{position:absolute;background:#eef3fb;border:1px solid #d6e2f4;border-radius:12px;padding:11px 16px;box-sizing:border-box;}
 .cc .flow .pp .pk{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#215caf;margin-bottom:3px;}
 .cc .flow .pp .pt{font-size:19px;font-weight:800;color:#1e2b45;margin-bottom:3px;}
@@ -151,7 +143,6 @@
 .cc .flow .ap .ar{color:#1e2b45;font-size:22px;font-weight:800;line-height:1;}
 .cc .flow .ap .pu{background:#b5821f;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;padding:6px 14px;border-radius:20px;}
 .cc .flow .ap .note{font-size:13px;color:#8a8577;font-style:italic;}
-/* ===== Backup: per-RQ slides ===== */
 .cc .rq-q{font-size:19px;color:#5f6c82;font-style:italic;margin:0 0 16px;max-width:1060px;line-height:1.35;}
 .cc .rq-find{background:#eef3fb;border-left:5px solid #215caf;border-radius:0 12px 12px 0;padding:15px 22px;font-size:20px;line-height:1.42;color:#1e2b45;margin:0 0 18px;max-width:1080px;}
 .cc .rq-find b{color:#215caf;font-weight:800;}
@@ -182,33 +173,24 @@
 .cc .req .req-note{margin-top:14px;font-size:15px;font-weight:600;color:#98a1b0;letter-spacing:.02em;}
 .cc .req .consent{margin-top:18px;display:flex;align-items:center;gap:11px;font-size:16px;font-weight:600;color:#5f6c82;}
 .cc .req .cbox{width:18px;height:18px;border:2px solid #b5821f;border-radius:4px;flex:0 0 auto;}
-/* agree / deny control on the privacy-policy box */
 .cc .req .cbtns{margin-top:16px;display:flex;gap:10px;}
 .cc .req .cbtn{display:inline-flex;align-items:center;gap:7px;font-size:15px;font-weight:700;padding:8px 16px;border-radius:8px;border:1.5px solid transparent;}
 .cc .req .cbtn.agree{background:#215caf;color:#fff;box-shadow:0 8px 18px -12px rgba(33,92,175,.9);}
 .cc .req .cbtn.deny{background:#fff;color:#8791a2;border-color:#cdd3df;}
-/* compact privacy-policy variant (leave room for table + browser) */
 .cc .req.policy{padding:0px 18px 10px 18px;}
 .cc .req.policy .req-bar{margin-bottom:9px;padding:6px 12px;font-size:11.5px;}
 .cc .req.policy .req-text{font-size:15px;font-weight:400;line-height:1.3;}
 .cc .req.policy .cbtns{margin-top:11px;gap:9px;}
 .cc .req.policy .cbtn{padding:6px 13px;font-size:13px;border-radius:7px;}
-/* "code changed": highlight the newly added consent-check lines */
 .cc .flow .file.changed pre{border-color:#bfe3c8;box-shadow:0 16px 34px -24px rgba(20,70,35,.45);}
 .cc .flow .file.changed .code-lbl .editbadge{display:inline-block;margin-left:9px;background:#e3f4e9;color:#2f8f4e;font-weight:800;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:100px;vertical-align:middle;}
-/* both template blocks (.tmpl) use data-line-numbers so auto-animate can morph line-by-line;
-   hide the number gutter (numbers are structural, not shown) */
 .cc .flow .file.tmpl pre code .hljs-ln-numbers,
 .cc .flow .file.tmpl pre code td.hljs-ln-numbers{display:none;}
-/* reveal shrinks line-number code cells to .8em - force parity with main.py (12px) */
 .cc .flow .file.tmpl pre code{padding:14px 12px 14px 4px;}
-/* methodology view_event.html: match main.py's left padding */
 .cc .methstage .file.tmpl pre code{padding:16px 20px;}
 .cc .flow .file.tmpl pre code td.hljs-ln-code{font-size:12px;padding-left:14px;}
-/* green diff bar sits in the left gutter, not over the text */
 .cc .flow .file.changed pre code .highlight-line td.hljs-ln-code{background:rgba(47,158,68,.16);box-shadow:inset 4px 0 0 #2f9e44;}
 .cc .flow .file.changed pre code.has-highlights tr:not(.highlight-line){opacity:1 !important;}
-/* consent - relational table (code-centric privacy slide, right side) */
 .cc .flow .ctable{z-index:2;}
 .cc .flow .ctable .ctable-lbl{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#98a1b0;margin-bottom:8px;}
 .cc .flow .ctable .ctable-lbl::before{content:"";width:14px;height:14px;border-radius:3px;background:#215caf;}
@@ -223,7 +205,6 @@
 .cc .flow .ctable .cbadge.yes{background:#e3f4e9;color:#2f8f4e;}
 .cc .flow .ctable .cbadge.no{background:#fbe6e4;color:#c0392b;}
 .cc .flow .browser .page .att .hidden-name{color:#a0a7b2;font-style:italic;}
-/* pop-up "Problems" overlay (final fragment; dims the code) */
 .cc .probs-pop{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;pointer-events:none;background:rgba(18,26,44,.42);}
 .cc .probs{background:#14335f;color:#fff;border-radius:16px;padding:38px 52px 42px;max-width:740px;box-shadow:0 44px 100px -34px rgba(8,16,34,.85),0 0 0 1px rgba(255,255,255,.05);transform:scale(.9);transition:transform .3s cubic-bezier(.2,.8,.25,1);}
 .cc .probs-pop.visible .probs{transform:scale(1);}
@@ -232,8 +213,6 @@
 .cc .probs li{position:relative;padding-left:36px;font-size:29px;font-weight:500;line-height:1.25;color:#eaf1fb;}
 .cc .probs li:before{content:"\2013";position:absolute;left:0;top:-1px;color:#9db8e6;font-weight:700;}
 .cc .probs li b{color:#ffd66b;font-weight:800;}
-/* "Model-driven development" overlay - shown first over the "how it works" slide, then fades out
-   to reveal the mechanism; opaque slide-coloured backdrop hides the diagram until removed */
 .cc .mda-pop{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;pointer-events:none;background:#fbfaf7;}
 .cc .mda{background:#cd5e6d;color:#fff;border-radius:16px;padding:34px 52px 38px;max-width:740px;box-shadow:0 44px 100px -34px rgba(70,14,24,.7),0 0 0 1px rgba(255,255,255,.06);}
 .cc .mda .probs-h{font-size:38px;font-weight:800;letter-spacing:-.5px;margin:0 0 24px;}
@@ -241,8 +220,6 @@
 .cc .mda li{position:relative;padding-left:36px;font-size:28px;font-weight:500;line-height:1.25;color:#fdeff1;}
 .cc .mda li:before{content:"\2013";position:absolute;left:0;top:-1px;color:#f6c3cb;font-weight:700;}
 .cc .mda li b{color:#ffe08a;font-weight:800;}
-/* MDD → MDS → MDP: title, caption and same-size figure swap together across fragment steps.
-   figures are white, so the slide is white too; no border/shadow on the image. */
 .cc .mdtitle{position:absolute;left:60px;top:44px;margin:0;}
 .cc .mdtxt{position:absolute;left:60px;top:104px;width:1160px;font-size:26px;font-weight:500;line-height:1.35;color:#1e2b45;}
 .cc .mdtxt.center{text-align:center;}
@@ -251,8 +228,6 @@
 .cc .hl-mde{color:#215caf;font-weight:800;}
 .cc .hl-sec{color:#c0392b;font-weight:800;}
 .cc .hl-priv{color:#2f8f4e;font-weight:800;}
-/* ---------- formal-foundations slides: data model & atomic actions ---------- */
-/* the definition is shown first as an opaque cover below the title, then fades to the example */
 .cc .cover{position:absolute;left:60px;right:60px;top:132px;bottom:22px;background:#fff;z-index:10;}
 .cc .dfn{font-size:21px;line-height:1.5;color:#1e2b45;max-width:1170px;}
 .cc .dfn i{font-style:italic;}
@@ -266,19 +241,16 @@
 .cc .ex-lead{font-size:21px;color:#1e2b45;margin:2px 0 0;}
 .cc .exfig{display:block;margin:16px auto 14px;width:820px;}
 .cc .eqs{font-family:ui-monospace,Consolas,monospace;font-size:19px;line-height:1.55;color:#1e2b45;margin:0 auto;width:max-content;max-width:100%;background:#f7f9fc;border:1px solid #e6ecf5;border-radius:10px;padding:14px 22px;white-space:pre;}
-/* data-model definition: enlarged tuple; each element lights up as its bullet is revealed (slide 9) */
 .cc .dmtuple{text-align:center;font-family:'Noto Sans',system-ui,sans-serif;font-size:46px;font-weight:800;color:#1e2b45;letter-spacing:1px;margin:16px 0 10px;}
 .cc .dmtuple .te{padding:1px 7px;border-radius:8px;transition:background .25s ease,color .25s ease;}
 .cc .dmtuple .te.hl{color:#215caf;background:#e7eefb;}
 .cc .dmtuple sub{font-size:.6em;font-weight:800;}
-/* dmt2: big tuple; each element shows a down-arrow + label on its step */
 .cc .dmt2{text-align:center;font-family:'Noto Sans',system-ui,sans-serif;font-size:52px;font-weight:800;color:#1e2b45;letter-spacing:1px;margin:14px 0 10px;}
 .cc .dmt2 sub{font-size:.6em;font-weight:800;}
 .cc .dmt2 .tel{position:relative;display:inline-block;padding:1px 8px;border-radius:8px;transition:color .25s ease,background .25s ease;}
 .cc .dmt2 .tel:has(.cap.current-fragment){color:#215caf;background:#e7eefb;}
 .cc .dmt2 .cap{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:12px;display:flex;flex-direction:column;align-items:center;font-size:22px;font-weight:700;color:#215caf;letter-spacing:0;white-space:nowrap;}
 .cc .dmt2 .cap::before{content:"\2193";font-size:32px;line-height:.7;margin-bottom:6px;}
-/* slide 11 - per-element detail panel: swaps in each following slide's definition + example */
 .cc .pmdetail{position:relative;max-width:1060px;margin:104px 0 0;min-height:150px;}
 .cc .pmd{position:absolute;left:0;right:0;top:0;text-align:left;font-size:24px;color:#111;line-height:1.6;}
 .cc .pmd b{color:#000;font-weight:800;}
@@ -286,10 +258,8 @@
 .cc .pmd .pmeg{display:block;margin-top:18px;font-size:19px;color:#111;line-height:1.45;}
 .cc .pmd .pmeg b{color:#000;font-weight:800;}
 .cc .pmd i{font-style:italic;}
-/* left-aligned model sub-heading (slides 9 & 11) - bigger */
 .cc .mdsub{text-align:left;font-size:25px;font-weight:800;letter-spacing:0;text-transform:none;color:#215caf;margin:22px 0 2px;}
 .cc .mdsub.ctxlbl{color:#9aa3b2;}
-/* slide 11 - data model (context, muted) above the animated privacy model; no boxes. All tuples share one font & size (base .dmt2). */
 .cc .s11 .cc-title{margin-bottom:6px;}
 .cc .s11 .mdsub{margin-top:24px;}
 .cc .s11 .dmt2{margin:2px 0 4px;}
@@ -299,7 +269,6 @@
 .cc .s11 .pmdetail{margin-top:72px;min-height:104px;max-width:none;}
 .cc .s11 .pmd{font-size:21px;}
 .cc .s11 .pmd .pmeg{font-size:18px;margin-top:12px;}
-/* slide 9 - data model with UML diagram + per-component example (swapped per click, synced with the tuple highlight) */
 .cc .s9 .exfig{margin:70px auto 8px;width:640px;}
 .cc .dmexample{position:relative;margin-top:12px;min-height:92px;}
 .cc .dmex{position:absolute;left:50%;top:0;transform:translateX(-50%);text-align:left;white-space:nowrap;font-size:20px;font-weight:400;color:#000;line-height:1.6;}
@@ -313,23 +282,19 @@
 .cc .dmdef .note{margin:12px 0 0;color:#5f6c82;}
 .cc .dmdef b{font-weight:800;color:#1e2b45;}
 .cc .dmdef i{font-style:italic;}
-/* data atomic actions - the current rule (text) above, and five aligned build snapshots below (slide 10) */
 .cc .daform{position:absolute;left:60px;top:112px;width:1160px;font-size:19px;line-height:1.4;color:#1e2b45;}
 .cc .daform i{font-style:italic;}
 .cc .dafig{position:absolute;left:150px;top:190px;width:980px;height:auto;}
-/* atomic-action callouts on the Event class */
 .cc .clbox{position:absolute;background:#f4f7fc;border:1.5px solid #cddaf0;border-radius:10px;padding:9px 14px;box-shadow:0 12px 26px -20px rgba(20,30,50,.55);z-index:2;}
 .cc .clbox .cl-h{font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#8791a2;margin-bottom:5px;}
 .cc .clbox .act{font-family:ui-monospace,Consolas,monospace;font-size:15.5px;color:#1e2b45;display:block;line-height:1.55;}
 .cc .clbox .act b{color:#215caf;font-weight:700;}
 .cc .cline{position:absolute;border-top:2px dashed #9db8e6;z-index:1;}
-/* slide 11 - modeling blocks */
 .cc .mblocks{margin-top:22px;display:flex;flex-direction:column;gap:18px;max-width:1000px;}
 .cc .mrow{display:flex;align-items:center;background:#fff;border:1px solid #e6e2d8;border-left:6px solid #215caf;border-radius:12px;padding:17px 24px;box-shadow:0 12px 30px -22px rgba(0,0,0,.4);}
 .cc .mrow .mnum{flex:0 0 auto;width:36px;height:36px;border-radius:100px;background:#215caf;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin-right:20px;}
 .cc .mrow .mlabel{font-size:25px;font-weight:700;color:#1e2b45;}
 .cc .mrow .mlabel .plus{color:#215caf;font-weight:800;margin:0 9px;}
-/* ---- privacy-model concept detail slides ---- */
 .cc .pmlead{font-size:19px;line-height:1.5;color:#2b3550;max-width:1180px;}
 .cc .pmlead + .pmlead{margin-top:10px;}
 .cc .pmlead b{color:#1e2b45;font-weight:800;}
@@ -349,10 +314,8 @@
 .cc .pmmath sub{font-size:.68em;}
 .cc .pmmath sup{font-size:.68em;}
 .cc .pmmath .big{font-size:1.5em;vertical-align:-.3em;line-height:0;}
-/* big union/operator with index stacked beneath */
 .cc .pmmath .bigop{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:.82;font-size:2.7em;margin:0 .16em;}
 .cc .pmmath .bigop small{font-size:.28em;font-weight:400;font-style:normal;margin-top:-.04em;}
-/* development methodology - 4 steps (thesis Ch.5, Table 5.1) */
 .cc .method{display:flex;flex-direction:column;gap:15px;margin-top:14px;}
 .cc .mstep{display:flex;align-items:flex-start;gap:16px;}
 .cc .mstep .mnum{flex:0 0 auto;width:34px;height:34px;border-radius:100px;background:#215caf;color:#fff;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;margin-top:1px;}
@@ -363,7 +326,6 @@
 .cc .mstep .md b{color:#1e2b45;font-weight:800;}
 .cc .mstep .gen{color:#5f6c82;}
 .cc .mstep .gen .lbl{color:#3d7a2e;font-weight:800;}
-/* dev-methodology detail slides */
 .cc .mlist{margin:14px 0 0;padding-left:0;list-style:none;font-size:18px;color:#2b3550;line-height:1.45;}
 .cc .mlist>li{position:relative;padding-left:24px;margin-bottom:12px;}
 .cc .mlist>li:before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:50%;background:#215caf;}
@@ -374,20 +336,16 @@
 .cc .gcode .zap{color:#b5821f;font-weight:800;}
 .cc .gcols{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;margin-top:14px;}
 .cc .clabel{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1e2b45;margin-bottom:6px;}
-/* consolidated methodology build (JS-driven show/hide/replace) */
 .cc .methstage{position:relative;margin-top:14px;height:583px;}
 .cc .methstage [data-show]{opacity:0;visibility:hidden;transition:opacity .35s ease;}
 .cc .methstage [data-show].meth-on{opacity:1;visibility:visible;}
-/* generated stub that slides into the application-code frame (replacing the main.py box) */
 .cc .methstage .genstub{position:absolute;left:30px;top:375px;width:600px;z-index:5;transition:opacity .35s ease,left .6s cubic-bezier(.4,0,.2,1),top .6s cubic-bezier(.4,0,.2,1),width .6s cubic-bezier(.4,0,.2,1);}
 .cc .methstage .genstub.meth-moved{left:25px;top:162px;width:525px;}
 .cc .methstage .genstub .genpre{height:160px;transition:height .6s cubic-bezier(.4,0,.2,1);}
 .cc .methstage .genstub.meth-moved .genpre{height:110px;}
-/* consistent code font across the methodology slide (main.py + view_event.html) */
 .cc .methstage .flow pre code{font-size:13px;}
 .cc .methstage .file pre code table{font-size:13px;}
 .cc .methstage .file.tmpl pre code td.hljs-ln-code{font-size:13px;}
-/* step 16 -> 17: the implemented main.py / view_event.html write in line by line */
 .cc .methstage .file.impl pre code .hljs-ln-numbers{display:none;}
 .cc .methstage .file.impl pre code tr{opacity:0;}
 .cc .methstage .file.impl.meth-on pre code tr{animation:codeLine .3s ease forwards;}
@@ -415,11 +373,9 @@
 .cc .mtab td{padding:10px 16px;border-top:1px solid #eef1f6;color:#2b3550;vertical-align:top;line-height:1.35;}
 .cc .mtab td:first-child{font-weight:700;color:#1e2b45;white-space:nowrap;}
 .cc .mtab tr:nth-child(even) td{background:#f6f8fc;}
-/* privacy model - the four blocks, as a plain list (intro slide) */
 .cc .fourlist{margin-top:30px;padding-left:6px;list-style:none;}
 .cc .fourlist li{position:relative;padding-left:36px;margin-bottom:24px;font-size:32px;font-weight:600;line-height:1.3;color:#1e2b45;}
 .cc .fourlist li:before{content:"\2022";position:absolute;left:2px;top:-2px;color:#215caf;font-weight:800;}
-/* purpose hierarchy - example tree */
 .cc .purpose-ex{margin-top:22px;}
 .cc .purpose-ex .pex-lead{font-size:19px;color:#1e2b45;}
 .cc .ptree{display:block;width:560px;height:auto;margin:8px auto 0;}
@@ -427,7 +383,6 @@
 .cc .ptree .ntext{fill:#1e2b45;font-family:'Noto Sans',system-ui,sans-serif;font-size:19px;font-weight:700;}
 .cc .ptree .edge{stroke:#1e2b45;stroke-width:2.2;}
 .cc .ptree .elbl{fill:#1e2b45;font-size:28px;font-weight:700;paint-order:stroke;stroke:#fbfaf7;stroke-width:5px;stroke-linejoin:round;}
-/* ===== MDD figure: HTML copy of the source diagram (slides 6 & 7) ===== */
 .cc .mdx{position:relative;margin:6px auto 0;font-family:'Noto Sans',system-ui,sans-serif;color:#2b2b2b;}
 .cc .mdx .lbl{position:absolute;font-family:Georgia,'Times New Roman',serif;font-weight:700;color:#1a1a1a;white-space:nowrap;}
 .cc .mdx .dash{position:absolute;left:0;right:0;border-top:2px dashed #b7bcc6;}
@@ -468,7 +423,6 @@
 .cc .mdx .infra .sub{display:block;font-weight:600;font-size:14px;}
 .cc .mdx .infra.sec{color:#e11414;}
 .cc .mdx .infra.priv{color:#1c7d1c;}
-/* ===== Contributions list ===== */
 .cc .contrib{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:11px;}
 .cc .contrib .item{display:flex;gap:15px;align-items:flex-start;padding:9px 16px;border-radius:12px;border:1px solid transparent;}
 .cc .contrib .num{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;background:#e7e3d8;color:#8a8577;}
@@ -481,7 +435,6 @@
 .cc .focus-note{margin-top:16px;font-size:18px;color:#1e2b45;background:#fff6e2;border-left:4px solid #b5821f;border-radius:0 8px 8px 0;padding:12px 18px;line-height:1.4;}
 .cc .focus-note b{color:#b5821f;font-weight:800;}
 .cc .focus-note .star{color:#b5821f;font-weight:800;margin-right:6px;}
-/* ===== Privacy model concepts ===== */
 .cc .pm-intro{font-size:19px;color:#5f6c82;margin:0 0 16px;max-width:1010px;line-height:1.4;}
 .cc .pm-intro b{color:#215caf;}
 .cc .pmgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
@@ -494,7 +447,6 @@
 .cc .enforce .lbl{font-weight:800;color:#ffd66b;text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;flex:0 0 auto;}
 .cc .enforce b{color:#fff;font-weight:700;}
 .cc .enforce .chk{color:#7fdca0;font-weight:800;}
-/* ===== Privacy DSL listing ===== */
 .cc .dslwrap{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin-top:20px;}
 .cc pre.dsl{margin:0;border:1px solid #e4e0d5;border-radius:12px;background:#f7f6f1;box-shadow:0 16px 34px -24px rgba(20,30,50,.5);overflow:hidden;padding:14px 18px;font-family:ui-monospace,Consolas,"Courier New",monospace;font-size:13px;line-height:1.5;color:#404a5e;box-sizing:border-box;}
 .cc pre.dsl .kw{color:#215caf;font-weight:700;}
@@ -509,7 +461,6 @@
 .cc .blk.b2{border-color:#b5821f;} .cc .blk.b2 .bh code{color:#b5821f;}
 .cc .blk.b3{border-color:#3d7a2e;} .cc .blk.b3 .bh code{color:#3d7a2e;}
 .cc .blk.b4{border-color:#c0392b;} .cc .blk.b4 .bh code{color:#c0392b;}
-/* ===== Results: plots + stats ===== */
 .cc .plotrow{display:flex;gap:26px;justify-content:center;align-items:flex-start;margin-top:12px;}
 .cc .plotrow img{display:block;max-width:100%;height:auto;border-radius:10px;}
 .cc .plotcol{display:flex;flex-direction:column;align-items:center;gap:8px;}
@@ -523,7 +474,6 @@
 .cc .res-hi .rc .lbl{font-size:14.5px;color:#5f6c82;margin-top:7px;line-height:1.3;}
 .cc .res-hi .rc .lbl b{color:#1e2b45;}
 .cc .res-hi .rc.plain{background:none;border:none;box-shadow:none;padding:0;min-width:0;}
-/* challenges heatmaps */
 .cc .hmcols{display:flex;gap:24px;justify-content:center;align-items:flex-start;margin-top:6px;}
 .cc .hmcols figure{margin:0;flex:1;text-align:center;}
 .cc .hmcols img{display:block;width:100%;max-height:330px;object-fit:contain;border:1px solid #e4e0d5;border-radius:10px;background:#fff;}
@@ -535,7 +485,6 @@
 .cc .hmstat .hs b{color:#1e2b45;font-weight:800;}
 .cc .hmstat .hs.nag{background:#fdf0e4;border-color:#f0d6bb;}
 .cc .hmstat .hs .mono{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;color:#3a4864;}
-/* ===== Qualitative results ===== */
 .cc .qbox{margin:16px 0 22px;font-size:21px;color:#1e2b45;line-height:1.4;font-style:italic;}
 .cc .qbox b{font-style:normal;color:#215caf;font-weight:700;}
 .cc .qmethod{font-size:16.5px;color:#5f6c82;margin:0 0 14px;line-height:1.42;}
@@ -550,7 +499,6 @@
 .cc .pos{color:#1e2b45;font-weight:800;}
 .cc .neg{color:#5f6c82;font-weight:700;}
 .cc .qcard .concern{margin-top:10px;padding-top:9px;border-top:1px dashed #e6e2d8;font-size:15px;color:#5f6c82;line-height:1.4;}
-/* ===== Summary Q&A ===== */
 .cc .qa{display:flex;flex-direction:column;margin-top:14px;max-width:1080px;}
 .cc .qa .item{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:baseline;padding:11px 2px;border-bottom:1px solid #efece3;}
 .cc .qa .q{font-size:19px;color:#3a4864;line-height:1.34;}
@@ -558,7 +506,6 @@
 .cc .qa .a{font-size:19px;font-weight:800;color:#215caf;text-align:right;}
 .cc .qa .a .yes{color:#2f8f4e;}
 
-/* ===== Model-driven development - "Our solution" bridge (ported PETS'24 slide 9) ===== */
 .cc .sol{display:flex;align-items:center;justify-content:center;gap:0;margin-top:60px;}
 .cc .sol .end{width:280px;text-align:center;}
 .cc .sol .end .card{height:152px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px solid #e4e0d5;box-shadow:0 16px 34px -24px rgba(20,30,50,.5);}
@@ -571,7 +518,6 @@
 .cc .sol .span .bar{height:4px;border-radius:2px;background:linear-gradient(90deg,#215caf,#b5821f);position:relative;}
 .cc .sol .span .bar:after{content:"";position:absolute;right:-1px;top:-6px;border-left:14px solid #b5821f;border-top:8px solid transparent;border-bottom:8px solid transparent;}
 
-/* ===== Empirical study slides ===== */
 .reveal .slides section.es-standout{padding:0;}
 .es-standout .wrap{position:relative;width:100%;height:720px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 120px;font-family:'Noto Sans',system-ui,sans-serif;}
 .es-standout .kick{color:#bcd3f5;font-weight:700;font-size:16px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:30px;}
@@ -605,7 +551,6 @@
 .cc .phase .pd{font-size:14px;color:#a0a7b2;margin:2px 0 12px;}
 .cc .phase .pbody{font-size:16px;color:#2b3550;line-height:1.35;}
 .cc .phase .pbody b{color:#1e2b45;font-weight:700;}
-/* selected RQs */
 .cc .selrq{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px;}
 .cc .selrq .card{background:#e7ebf8;border-radius:16px;padding:22px 24px;transition:background .4s ease;}
 .cc .selrq .card.priv{background:#f6ecca;}
@@ -613,10 +558,8 @@
 .cc .selrq .card.priv .n{color:#b5821f;}
 .cc .selrq .card .t{font-size:23px;font-weight:600;color:#1e2b45;line-height:1.32;}
 .cc .selrq .card .s{font-size:15px;color:#5f6c82;margin-top:10px;}
-/* cards fade in wave by wave (all blue); a final step recolours the selected ones to yellow */
 .cc .selrq .rqhl.visible ~ .card.sel{background:#f6ecca;}
 .cc .selrq .rqhl.visible ~ .card.sel .n{color:#b5821f;}
-/* grand study */
 .cc .grand-stats{display:flex;gap:44px;margin-bottom:26px;}
 .cc .gstat{display:flex;align-items:baseline;gap:13px;}
 .cc .gstat .gn{font-weight:800;font-size:64px;color:#215caf;letter-spacing:-2px;line-height:1;}
@@ -628,7 +571,6 @@
 .cc .ed.on .ey{color:#b5821f;}
 .cc .ed .en{font-weight:800;font-size:34px;color:#1e2b45;line-height:1;margin:2px 0 5px;}
 .cc .ed .ed-t{font-size:13.5px;color:#6b7482;line-height:1.3;}
-/* project requirements */
 .cc .reqcols{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:start;}
 .cc .reqlist{margin:0;padding:0;}
 .cc .reqlist li{list-style:none;font-size:20px;color:#2b3550;line-height:1.4;margin-bottom:16px;padding-left:26px;position:relative;}
@@ -638,7 +580,6 @@
 .cc .policybox .pl{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#b5821f;margin-bottom:12px;}
 .cc .policybox .pt{font-size:22px;color:#1e2b45;line-height:1.42;font-style:italic;}
 .cc .policybox .pe{margin-top:16px;font-size:15px;color:#8a7a4e;}
-/* evaluation methodology */
 .cc .evalgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:34px;align-items:start;margin-top:4px;}
 .cc .evalh{font-weight:800;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:#215caf;margin:0 0 12px;}
 .cc .evallist{list-style:none;margin:0;padding:0;}
@@ -649,7 +590,6 @@
 .cc .tmode{font-family:ui-monospace,Consolas,monospace;font-size:14.5px;font-weight:700;color:#b5821f;background:#f6ecca;border:1px solid #ecdca0;border-radius:6px;padding:1px 7px;white-space:nowrap;}
 .cc .evalcard{background:#eef3fb;border:1px solid #dbe4f4;border-radius:12px;padding:12px 16px;}
 .cc .evalcard + .evalcard{margin-top:12px;}
-/* 6-phase timeline */
 .cc .timeline{display:flex;align-items:flex-start;margin-top:28px;}
 .cc .tphase{flex:1;text-align:center;position:relative;padding:0 6px;}
 .cc .tphase::before{content:"";position:absolute;top:18px;left:-50%;width:100%;height:2px;background:#dcd8cc;}
@@ -666,7 +606,6 @@
 .cc .pt b{font-weight:800;color:#1e2b45;}
 .cc .cc-out{margin-top:32px;font-size:23px;font-weight:800;color:#1e2b45;line-height:1.3;}
 
-/* ===== Privacy enforcement & criteria ===== */
 .reveal .slides section.pe{padding:0;text-align:left;}
 .pe .pe-body{display:flex;flex-direction:column;gap:26px;color:#2b3550;}
 .pe .sec-lbl{font-weight:800;font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:black;margin-bottom:9px;}
@@ -675,17 +614,14 @@
 .pe .prow .eg{display:block;margin-top:7px;color:#5f6c82;font-style:italic;font-size:19px;}
 .pe ul{margin:10px 0 0;padding-left:24px;}
 .pe ul li{font-size:20px;line-height:1.5;color:#2b3550;margin-bottom:4px;}
-/* the only kept emphasis: confidentiality / integrity, and the criteria labels - one blue accent */
 .pe ul li b{color:#215caf;font-weight:800;}
 .pe .crit{font-size:20px;line-height:1.45;position:relative;padding-left:22px;margin-bottom:9px;}
 .pe .crit:last-child{margin-bottom:0;}
 .pe .crit::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;border-radius:50%;background:#c4cad6;}
 .pe .crit .cl{font-weight:800;color:#215caf;}
-/* keyword highlights removed - plain text now */
 .pe .k-det,.pe .k-purpose,.pe .k-cond,.pe .k-data,.pe .k-mark{color:inherit;font-weight:400;}
 .pe .k-mark{color:#215caf;font-weight:700;}
 
-/* ===== Imported CCS study-design slides (p36–46) ===== */
 .cc .slist{margin:0;padding:0;font-size:23px;color:#2b3550;line-height:1.4;}
 .cc .slist>li{list-style:none;position:relative;padding-left:26px;margin-bottom:16px;}
 .cc .slist>li::before{content:"";position:absolute;left:2px;top:12px;width:9px;height:9px;border-radius:50%;background:#215caf;}
@@ -694,7 +630,6 @@
 .cc .slist ul li::before{content:"";position:absolute;left:5px;top:10px;width:7px;height:7px;border-radius:2px;background:#9aa7bd;}
 .cc .slist b{color:#1e2b45;font-weight:800;}
 .cc .hot{color:#215caf;font-weight:800;}
-/* UML class cards + associations + purpose tree (p37, p38) */
 .cc .umlcols{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;}
 .cc .uml{display:flex;flex-wrap:wrap;gap:12px;align-content:flex-start;}
 .cc .cls{border:1.5px solid #cdd3df;border-radius:8px;background:#fff;box-shadow:0 8px 20px -16px rgba(20,30,50,.5);}
@@ -709,7 +644,6 @@
 .cc .rbul>li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:#215caf;}
 .cc .rbul b{color:#1e2b45;font-weight:800;}
 .cc .rbul .ev{color:#c0392b;font-weight:800;}
-/* organization phase flow (p39–46) */
 .cc .org{display:flex;flex-direction:column;align-items:center;margin-top:10px;}
 .cc .phase-lbl{font-size:24px;font-weight:700;color:#1e2b45;margin-bottom:26px;}
 .cc .phase-lbl b{color:#215caf;}
@@ -733,7 +667,6 @@
 .cc .callout{margin-top:22px;background:#c0392b;color:#fff;border-radius:12px;padding:14px 20px;font-size:17px;line-height:1.55;}
 .cc .callout b{color:#fff;}
 .cc .crossnote{margin-top:18px;font-size:17px;color:#c0392b;font-weight:700;}
-/* per-phase progress strip (timeline "on a string") */
 .cc .ptl{display:flex;align-items:flex-start;margin:2px 0 16px;}
 .cc .ptl .tp{flex:1;text-align:center;position:relative;padding:0 3px;}
 .cc .ptl .tp::before{content:"";position:absolute;top:12px;left:-50%;width:100%;height:3px;background:#e0dccf;z-index:0;}
@@ -744,7 +677,6 @@
 .cc .ptl .tp.done .t{color:#6b7482;}
 .cc .ptl .tp.on .d{background:#215caf;color:#fff;border-color:#215caf;box-shadow:0 0 0 4px #d7e2f7;}
 .cc .ptl .tp.on .t{color:#1e2b45;}
-/* phase map - compact icon progress strip above the detailed per-phase flow; dimmed unless it is the active phase */
 .cc .pmap{display:flex;align-items:flex-start;margin:14px 0 6px;}
 .cc .pmap .tp{flex:1;text-align:center;position:relative;padding:0 10px;opacity:.4;}
 .cc .pmap .tp::before{content:"";position:absolute;top:12px;left:-44%;width:88%;height:3px;background:#d9d4c6;z-index:0;}
@@ -760,7 +692,6 @@
 .cc .pmap .tp.on .d{background:#215caf;color:#fff;border-color:#215caf;box-shadow:0 0 0 4px #d7e2f7;}
 .cc .pmap .tp.on .t{color:#153a78;}
 .cc .pmap .tp.on .picon svg{stroke:#215caf;}
-/* smooth phase-map advance + crowd split (training slide) */
 .cc .pmap .tp{transition:opacity .35s ease;}
 .cc .pmap .tp .d{transition:background .35s ease,border-color .35s ease,box-shadow .35s ease,color .35s ease;}
 .cc .pmap .tp .t{transition:color .35s ease;}
@@ -768,72 +699,53 @@
 .cc .scene,.cc [data-crowd-single],.cc [data-until-dev],.cc [data-until-dev2],.cc [data-straight],.cc [data-devio],.cc [data-groups],.cc [data-until-evolve],.cc [data-until-survey]{transition:opacity .3s ease;}
 .cc .is-hidden{opacity:0 !important;pointer-events:none;}
 .cc .org.tight .codebox{font-size:10px;line-height:1.4;}
-/* privacy-notions slide (adapted from ccs-talk p6-10) */
 .cc .pvcols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;margin-top:28px;}
 .cc .pvcol{display:flex;flex-direction:column;border:1px solid #e6e2d8;border-radius:14px;background:#fff;padding:18px 16px 10px;box-shadow:0 10px 26px -20px rgba(20,30,50,.5);transition:opacity .35s ease,box-shadow .35s ease,border-color .35s ease,filter .35s ease;}
 .cc .pvcol .pvt{font-size:23px;font-weight:800;color:#1e2b45;text-align:center;margin-bottom:2px;}
-/* subtitle is overlaid in the gap (net-zero height) so the Data-protection SVG's A/B align with the other two columns */
 .cc .pvcol .pvsub{font-size:13px;font-weight:600;color:#111;text-align:center;line-height:1;margin:2px 0 -15px;}
 .cc .pvcol .pvsvg{width:100%;height:auto;display:block;margin:12px 0 2px;}
-/* step 4: when the caption appears, spotlight data protection and dim the others */
 .cc .cc-wrap:has(.pvcaption.visible) .pvcol:not(.focus){opacity:.38 !important;filter:grayscale(.5);}
 .cc .cc-wrap:has(.pvcaption.visible) .pvcol.focus{border-color:#215caf;box-shadow:0 14px 34px -14px rgba(33,92,175,.6);}
 .cc .cc-wrap:has(.pvcaption.visible) .pvcol.focus .pvt{color:#215caf;}
 .cc .pvcaption{margin-top:30px;text-align:center;font-size:23px;color:#1e2b45;}
 .cc .pvcaption b{color:#215caf;}
 .cc .pvcaption .approx{color:#215caf;font-weight:800;font-size:24px;vertical-align:-2px;}
-/* step 5: zoom into the Data-protection box until it fills the frame ("the box becomes a slide") */
 .cc .pvcol.focus{transform-origin:center center;transition:opacity .35s ease,box-shadow .35s ease,border-color .35s ease,filter .35s ease,transform .6s cubic-bezier(.4,0,.2,1),border-radius .6s ease;}
 .cc .cc-wrap:has(.pvzoom.visible) .cc-title,
 .cc .cc-wrap:has(.pvzoom.visible) .cc-hr,
 .cc .cc-wrap:has(.pvzoom.visible) .pvcaption,
 .cc .cc-wrap:has(.pvzoom.visible) .pvcol:not(.focus){opacity:0 !important;pointer-events:none;}
 .cc .cc-wrap:has(.pvzoom.visible) .pvcol.focus{transform:translate(-395px,51px) scale(2.1);z-index:20;border-radius:0;border-color:transparent;box-shadow:none;filter:none !important;}
-/* step 6: threat-model caption fades in inside the box */
 .cc .pvsvg .threat{transition:opacity .5s ease;}
-/* step 7: B's horns fade out slowly (keep rendered through the fade so opacity can animate) */
 .cc .pvsvg .thorn{transition:opacity 1.2s ease !important;}
 .cc .pvsvg .thorn.visible{visibility:inherit !important;}
-/* B's halo appears as the horns fade */
 .cc .pvsvg .bhalo{transition:opacity 1.2s ease !important;}
-/* contributions slide - two model branches; each a boxed root with a bracket connector down to two contribution boxes */
 .cc .contrib{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1060px;margin:120px auto 0;align-items:start;}
 .cc .cbranch{--line:#c2c8d2;}
 .cc .cnode{position:relative;background:#eceff4;border:1px solid #dbe0e8;border-radius:5px;padding:12px 20px;text-align:center;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease;}
-/* numbered step badge sitting on the connector line above each focus box - pops in at the final highlight step */
 .cc .cnode .cbadge{position:absolute;top:-33px;left:50%;width:20px;height:20px;border-radius:50%;background:#215caf;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 12px -3px rgba(33,92,175,.6);opacity:0;transform:translateX(-50%) scale(.4);transition:opacity .3s ease,transform .3s ease;z-index:6;}
 .cc .cc-wrap:has(.cfocus-on.visible) .cnode .cbadge{opacity:1;transform:translateX(-50%) scale(1);}
 .cc .cnode .cname{font-size:20px;font-weight:800;color:#1e2b45;line-height:1.2;white-space:nowrap;transition:color .3s ease;}
 .cc .cnode .cvenue{font-size:14px;font-weight:600;color:#6b7482;margin-top:5px;}
-/* root box centered above the pair */
 .cc .croot{width:fit-content;max-width:100%;margin:0 auto;}
-/* children row + bracket connector */
 .cc .ckids{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:28px;}
-/* stem from the model box down to the bar - hidden until the boxes appear so nothing dangles off the box */
 .cc .ckids::before{content:"";position:absolute;top:0;left:50%;width:0;height:22px;border-left:2px solid var(--line);opacity:0;transition:opacity .25s ease;}
 .cc .ckids:has(.cnode.visible)::before{opacity:1;}
-/* each work = box + short explanation bubble, stacked */
 .cc .ckids>.cwork{position:relative;margin-top:44px;display:flex;flex-direction:column;align-items:center;}
 .cc .cwork .cnode{width:100%;box-sizing:border-box;}
-/* one rounded L-elbow per child: drop on its own centre + a bar reaching in to the stem - appears with its box */
 .cc .ckids>.cwork::before{content:"";position:absolute;top:-22px;height:22px;width:calc(50% + 14px);border-top:2px solid var(--line);opacity:0;transition:opacity .25s ease;}
 .cc .ckids>.cwork:has(.cnode.visible)::before{opacity:1;}
 .cc .ckids>.cwork:first-child::before{left:50%;border-left:2px solid var(--line);}
 .cc .ckids>.cwork:last-child::before{right:50%;border-right:2px solid var(--line);}
-/* short "what it does" caption as a dialog bubble under each work (tail points up to the box) */
 .cc .cwork .cexpl{position:relative;margin-top:15px;max-width:235px;background:#eef3fb;border:1px solid #d6e2f4;border-radius:12px;padding:9px 14px;font-size:14.5px;font-weight:500;color:#1e2b45;line-height:1.32;text-align:center;box-shadow:0 8px 20px -14px rgba(20,30,50,.5);transition:background .3s ease,border-color .3s ease,color .3s ease,box-shadow .3s ease;}
 .cc .cwork .cexpl::before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%);border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #eef3fb;transition:border-bottom-color .3s ease;}
-/* final step - spotlight the privacy line: blue border on the focus boxes */
 .cc .cc-wrap:has(.cfocus-on.visible) .cnode.cfocus{background:#e7effb;box-shadow:0 0 0 2px #215caf,0 12px 30px -16px rgba(33,92,175,.6);}
 .cc .cc-wrap:has(.cfocus-on.visible) .cnode.cfocus .cname{color:#215caf;}
-/* …and bold just the νActionGUI phrase inside its bubble, dimming the SQLSPI part */
 .cc .cwork .cexpl .hlnu,.cc .cwork .cexpl .hldim{transition:color .3s ease,opacity .3s ease;}
 .cc .cc-wrap:has(.cfocus-on.visible) .cexpl .hlnu{font-weight:800;color:#215caf;}
 .cc .cc-wrap:has(.cfocus-on.visible) .cexpl .hldim{color:#aab0bb;opacity:.75;}
-/* …while dimming the whole security branch so focus stays on privacy */
 .cc .cbranch{transition:opacity .35s ease,filter .35s ease;}
 .cc .cc-wrap:has(.cfocus-on.visible) .cbranch.dimmable{opacity:.32;filter:grayscale(.4);}
-/* data-protection-requirements slide (ccs-talk p11) */
 .cc .dprcols{display:grid;grid-template-columns:1fr 1.12fr;gap:26px;align-items:stretch;margin-top:18px;}
 .cc .dprcard{display:flex;flex-direction:column;border:1px solid #e6e2d8;border-radius:14px;background:#fff;padding:16px 22px 18px;box-shadow:0 10px 26px -20px rgba(20,30,50,.5);}
 .cc .dprh{font-size:19px;font-weight:800;color:#1e2b45;margin-bottom:8px;}
@@ -869,7 +781,6 @@
 .cc .reg .flag{flex:none;border-radius:2px;box-shadow:0 1px 3px rgba(20,30,50,.35);}
 .cc .reg b{color:#1e2b45;font-weight:800;}
 .cc .reg .regfull{color:#8791a2;font-weight:500;}
-/* purpose limitation & user consent (ccs-talk p12) */
 .cc.cc-center .cc-wrap{display:flex;flex-direction:column;justify-content:flex-start;padding-top:62px;}
 .cc .ppgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
 .cc .ppcard{border:1px solid #e6e2d8;border-radius:16px;background:#fff;padding:0 0 20px;box-shadow:0 12px 30px -20px rgba(20,30,50,.5);overflow:hidden;display:flex;flex-direction:column;}
@@ -879,7 +790,6 @@
 .cc .ppquote b{font-style:normal;color:#1e2b45;font-weight:800;}
 .cc .pp-trad{margin-top:36px;font-size:24px;line-height:1.5;color:#2b3550;}
 .cc .pp-trad b{color:#1e2b45;font-weight:800;}
-/* motivation: fines-over-time chart + summary cards */
 .mot .motmain{display:grid;grid-template-columns:1.45fr 1fr;gap:24px;align-items:stretch;margin-top:6px;}
 .mot .motchart{background:#fff;border:1px solid #e6e2d8;border-radius:14px;padding:14px 18px 12px;box-shadow:0 10px 26px -20px rgba(20,30,50,.5);display:flex;flex-direction:column;}
 .mot .motchart-title{font-size:17px;font-weight:800;color:#1e2b45;margin-bottom:4px;}
@@ -888,7 +798,6 @@
 .mot .motcol{display:flex;flex-direction:column;gap:16px;}
 .mot .motcol .mot-card{margin:0;}
 
-/* section divider slides */
 .section-divider{text-align:center !important}
 .section-divider .kicker{font-family:var(--r-main-font);text-transform:uppercase;letter-spacing:.28em;font-size:.5em;color:var(--accent);font-weight:700}
 .section-divider h2{font-size:2.2em;border:0}
@@ -900,10 +809,8 @@
 .cc.thanks .thumbs span{display:block;text-align:center;margin-top:11px;font-size:16px;font-weight:600;}
 .cc.thanks .thanks-foot{text-align:center;color:#1e2b45;font-size:15px;margin-top:40px;}
 
-/* accent rule under headings */
 .reveal .slides section > h2:first-child::after{content:"";display:block;width:64px;height:4px;background:var(--accent);margin:.35em 0 .5em;border-radius:2px}
 
-/* two-column helper */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:1em;align-items:center}
 .card{background:#fff;border:1px solid #e6e2d8;border-radius:12px;padding:.7em .9em;box-shadow:0 8px 24px -18px rgba(0,0,0,.5)}
 .muted{color:#67717f}
@@ -913,7 +820,6 @@
 .reveal small.footnote{position:absolute;bottom:.6em;left:1em;font-size:.4em;color:#1e2b45}
 .pill{display:inline-block;background:#eaf1ff;color:var(--accent);border-radius:100px;padding:.1em .6em;font-size:.7em;font-weight:600}
 
-/* ported from index1.html (Data protection artref; Participation table) */
 .cc .dpr2sub .artref{color:#8791a2;font-weight:500;font-size:15px;}
 .reveal table.partab{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid #dfe4ee;border-radius:4px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(20,30,50,.55);font-size:1em;}
 .reveal table.partab thead th{background:#215caf;color:#fff;font-weight:700;text-align:left;padding:14px 26px;font-size:16px;letter-spacing:.05em;text-transform:uppercase;}
@@ -924,29 +830,24 @@
 .reveal table.partab .ab{font-family:ui-monospace,Consolas,monospace;font-size:18px;color:#5f6c82;}
 .reveal table.partab .edtag{font-size:12px;font-weight:700;background:rgba(255,255,255,.22);border-radius:100px;padding:2px 9px;letter-spacing:.04em;}
 
-/* slide 3 - spotlight the first two common requirements (this thesis's scope) */
 .cc .dpr2sub.creq li{transition:opacity .3s ease,color .3s ease;}
 .cc .dpr2:has(.dprhl.visible) .creq li:not(.hlreq){opacity:.34;}
 .cc .dpr2:has(.dprhl.visible) .creq li.hlreq{color:#215caf;font-weight:800;}
 .cc .dpr2:has(.dprhl.visible) .creq li.hlreq .artref{color:#5b8bd0;}
 .cc .dpr2:has(.dprhl.visible) .creq li.hlreq::before{background:#215caf;}
-/* ...and, in the sources column, spotlight GDPR while dimming nFADP and the other sources */
 .cc .dpr2sub.sreq > li,
 .cc .dpr2sub.sreq .reg{transition:opacity .3s ease,color .3s ease;}
 .cc .dpr2:has(.dprhl.visible) .sreq > li:not(:first-child){opacity:.34;}
 .cc .dpr2:has(.dprhl.visible) .sreq .dimsrc{opacity:.34;}
 .cc .dpr2:has(.dprhl.visible) .sreq .hlsrc b{color:#215caf;}
-/* slide 4 - the moved "little guidance" note */
 .cc .pp-note{margin-top:22px;text-align:center;font-size:22px;color:#1e2b45;}
 .cc .pp-note b{color:#215caf;}
 
-/* slide 4 - "Our scope:" lead above the two GDPR cards */
 .cc .pp-scope{text-align:center;font-size:40px;font-weight:800;color:#1e2b45;margin:0;letter-spacing:-.4px;}
 .cc .pp-scope b{color:#215caf;}
 .cc .pp-scope::after{content:"";display:block;width:64px;height:4px;background:#215caf;border-radius:2px;margin:14px auto 0;}
 .cc .pp-center{flex:1;display:flex;flex-direction:column;justify-content:center;}
 
-/* slides 28/29 - compact, presentation-friendly "How we compute it" panel */
 .cc .howto{max-width:1000px;margin:24px auto 0;background:#fff;border:1px solid #e4e0d5;border-left:4px solid #215caf;border-radius:14px;padding:22px 30px 24px;box-shadow:0 14px 34px -26px rgba(20,30,50,.55);}
 .cc .howto-h{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#215caf;margin:0 0 16px;}
 .cc .howto-steps{display:flex;flex-direction:column;gap:14px;}
@@ -968,7 +869,6 @@
 .cc .hmetric .hmv{font-size:22px;font-weight:800;color:#1e2b45;line-height:1.2;}
 .cc .hmetric .hmn{font-size:15px;color:#5f6c82;margin-top:6px;line-height:1.35;}
 
-/* slide 32 - conclusion cards */
 .cc .concl{display:block;max-width:1040px;margin-top:30px;}
 .cc .concl p{font-size:22px;line-height:1.6;color:#1a1a1a;margin:0 0 22px;}
 .cc .concl p:last-child{margin-bottom:0;}
@@ -988,7 +888,6 @@
 .cc .cbox li b{color:#215caf;font-weight:800;}
 .cc .concl .cbox{background:none;border:none;box-shadow:none;padding:0;}
 
-/* slide 12 - privacy-model tuple: each element previews its following slide's definition */
 .cc .pmcards{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin-top:26px;}
 .cc .pmcard{background:#fff;border:1px solid #e4e0d5;border-left:4px solid #215caf;border-radius:12px;padding:16px 20px;box-shadow:0 12px 28px -22px rgba(20,30,50,.5);}
 .cc .pmcard .pmk{font-size:16px;font-weight:800;color:#215caf;margin-bottom:11px;}
@@ -999,11 +898,9 @@
 .cc .pmcard .pmeg{font-size:14.5px;color:#5f6c82;margin-top:10px;line-height:1.4;}
 .cc .pmcard .pmeg i{font-style:italic;}
 
-/* slide 27 - keep the three privacy-mode cards visually even */
 .cc .evalcard{display:flex;flex-direction:column;}
 .cc .evalcard .sub{flex:1;}
 
-/* Privacy-enforcement slide - three mechanisms swapped in place */
 .cc.enf .enfstage{position:relative;margin-top:16px;min-height:432px;}
 .cc.enf .enfpanel{position:absolute;left:0;right:0;top:0;}
 .cc.enf .enfhead{font-size:26px;font-weight:800;color:#1e2b45;margin-bottom:10px;display:flex;align-items:center;gap:14px;}
@@ -1034,7 +931,6 @@
 .cc.enf .stack .frame.top{background:#e7eefb;}
 .cc.enf .stack .pur{color:#215caf;font-weight:800;}
 .cc.enf .enfset{font-size:22px;color:#000;font-weight:400;}
-/* pseudo-code with a moving line highlight */
 .cc.enf .apcode{font-family:ui-monospace,Consolas,monospace;font-size:19px;line-height:1.9;color:#1e2b45;background:#f7f6f1;border:1px solid #e4e0d5;border-radius:5px;padding:16px 26px;box-shadow:0 14px 34px -24px rgba(20,30,50,.5);}
 .cc.enf .apcode .cl{position:relative;white-space:pre;}
 .cc.enf .apcode .cl.ind{padding-left:2.4em;}
@@ -1046,7 +942,6 @@
 .cc.enf .apstack{display:flex;flex-direction:column;align-items:center;gap:18px;}
 .cc.enf .apstack .apslabel{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8791a2;}
 .cc.enf .stack .fn{color:#5f6c82;}
-/* stack push/pop: collapse frames + the [..] set element when hidden, so the call stack sizes to only the live frames (1 or 2) with no reserved empty space */
 .cc.enf .stack .frame.fade-in-then-out{display:none;}
 .cc.enf .stack .frame.fade-in-then-out.current-fragment{display:block;}
 .cc.enf .enfset .fragment.fade-in-then-out{display:none;}
@@ -1061,7 +956,6 @@
 .cc.enf .enfnote b{color:#215caf;font-weight:800;}
 .cc.enf .enfoutcome{margin-top:22px;font-size:20px;color:#2b3550;line-height:1.5;}
 .cc.enf .enfoutcome b{color:#c0392b;font-weight:800;}
-/* ---- The tool: nuActionGUI ---- */
 .cc.tool .tool-lead{font-size:22px;color:#2b3550;line-height:1.5;margin:4px 0 20px;max-width:800px;}
 .cc.tool .tool-lead b{color:#1e2b45;}
 .cc.tool .tool-list{list-style:none;margin:0;padding:0;max-width:800px;}
@@ -1072,7 +966,6 @@
 .cc.tool .tool-qr img{width:190px;height:190px;display:block;border:6px solid #fff;box-shadow:0 3px 16px rgba(30,43,69,.16);border-radius:10px;}
 .cc.tool .tool-qr .qcap{margin-top:9px;font-size:15px;font-weight:700;color:#215caf;letter-spacing:.01em;}
 .cc.tool .tool-qr .qtop{margin-bottom:8px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8a94a6;}
-/* ---- privacy requirements merged into the event-app slide ---- */
 .cc .reqadd{margin-top:16px;padding-top:13px;border-top:1px dashed #d9d3c4;}
 .cc .reqadd .reqadd-h{color:#215caf;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;}
 .cc .reqadd .reqlead{margin:0 0 8px;font-size:16px;line-height:1.4;color:#2b3550;}
@@ -1081,8 +974,8 @@
 .cc .reqadd .reqeg{margin-top:8px;font-size:16px;color:#5f6c82;}
 .cc .ptree-mini .ntext{font-size:16px;}
 .cc .ptree-mini .edge{stroke-width:1.8;}
-.cc .ptree-mini .node{stroke:#1e2b45;}          /* black border, not blue */
-.cc .ptree-mini .node.new{stroke:#c0392b;}      /* evolution additions in red */
+.cc .ptree-mini .node{stroke:#1e2b45;}
+.cc .ptree-mini .node.new{stroke:#c0392b;}
 .cc .ptree-mini .ntext.new{fill:#c0392b;}
 .cc .ptree-mini .edge.new{stroke:#c0392b;}
 .cc .treestack{position:relative;width:100%;max-width:600px;margin:14px auto 0;}
@@ -1094,7 +987,6 @@
 <div class="reveal">
 <div class="slides">
 
-  <!-- ============ TITLE ============ -->
   <section class="title-slide" data-background-color="#fbfaf7">
     <div class="tl-wrap">
       <div class="tl-blue"></div>
@@ -1107,18 +999,12 @@
           <div class="tl-name">Hoàng Nguyễn</div>
         </div>
         <div class="tl-meta">
-          <!-- Examiner / Co-examiners hidden for now
-          <div><span>Examiner:</span> Prof. Dr. David Basin</div>
-          <div><span>Co-examiners:</span> Assoc. Prof. Dr. Srđan Krstić</div>
-          <div class="indent">Assoc. Prof. Dr. Raúl Pardo</div>
-          -->
           <div class="place">ETH Zürich <span class="slash">/</span> 28 Aug 2026</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PRIVACY - WHAT WE MEAN (adapted from ccs-talk p6-10) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Privacy</h2>
@@ -1205,12 +1091,10 @@
         </div>
       </div>
       <div class="pvcaption fragment" data-fragment-index="4" data-notes="In this thesis, privacy is all about data protection">In this thesis: <b>Privacy</b> <span class="approx">&asymp;</span> <b>Data protection</b></div>
-      <!-- step 5: empty fragment; drives the zoom-in state -->
       <div class="pvzoom fragment" data-fragment-index="5" aria-hidden="true" data-notes=""></div>
     </div>
   </section>
 
-  <!-- ============ MOTIVATION - THE SETTING ============ -->
   <section class="mot" data-background-color="#fbfaf7">
     <div class="mot-wrap">
       <div class="mot-head">
@@ -1249,7 +1133,6 @@
     </div>
   </section>
 
-  <!-- ============ DATA PROTECTION REQUIREMENTS (ccs-talk p11) ============ -->
   <section class="cc" data-background-color="#fbfaf7" data-transition="fade">
     <div class="cc-wrap">
       <h2 class="cc-title">Data protection requirements</h2>
@@ -1273,7 +1156,6 @@
         <div class="dpr2item fragment" data-fragment-index="5" data-notes="Among these requirements, the most common ones are the purpose limitation, user consent, right to rectification, data minimization, and storage limitation.">
           <b>Common requirements</b> <span style="color:#8791a2;font-weight:500;">(mapped to GDPR)</span>:
           <br>
-          <!-- step 11: highlight the first two (this thesis's scope) -->
           <span class="dprhl fragment" data-fragment-index="11" style="display:none;" data-notes="In this thesis, we focus on the two most relevant that are the purpose limitation and user consent."></span>
           <ul class="dpr2sub creq">
             <li class="fragment hlreq" data-fragment-index="6" data-notes="Among these requirements, the most common ones are the purpose limitation, user consent, right to rectification, data minimization, and storage limitation.">Purpose limitation <span class="artref">,  Art. 5(1)(b)</span></li>
@@ -1287,7 +1169,6 @@
     </div>
   </section>
 
-  <!-- ============ PURPOSE LIMITATION & USER CONSENT (ccs-talk p12) ============ -->
   <section class="cc cc-center" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <div class="pp-scope"><b>Our scope</b></div>
@@ -1312,7 +1193,6 @@
     </div>
   </section>
 
-  <!-- ============ THE CODE-CENTRIC APPROACH ============ -->
   <section class="cc cc-ink" data-auto-animate data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title" data-id="act" style="text-align:center;">The (traditional) code-centric approach</h2>
@@ -1365,7 +1245,6 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ CODE-CENTRIC → PRIVACY, part A: plain template + the privacy policy (auto-animate pair) ============ -->
   <section class="cc cc-ink" data-auto-animate data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title" data-id="act" style="text-align:center;">The (traditional) code-centric approach</h2>
@@ -1383,7 +1262,6 @@ def view_event(id):
 </code></pre>
         </div>
 
-        <!-- view_event.html: plain template - auto-animates into the consent version on the next slide -->
         <div class="file tmpl" data-id="ach" style="left:25px;top:224px;width:525px;">
           <div class="code-lbl">view_event.html (Jinja template)</div>
           <pre><code class="language-html" data-trim data-id="tmplcode" data-line-numbers>
@@ -1399,7 +1277,6 @@ def view_event(id):
 </code></pre>
         </div>
 
-        <!-- right: the privacy policy (blue) with an agree / deny control -->
         <div class="req sec policy fragment" data-fragment-index="0" data-id="pol" data-notes="Then the developer builds a privacy notice that tell user that the application will use their name for the FUNCTIONAL purpose, and ask them to give consent or deny it." style="left:610px;top:6px;width:540px;">
           <div class="req-bar">Privacy policy</div>
           <div class="req-text">We use your name for the website's FUNCTIONAL purpose, such as viewing events.</div>
@@ -1412,7 +1289,6 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ CODE-CENTRIC → PRIVACY, part B: consent checks morph into the template (auto-animate pair) ============ -->
   <section class="cc cc-ink" data-auto-animate data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title" data-id="act" style="text-align:center;">The (traditional) code-centric approach</h2>
@@ -1430,7 +1306,6 @@ def view_event(id):
 </code></pre>
         </div>
 
-        <!-- view_event.html: consent checks; added lines marked green -->
         <div class="file changed tmpl" style="left:25px;top:224px;width:525px;">
           <div class="code-lbl">view_event.html (Jinja template)</div>
           <pre><code class="language-html" data-trim data-line-numbers="1,2,3,4,8,11">
@@ -1449,7 +1324,6 @@ def view_event(id):
 </code></pre>
         </div>
 
-        <!-- right: the privacy policy persists in place (matched by data-id) -->
         <div class="req sec policy" data-id="pol" style="left:610px;top:6px;width:540px;">
           <div class="req-bar">Privacy policy</div>
           <div class="req-text">We use your name for the website's FUNCTIONAL purpose, such as viewing events.</div>
@@ -1459,7 +1333,6 @@ def view_event(id):
           </div>
         </div>
 
-        <!-- right: consent stored in a relational table -->
         <div class="ctable fragment" data-fragment-index="0" data-notes="Let's assume that consent is stored in a relational database table. Some users may consent, some do not." style="left:610px;top:150px;width:540px;">
           <table>
             <thead><tr><th>user</th><th>data</th><th>purpose</th><th>consent</th></tr></thead>
@@ -1471,7 +1344,6 @@ def view_event(id):
           </table>
         </div>
 
-        <!-- right: page re-rendered under the consent checks - arrow runs from the application code to the browser, labelled "re-renders" -->
         <div class="arlbl fragment fade-in" data-fragment-index="1" data-notes="When the page renders, if a user does not consent, its name will be hidden." style="left:600px;top:400px;width:170px;">renders</div>
         <svg class="fragment fade-in" data-fragment-index="1" style="left:585px;top:418px;width:200px;height:24px;overflow:visible;" viewBox="0 0 200 24">
           <defs><marker id="ahr" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
@@ -1487,7 +1359,6 @@ def view_event(id):
         </div>
       </div>
 
-      <!-- final overlay: the problems with the hand-coded, code-centric approach -->
       <div class="probs-pop fragment" data-fragment-index="2" data-notes="This may seem straightforward in this case, but sometimes it is not easy to enforce privacy requirements. For example, for the purpose limitation: one need to associate function with the right purpose. It also does not scale with the application size, and it is difficult to maintain and evolve.">
         <div class="probs">
           <div class="probs-h">Problems:</div>
@@ -1501,15 +1372,12 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ MDD → MDS → MDP: title + caption + same-size figure swap together across steps (white slide to match the white figures) ============ -->
   <section class="cc" data-background-color="#ffffff">
     <div class="cc-wrap">
-      <!-- title - swaps MDD → MDS → MDP in place; the MDS title now persists through the security-tools step -->
       <h2 class="cc-title mdtitle fragment fade-out" data-fragment-index="0" data-notes="Basin and his colleagues specialized model-driven development into a new methodology that supports security, where the access-control enforcement is generated from their security model.">Model-driven development</h2>
       <div class="fragment fade-out" data-fragment-index="2" data-notes="In this thesis, we take the same idea to data protection requirements focusing on purpose limitation and user consent."><h2 class="cc-title mdtitle fragment fade-in" data-fragment-index="0">Model-driven <b class="hl-sec">security</b></h2></div>
       <h2 class="cc-title mdtitle fragment fade-in" data-fragment-index="2">Model-driven <b class="hl-priv">privacy</b></h2>
 
-      <!-- caption above the figure - Basin intro (0) → the security tools they built (1) → privacy focus (2) -->
       <div class="mdtxt left fragment fade-in-then-out" data-fragment-index="0">Basin et al. have specialized model-driven development into a new methodology that supports <b class="hl-sec">security</b>.</div>
       <div class="mdtxt left fragment fade-in-then-out" data-fragment-index="1" data-notes="They built ActionGUI, a tool for developing secure-by-design web applications; and SQLSI, that rewrites SQL queries into security-aware stored procedures.">
         <b class="hl-sec">ActionGUI:</b> a tool for model-driven development of secure-by-design web applications.<br>
@@ -1517,7 +1385,6 @@ def view_event(id):
       </div>
       <div class="mdtxt left fragment fade-in" data-fragment-index="2">In this thesis, we focus on <b class="hl-priv">purpose limitation</b> and <b class="hl-priv">user consent</b> requirements.</div>
 
-      <!-- figure - same spot; mde (0) → mds persists through the tools step (fade-out @2 wraps fade-in @0) → mdp (2) -->
       <img class="mdfig fragment fade-out" data-fragment-index="0" src="mde.png" alt="Model-driven development">
       <div class="fragment fade-out" data-fragment-index="2"><img class="mdfig fragment fade-in" data-fragment-index="0" src="mds.png" alt="Model-driven security"></div>
       <img class="mdfig fragment fade-in" data-fragment-index="2" src="mdp.png" alt="Model-driven privacy">
@@ -1527,7 +1394,6 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ CONTRIBUTIONS - two model branches (security / privacy), each with its contributions + venues ============ -->
   <section class="cc cc-contrib" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title" style="color:#215caf;text-align:center;">Contributions</h2>
@@ -1576,7 +1442,6 @@ def view_event(id):
         </div>
       </div>
 
-      <!-- final step: highlight the privacy line -->
       <div class="cfocus-on fragment" data-fragment-index="7" aria-hidden="true" data-notes="In this talk, let's focus on the privacy contributions."></div>
     </div>
   </section>
@@ -1587,7 +1452,6 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ DATA MODEL - full definition; tuple elements light up as each bullet is revealed ============ -->
   <section class="cc" data-background-color="#ffffff">
     <div class="cc-wrap s9">
       <h2 class="cc-title">Model definition</h2>
@@ -1607,13 +1471,11 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ DATA ATOMIC ACTIONS - five aligned build snapshots exported from dataactions.pdf ============ -->
   <section class="cc" data-background-color="#ffffff">
     <div class="cc-wrap">
       <h2 class="cc-title">Data atomic actions</h2>
       <div class="cc-hr"></div>
 
-      <!-- same diagram, five aligned snapshots stacked at one spot; each click steps the build -->
       <img class="dafig fragment fade-out" data-fragment-index="0" data-notes="read and update the value of an attribute or a 1 association end;" src="dataactions-1.png" alt="create / delete on the class">
       <img class="dafig fragment fade-in-then-out" data-fragment-index="0" src="dataactions-2.png" alt="read / update on an attribute">
       <img class="dafig fragment fade-in-then-out" data-fragment-index="1" data-notes="read and update the value of an attribute or a 1 association end;" src="dataactions-3.png" alt="read / update on a single-valued association end">
@@ -1622,9 +1484,7 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ MODEL DEFINITION + PRIVACY DETAILS - vertical stack: overview on top, per-element details below (down-arrow) ============ -->
   <section>
-  <!-- overview (top of the vertical stack) -->
   <section class="cc" id="model-definition" data-background-color="#fbfaf7">
     <div class="cc-wrap s11">
       <h2 class="cc-title">Model definition</h2>
@@ -1636,7 +1496,6 @@ def view_event(id):
       <div class="mdsub">Privacy model</div>
       <div class="dmt2">(&thinsp;<span class="tel" data-el="pd">PD<span class="cap fragment fade-in-then-out" data-fragment-index="0" data-notes="First, we need to define personal data. In our approach, we define them at the level of the class properties, which are the attributes and association ends.">personal data</span></span>, <span class="tel" data-el="pph">&#928;, &#8849;<sub>&#928;</sub><span class="cap fragment fade-in-then-out" data-fragment-index="1" data-notes="Then, we need to define applicaiton purposes. They also have a hierarchy, which is defined as a lattice ordered by set inclusion.">purposes and their hierarchy</span></span>, <span class="tel" data-el="dp">DP<span class="cap fragment fade-in-then-out" data-fragment-index="2" data-notes="Next, we need to define the declared purpose policy, which describes the purposes that the application is allowed to use personal data for. Each policy rule specifies a purpose, a personal data access, and an additional condition.">declared purpose policy</span></span>, <span class="tel" data-el="ap">ap<span class="cap fragment fade-in-then-out" data-fragment-index="3" data-notes="And finally, we need to define the actual purposes, which capture the purpose that the data is actually used for during execution. In our approach, we abstract this concept by associating actual purposes with the application interfaces and class methods.">actual purpose mapping</span></span>&thinsp;)</div>
 
-      <!-- per-element detail: the exact text from the following slides (Personal data, Purpose & hierarchy, Declared purposes, Actual purposes) -->
       <div class="pmdetail">
         <div class="pmd fragment fade-in-then-out" data-fragment-index="0">
           We define personal data at the level of class properties (its attributes and association ends).
@@ -1659,97 +1518,13 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ PRIVACY MODEL · 1 - Personal data ============ -->
-  <!-- <section class="cc" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <div class="cc-kick">Privacy model</div>
-      <h2 class="cc-title">Personal data</h2>
-      <div class="cc-hr"></div>
-      <p class="pmlead fragment fade-in" data-fragment-index="0">We define personal data at the level of class <b>properties</b>.
-      <div class="pmmath fragment fade-in" data-fragment-index="1" style="margin-top:14px;">The properties of a class sort <i>C</i> &#8712; <i>CS</i> are its attribute names and association-end names:<br>
-        <i>Props</i>(<i>C</i>) = dom(<i>attr</i>(<i>C</i>)) &#8746; { <i>n</i> | &#8707;&#945; &#8712; dom(<i>as</i>), <i>n</i>&#8242; &#8712; <i>ID</i>, <i>C</i>&#8242; &#8712; <i>CS</i> : <i>as</i>(&#945;) = ((<i>n</i>,&nbsp;_,&nbsp;<i>C</i>&#8242;),&nbsp;(<i>n</i>&#8242;,&nbsp;_,&nbsp;<i>C</i>)) &#8744; <i>as</i>(&#945;) = ((<i>n</i>&#8242;,&nbsp;_,&nbsp;<i>C</i>),&nbsp;(<i>n</i>,&nbsp;_,&nbsp;<i>C</i>&#8242;)) }</div>
-      <div class="defbox fragment fade-in" data-fragment-index="2">
-        <div class="dt">Personal data</div>
-        The personal data relation <i>PD</i> identifies, for each class sort, the subset of its properties that constitute personal data:
-        <div class="pmmath" style="text-align:center;margin-top:10px;"><i>PD</i> &nbsp;&#8838;&nbsp; <span class="bigop">&#8899;<small><i>C</i>&#8712;<i>CS</i></small></span> {<i>C</i>} &#215; <i>Props</i>(<i>C</i>)</div>
-      </div>
-      <img class="exfig fragment fade-in" data-fragment-index="3" src="datamodel.png" alt="Person and Event UML class diagram">
-      <div class="pmmath fragment fade-in" data-fragment-index="3" style="margin-top:13px;font-size:18px;"><b>Example</b>: <i>PD</i> = { (<i>Person</i>, <b>name</b>), (<i>Person</i>, <b>events</b>), (<i>Person</i>, <b>attends</b>) }</div>
-    </div>
-  </section> -->
-
-  <!-- ============ PRIVACY MODEL · 2 - Purpose and its hierarchy ============ -->
-  <!-- <section class="cc" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <div class="cc-kick">Privacy model</div>
-      <h2 class="cc-title">Purpose and its hierarchy</h2>
-      <div class="cc-hr"></div>
-      <p class="pmlead">Let &#928; be a set of purposes.</p>
-      <p class="pmlead">A complex purpose is any subset of &#928;, and they form a lattice ordered by set inclusion: &#8849;<sub>&#928;</sub> &nbsp;=&nbsp; ( 2<sup>&#928;</sup>, &nbsp;&#8838; )</p>
-      <div class="purpose-ex">
-        <div class="pex-lead"><b>Example</b>: Let &#928; = { Any, Functional, Analytics }, with the complex purpose being <b>Any</b>, which includes both Functional and Analytics.</div>
-        <svg class="ptree" viewBox="0 0 620 250" xmlns="http://www.w3.org/2000/svg">
-          <defs><marker id="pah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
-          <line class="edge" x1="310" y1="88" x2="175" y2="176" marker-end="url(#pah)"/>
-          <line class="edge" x1="310" y1="88" x2="455" y2="176" marker-end="url(#pah)"/>
-          <text class="elbl" x="232" y="115" text-anchor="middle" dominant-baseline="central" transform="rotate(-33 232 115)">&#8839;</text>
-          <text class="elbl" x="393" y="115" text-anchor="middle" dominant-baseline="central" transform="rotate(31 393 115)">&#8839;</text>
-          <rect class="node" x="240" y="44" width="140" height="44" rx="10"/>
-          <text class="ntext" x="310" y="72" text-anchor="middle">Any</text>
-          <rect class="node" x="110" y="176" width="130" height="44" rx="10"/>
-          <text class="ntext" x="175" y="204" text-anchor="middle">Functional</text>
-          <rect class="node" x="378" y="176" width="154" height="44" rx="10"/>
-          <text class="ntext" x="455" y="204" text-anchor="middle">Analytics</text>
-        </svg>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- ============ PRIVACY MODEL · 3 - Declared purpose ============ -->
-  <!-- <section class="cc" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <div class="cc-kick">Privacy model</div>
-      <h2 class="cc-title">Declared purposes</h2>
-      <div class="cc-hr"></div>
-      <p class="pmlead fragment fade-in" data-fragment-index="0">Declared purposes describe what the application is allowed to use personal data for.</p>
-      <p class="pmlead fragment fade-in" data-fragment-index="0">A <b>declared purpose</b> is a purpose-based access-control policy, presented to users and enforced by the system at run time.</p>
-      <p class="pmlead fragment fade-in" data-fragment-index="0">Each policy rule specifies a purpose, a personal data access, and an additional condition.</p>
-      <div class="defbox fragment fade-in" data-fragment-index="1">
-        <div class="dt">Declared purposes</div>
-        A declared purpose is a triple of a purpose, a personal data access and an additional condition.
-        <div class="pmmath" style="text-align:center;margin-top:10px;"><i>DP</i> &nbsp;&#8838;&nbsp; <span class="bigop">&#8899;<small><i>a</i>&#8712;<i>AP</i></small></span> &#928; &#215; {<i>a</i>} &#215; <i>C</i>(<i>a</i>)</div>
-      </div>
-      <p class="pmlead fragment fade-in" data-fragment-index="2">The declared purposes appear in the application's privacy notice, where users can grant or revoke consent for them.</p>
-      <div class="pmmath fragment fade-in" data-fragment-index="2" style="margin-top:14px;font-size:18px;"><b>Example</b>: &ldquo;We use your <b>name</b> for the <b>FUNCTIONAL</b> purpose, <b>if you are a regular user</b>.&rdquo;</div>
-    </div>
-  </section> -->
-
-  <!-- ============ PRIVACY MODEL · 6 - Actual purpose ============ -->
-  <!-- <section class="cc" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <div class="cc-kick">Privacy model</div>
-      <h2 class="cc-title">Actual purposes</h2>
-      <div class="cc-hr"></div>
-      <p class="pmlead">Actual purposes capture what the data is actually used for during execution.</p>
-      <p class="pmlead">We associate actual purposes with the application interfaces, e.g., web-application entrypoints and classes' methods. <br>
-        <i>F</i> &nbsp;&#8838;&nbsp; <span class="bigop">&#8899;<small><i>c</i>&#8712;<i>CS</i></small></span> dom(<i>meth</i>(<i>c</i>)) &#8746; <i>E</i></p>
-      <div class="defbox">
-        <div class="dt">Actual purposes</div>
-        The actual purpose is then a labeling function that annotates each function with the purpose it serves:
-        <div class="pmmath" style="text-align:center;margin-top:8px;"><i>ap</i> : <i>F</i> &#8594; 2<sup>&#928;</sup></div>
-      </div>
-      <div class="pmmath" style="margin-top:14px;font-size:18px;"><b>Example</b>: <i>ap</i>((<i>Event</i>, view_event)) = Functional</div>
-    </div>
-  </section> -->
   </section>
 
-  <!-- ============ PRIVACY MODELING LANGUAGE - the DSL (thesis Ch. 5.1.3) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Modeling languages</h2>
       <div class="cc-hr"></div>
       <div class="dslwrap">
-        <!-- LEFT: data modeling language - builds up: entity names (0) → attributes (1) → associations (2) → methods (3) -->
         <div>
           <div class="clabel fragment fade-in" data-fragment-index="0" data-notes="On the left is our data modeling language. The developer first declares the entities.">Data modeling language</div>
           <pre class="dsl fragment fade-in" data-fragment-index="0" style="font-size:13.5px;line-height:1.5;"><span class="kw">entity</span> Person {
@@ -1773,7 +1548,6 @@ def view_event(id):
     <span class="fragment fade-in" data-fragment-index="3" data-notes="and finally the methods.">view_event()</span>
 }</pre>
         </div>
-        <!-- RIGHT: UML class diagram (visible through the build) then the privacy modeling language (last) -->
         <div style="position:relative;">
           <div class="fragment fade-in" data-fragment-index="4" data-notes="On the right is the privacy modeling language. Here, the developer declares the personal data, purposes and their hierarchy, the declared purpose policies, and the actual purposes mapping in separate blocks.">
             <div class="clabel">Privacy modeling language</div>
@@ -1798,7 +1572,6 @@ def view_event(id):
   <span class="fragment fade-in" data-fragment-index="8" data-notes="and finally, we associate the view_event method in the Event class with the functional purpose.">Event.view_event <span class="pp">FUNCTIONAL</span></span>
 }</pre>
           </div>
-          <!-- UML stays visible while the data model builds (fades in at 0), then fades out when the privacy language arrives (4) -->
           <div class="fragment fade-out" data-fragment-index="4" style="position:absolute;left:0;right:0;top:0;">
             <div class="fragment fade-in" data-fragment-index="0">
               <div class="clabel">UML class diagram</div>
@@ -1812,13 +1585,11 @@ def view_event(id):
     </div>
   </section>
 
-  <!-- ============ DEV METHODOLOGY · consolidated build ============ -->
   <section class="cc" data-background-color="#ffffff">
     <div class="cc-wrap">
       <h2 class="cc-title">Development methodology</h2>
       <div class="cc-hr"></div>
 
-      <!-- 14 invisible step markers drive methRefresh() -->
       <span class="fragment methmark" data-fragment-index="0" data-notes="First, our developers define the application's data model."></span>
       <span class="fragment methmark" data-fragment-index="1" data-notes="Optionally, they may add a security model that enforces access-control requirements."></span>
       <span class="fragment methmark" data-fragment-index="2" data-notes="Here, let's assume that the Person entity is the user class, it contains an additional attribute to store the user's role."></span>
@@ -1840,7 +1611,6 @@ def view_event(id):
       <span class="fragment methmark" data-fragment-index="18" data-notes="The enforcement applies automatically at run time."></span>
 
       <div class="methstage">
-        <!-- text region (top) - Steps 1 & 2 persist as a recap through Step 3 -->
         <div data-show="-1" class="mline" style="position:absolute;left:0;top:6px;width:1140px;"><span class="mn">Step&nbsp;1.</span>Developers define the application's data model</div>
 
         <div data-show="1" data-hide="3" class="mline msub2" style="position:absolute;left:40px;top:44px;width:1040px;">Optionally, they may add a security model that enforces access control requirements.</div>
@@ -1849,7 +1619,6 @@ def view_event(id):
         <div data-show="5" data-hide="15" class="mline mauto" style="position:absolute;left:0;top:96px;width:1140px;"><b>&#8594;</b> A <b>model-to-model transformation</b> extends the data model with the resources needed to support privacy.</div>
         <div data-show="11" data-hide="15" class="mline mauto" style="position:absolute;left:0;top:138px;width:1140px;"><b>&#8594;</b> From the extended data model and the privacy model, <b>model-to-code generation</b>:</div>
 
-        <!-- UML class diagram grows across the build - base data model → +security → +privacy (same canvas, so it overlays in place) -->
         <img data-show="0" data-hide="2" src="datamodel-with-event.png" alt="Data model: Person and Event" class="mdiag" style="position:absolute;right:30px;top:130px;width:1100px;">
         <img data-show="2" data-hide="6" src="datamodel-with-sec.png" alt="Data model extended with the security model (Role)" class="mdiag" style="position:absolute;right:30px;top:130px;width:1100px;">
 <img data-show="6" data-hide="7" src="datamodel-with-privacy-1.png" alt="Privacy model build (step 1)" class="mdiag" style="position:absolute;right:30px;top:130px;width:1100px;">
@@ -1858,7 +1627,6 @@ def view_event(id):
         <img data-show="9" data-hide="10" src="datamodel-with-privacy-4.png" alt="Privacy model build (step 4)" class="mdiag" style="position:absolute;right:30px;top:130px;width:1100px;">
         <img data-show="10" data-hide="11" src="datamodel-with-privacy-5.png" alt="Privacy model build (step 5)" class="mdiag" style="position:absolute;right:30px;top:130px;width:1100px;">
 
-        <!-- generation table (bottom, replaces the diagram) - rows appear one at a time; clears when Step 3 begins -->
         <div data-show="11" data-hide="15" style="position:absolute;left:30px;top:200px;width:1120px;">
           <table class="mtab">
             <tr data-show="11"><th style="width:34%;">Developers define</th><th>Code generation</th></tr>
@@ -1867,7 +1635,6 @@ def view_event(id):
           </table>
         </div>
 
-        <!-- step 13: generated method stub; slides into main.py at step 15 -->
         <div class="genstub" data-show="13" data-hide="17" data-move-at="15">
           <div class="code-lbl" style="margin-bottom:5px;">main.py (Flask framework)</div>
           <pre class="dsl genpre" style="font-size:13px;line-height:1.55;padding:12px 16px;margin:0;box-sizing:border-box;">@secure(AP(['FUNCTIONAL']))
@@ -1876,7 +1643,6 @@ def view_event(request):
     return "# TODO: Implement the method stub"</pre>
         </div>
 
-        <!-- step 14: the generated privacy-policy notice -->
         <div data-show="14" data-hide="15" style="position:absolute;left:650px;top:375px;width:460px;">
           <div class="code-lbl" style="margin-bottom:5px;">Generated privacy notice</div>
           <div class="req sec policy" style="width:100%;height:160px;box-sizing:border-box;">
@@ -1889,15 +1655,11 @@ def view_event(request):
           </div>
         </div>
 
-        <!-- ===== STEP 3 · Implementation - continues the build after code generation ===== -->
-        <!-- Step 3 heading line (appears after the generated stubs), below the Step 1 & 2 recap -->
         <div data-show="16" class="mline" style="position:absolute;left:0;top:82px;width:1140px;"><span class="mn">Step&nbsp;3.</span>Developers implement the <b>business logic</b> in the method stubs.</div>
 
-        <!-- application-code frames (from the code-centric slide) -->
         <div class="flow" data-show="15" style="position:absolute;left:0;top:130px;width:1160px;height:452px;">
           <div class="appframe" style="left:0;top:0;width:575px;height:448px;"><span class="appframe-lbl">Application code</span></div>
 
-          <!-- main.py - the generated stub slides in here (see .genstub above); then filled in at step 17 -->
           <div class="file impl" data-show="17" style="left:25px;top:32px;width:525px;">
             <div class="code-lbl">main.py (Flask framework)</div>
             <pre><code class="language-python" data-trim data-line-numbers>
@@ -1909,11 +1671,9 @@ def view_event(request):
 </code></pre>
           </div>
 
-          <!-- view_event.html - empty stub (step 10), then filled in (step 12) -->
           <div class="file tmpl" data-show="15" data-hide="17" style="left:25px;top:200px;width:525px;">
             <div class="code-lbl">view_event.html (Jinja template)</div>
             <pre><code class="language-html" data-trim>
-<!-- empty -->
 </code></pre>
           </div>
           <div class="file tmpl impl" data-show="17" style="left:25px;top:200px;width:525px;">
@@ -1931,7 +1691,6 @@ def view_event(request):
 </code></pre>
           </div>
 
-          <!-- enforcement is a cross-cutting concern (step 13) -->
           <div class="req sec" data-show="18" style="left:610px;top:120px;width:540px;">
             <div class="req-bar">Enforcement</div>
             <div class="req-text">Enforcement applies automatically at run time. <b>No enforcement code</b> needs to be written by developers.</div>
@@ -1941,7 +1700,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ PRIVACY ENFORCEMENT - what the generated system enforces at run time ============ -->
   <section class="cc enf" id="privacy-enforcement" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Generated privacy enforcement</h2>
@@ -1949,7 +1707,6 @@ def view_event(request):
 
       <div class="enfstage">
 
-        <!-- 1 · Consent collection - builds over 4 clicks, then hands off to panel 2 at step 4 -->
         <div class="enfpanel">
           <div class="enfhead fragment fade-in" data-fragment-index="0" data-notes="First, it provides consent collection mechanism. User can provide their own customized data-usage policy through the generated privacy notice."><span class="enfn">1</span> Consent collection</div>
           <div class="fragment fade-out" data-fragment-index="4" data-notes="Secondly, we track the current stack of actual purposes. When a function is invoked at runtime, its actual purpose is pushed to the stack; when it returns, it is popped. Here foo is annotated with purpose Pa, so calling foo pushes Pa.">
@@ -1983,7 +1740,6 @@ def view_event(request):
           </div>
         </div>
 
-        <!-- 2 · Actual-purpose tracking - step through the lines (4..7); push/pop the stack -->
         <div class="enfpanel fragment fade-in" data-fragment-index="4">
           <div class="enfhead" style="margin-top:56px;"><span class="enfn">2</span> Actual purpose tracking</div>
           <div class="fragment fade-out" data-fragment-index="8" data-notes="Third, when a personal data is accessed, we check for purpose limitation and consent checking.">
@@ -2014,7 +1770,6 @@ def view_event(request):
           </div>
         </div>
 
-        <!-- 3 · Purpose limitation & consent checking -->
         <div class="enfpanel fragment fade-in" data-fragment-index="8">
           <div class="enfhead" style="margin-top:112px;"><span class="enfn">3</span> Purpose limitation &amp; consent checking</div>
           <div class="enfsub">When an action on personal data is invoked, we check two things:
@@ -2030,7 +1785,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ THE TOOL - nuActionGUI ============ -->
   <section class="cc tool" id="nuactiongui" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">&nu;ActionGUI <span style="color:#215caf;">(&nu;AG)</span></h2>
@@ -2044,7 +1798,6 @@ def view_event(request):
         <li class="fragment fade-in" data-fragment-index="2" data-notes="And it generates a complete Flask/Python web application, with the privacy enforcement built in.">Generates a Flask/Python web application.</li>
       </ul>
 
-      <!-- QR code linking to the tool website, bottom-right corner -->
       <div class="tool-qr fragment fade-in" data-fragment-index="0">
         <div class="qtop">Try it</div>
         <img src="nuactiongui-qr.png" alt="QR code to nuactiongui.github.io">
@@ -2053,8 +1806,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - big question ============ -->
-  <!-- vertical stack: standout question on top, enforcement & criteria below (down-arrow) -->
   <section>
   <section class="es-standout" data-background-color="#215caf">
     <div class="wrap">
@@ -2062,42 +1813,8 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ PRIVACY ENFORCEMENT & CRITERIA ============ -->
-  <!-- Ported from ccs-talk.pdf slides 13-17 - progressive build: policy, then enforcement goal,
-       then the three compliance criteria one at a time. -->
-  <!-- <section class="cc pe" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <h2 class="cc-title">Privacy declaration, enforcement, and <span style="color: #215caf;">criteria</span></h2>
-      <div class="cc-hr"></div>
-      <div class="pe-body">
-
-        <div class="sec fragment" data-fragment-index="0">
-          <div class="sec-lbl">Privacy policy</div>
-          <div class="prow">Declares a <span class="k-purpose">purpose</span> and <span class="k-cond">condition</span> when <span class="k-data">personal data</span> is used.<span class="eg">e.g., &ldquo;We use your <span class="k-data">name</span> for the <span class="k-purpose">FUNCTIONAL</span> purpose, <span class="k-cond">if you are a regular user</span>.&rdquo;</span></div>
-        </div>
-
-        <div class="sec fragment" data-fragment-index="1">
-          <div class="sec-lbl">Enforcement goal</div>
-          <div class="prow">Determines if actions <b>comply</b> with a privacy policy and <b>prevents</b> non-compliant ones.</div>
-          <ul>
-            <li>ensure data <b>confidentiality</b>, i.e., restrict/withhold the data.</li>
-            <li>and data <b>integrity</b>, i.e., suppress the action, roll back to the valid state, throw exceptions.</li>
-          </ul>
-        </div>
-
-        <div class="sec">
-          <div class="sec-lbl fragment" data-fragment-index="2">Compliance criteria</div>
-          <div class="crit fragment" data-fragment-index="2"><span class="cl">Privacy policy adequacy</span>: the declared privacy policy is &ldquo;reasonable&rdquo;.</div>
-          <div class="crit fragment" data-fragment-index="3"><span class="cl">Purpose limitation</span>: every allowed action on personal data was explicitly declared.</div>
-          <div class="crit fragment" data-fragment-index="4"><span class="cl">Consent checking</span>: every allowed action on personal data must have been consented to by the data&rsquo;s owner.</div>
-        </div>
-
-      </div>
-    </div>
-  </section> -->
   </section>
 
-  <!-- ============ [CCS p36] LET'S DO A STUDY! ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Let's do a study!</h2>
@@ -2122,20 +1839,15 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - selected research questions ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Research questions</h2>
       <div class="cc-hr"></div>
       <div class="selrq">
-        <!-- hidden trigger: recolours the selected cards yellow once all RQs are shown -->
         <span class="rqhl fragment" data-fragment-index="3" style="display:none;" data-notes="In this talk, I will focus on the highlighted ones."></span>
-        <!-- wave 1: the privacy-correctness questions -->
         <div class="card fragment" data-fragment-index="0" data-notes="The main ones concern privacy policy adequacy and privacy compliance."><div class="n">Policy adequacy</div><div class="t">Does modeling improve privacy policy adequacy?</div></div>
         <div class="card sel fragment" data-fragment-index="0"><div class="n">Privacy compliance</div><div class="t">Does modeling improve privacy compliance?</div></div>
-        <!-- wave 2: the effort question -->
         <div class="card sel fragment" data-fragment-index="1" data-notes="Then we measure the development and evolution effort of each approach."><div class="n">Effort</div><div class="t">What about development and evolution effort, in time and code?</div></div>
-        <!-- wave 3: the rest -->
         <div class="card fragment" data-fragment-index="2" data-notes="We also looked at the effect of prior experience, the most challenging aspects, and qualitative preferences."><div class="n">Prior experience</div><div class="t">Does prior experience in designing privacy requirements improve their implementation, and vice versa?</div></div>
         <div class="card fragment" data-fragment-index="2"><div class="n">Challenges</div><div class="t">What are the most challenging aspects to design and implement?</div></div>
         <div class="card sel fragment" data-fragment-index="2"><div class="n">Other</div><div class="t">Qualitative aspects: approach preferences and justification</div></div>
@@ -2143,17 +1855,8 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ###################################################################### -->
-  <!-- ####  IMPORTED FROM ccs-talk.pdf slides 36–46 (word-by-word)      #### -->
-  <!-- ####  Re-styled to match this deck. NOTE: these overlap the        #### -->
-  <!-- ####  existing "Let's do a study!" / "Project requirements" /      #### -->
-  <!-- ####  "Organization" slides below - reconcile/delete as needed.    #### -->
-  <!-- ###################################################################### -->
-
-  <!-- ============ [CCS p37-38] STUDY DESIGN · PROJECT (dev) then EVOLVED - merged ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
-      <!-- kicker flips to "Evolved" on the same click -->
       <div class="cc-kick" style="position:relative;">
         <span class="fragment fade-out" data-fragment-index="2" data-notes="In the later part of the study, we updated the project to explicitly introduce event invitations with richer personal data and purpose hierarchy that are shown in red."> Project description</span>
         <span class="fragment fade-in" data-fragment-index="2" style="position:absolute;left:0;top:0;white-space:nowrap;"><span style="color:#c0392b;">Evolved</span> project description</span>
@@ -2162,12 +1865,9 @@ def view_event(request):
       <div class="cc-hr"></div>
       <div class="umlcols">
         <div class="imgstack" style="position:relative;margin-top:-16px;">
-          <!-- taller evolved image (in flow) reserves the space; dev image sits on top and fades out -->
           <img src="event-evol.png" class="fragment fade-in" data-fragment-index="2" alt="UML class diagram of the event platform (evolution additions marked in red)" style="display:block;width:100%;height:auto;border:1px solid #e4e0d5;border-radius:10px;background:#fff;box-shadow:0 10px 26px -18px rgba(20,30,50,.5);">
           <img src="event-dev.png" class="fragment fade-out" data-fragment-index="2" alt="UML class diagram of the event platform" style="position:absolute;left:0;top:0;display:block;width:100%;height:auto;border:1px solid #e4e0d5;border-radius:10px;background:#fff;box-shadow:0 10px 26px -18px rgba(20,30,50,.5);">
-          <!-- purpose hierarchy under the data model; base tree (step 1) evolves to the Insights branch (step 2) -->
           <div class="treestack">
-            <!-- evolved tree (in flow, reserves space) -->
             <svg class="ptree ptree-mini evolved fragment fade-in" data-fragment-index="2" viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg">
               <line class="edge" x1="415" y1="50" x2="132" y2="100"/>
               <line class="edge new" x1="415" y1="50" x2="415" y2="100"/>
@@ -2199,7 +1899,6 @@ def view_event(request):
               <rect class="node" x="675" y="190" width="110" height="40" rx="8"/>
               <text class="ntext" x="730" y="210" text-anchor="middle" dominant-baseline="central">Targeted</text>
             </svg>
-            <!-- base tree (overlay): appears with privacy (step 1), fades out when evolved appears (step 2) -->
             <svg class="ptree ptree-mini base fragment fade-in-then-out" data-fragment-index="1" data-notes="The application also serves customized ads and creates mass marketing emails. In the privacy requirements, we declare personal data, such as a person's attributes and subscriptions, and purposes such as functionality, advertising, marketing, and statistics." viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg">
               <line class="edge" x1="415" y1="50" x2="132" y2="100"/>
               <line class="edge" x1="415" y1="50" x2="415" y2="100"/>
@@ -2237,7 +1936,6 @@ def view_event(request):
               <li class="fragment fade-in" data-fragment-index="2">The application supports explicit <span class="ev">invitations</span>.</li>
             </ul>
           </div>
-          <!-- privacy requirements - shown before the evolved step -->
           <div class="reqadd fragment fade-in" data-fragment-index="1" style="margin-top:90px;">
             <div class="reqadd-h">Privacy requirements</div>
             <p class="reqlead">The application also serves customized ads and creates mass marketing emails.</p>
@@ -2252,7 +1950,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ [CCS p39] PROJECT ORGANIZATION - PHASE 0 · TRAINING ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Project organization</h2>
@@ -2296,15 +1993,12 @@ def view_event(request):
       </div>
       <div class="org" style="position:relative;min-height:340px;">
 
-        <!-- move to Dev I / Dev II / Evolve: advance the phase-map -->
         <span class="fragment" data-fragment-index="3" data-active-phase="1" data-notes="Then we start the project development phases."></span>
         <span class="fragment" data-fragment-index="7" data-active-phase="2" data-notes="In Development II, we swap the groups."></span>
         <span class="fragment" data-fragment-index="10" data-active-phase="3" data-notes="Then we introduce some new functional and privacy requirements."></span>
         <span class="fragment" data-fragment-index="14" data-active-phase="4" data-notes="Finally, at the end of the course,"></span>
 
-        <!-- ===== one stage: Phase 0 (material -> students at the mid-line) then Dev I/II (templates | groups | outputs) ===== -->
         <div class="scene" style="position:absolute;left:50%;top:6px;transform:translateX(-50%);width:900px;">
-          <!-- Phase 0: black arrow, training material, and the single students crowd centred between the two group rows -->
           <svg class="fragment fade-in" data-fragment-index="1" data-until-dev data-notes="They receive materials on both tools and learn how to use them via guided exercises and labs." viewBox="0 0 900 224" style="position:absolute;left:0;top:0;width:900px;height:224px;overflow:visible;">
             <defs><marker id="ahT" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
             <line x1="256" y1="118" x2="322" y2="118" stroke="#1e2b45" stroke-width="2.5" fill="none" marker-end="url(#ahT)"/>
@@ -2313,7 +2007,6 @@ def view_event(request):
           <div class="crowd-actor fragment fade-in" data-fragment-index="0" data-crowd-single data-notes="First, a training phase for all students." style="position:absolute;left:330px;top:118px;transform:translateY(-50%);width:240px;"><svg class="crowd" viewBox="0 0 120 84" style="height:112px;"><g fill="#1f2836"><circle cx="18" cy="15" r="7"/><path d="M5 43Q5 23 18 23Q31 23 31 43Z"/><circle cx="46" cy="15" r="7"/><path d="M33 43Q33 23 46 23Q59 23 59 43Z"/><circle cx="74" cy="15" r="7"/><path d="M61 43Q61 23 74 23Q87 23 87 43Z"/><circle cx="102" cy="15" r="7"/><path d="M89 43Q89 23 102 23Q115 23 115 43Z"/><circle cx="18" cy="53" r="7"/><path d="M5 81Q5 61 18 61Q31 61 31 81Z"/><circle cx="46" cy="53" r="7"/><path d="M33 81Q33 61 46 61Q59 61 59 81Z"/><circle cx="74" cy="53" r="7"/><path d="M61 81Q61 61 74 61Q87 61 87 81Z"/><circle cx="102" cy="53" r="7"/><path d="M89 81Q89 61 102 61Q115 61 115 81Z"/></g></svg><div class="cl">Students</div></div>
           <div class="dur fragment fade-in" data-fragment-index="2" data-until-dev data-notes="This lasts six weeks." style="position:absolute;left:0;width:900px;top:236px;text-align:center;">Duration: 6 weeks</div>
 
-          <!-- straight wiring (Dev I): template -> group -> output, per row -->
           <svg class="fragment fade-in" data-fragment-index="5" data-straight data-devio data-notes="In the first development phase, Group A uses the model-driven approach, while Group B uses the code-centric approach. At the end of the phase, they need to submit their privacy model and Python implementation." viewBox="0 0 900 224" style="position:absolute;left:0;top:0;width:900px;height:224px;overflow:visible;">
             <defs><marker id="ahS" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
             <g stroke="#1e2b45" stroke-width="2.5" fill="none" marker-end="url(#ahS)">
@@ -2321,7 +2014,6 @@ def view_event(request):
               <line x1="256" y1="176" x2="322" y2="176"/><line x1="578" y1="176" x2="644" y2="176"/>
             </g>
           </svg>
-          <!-- crossover wiring (Dev II): inputs cross to the other group, groups cross to the other output -->
           <svg class="fragment fade-in" data-fragment-index="8" data-crossover data-devio data-notes="Group A now uses the code-centric approach, while Group B uses the model-driven approach." viewBox="0 0 900 224" style="position:absolute;left:0;top:0;width:900px;height:224px;overflow:visible;">
             <defs><marker id="ahX" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
             <g stroke="#1e2b45" stroke-width="2.5" fill="none" marker-end="url(#ahX)">
@@ -2330,24 +2022,17 @@ def view_event(request):
             </g>
           </svg>
 
-          <!-- templates (left) -->
           <div class="obox fragment fade-in" data-fragment-index="5" data-devio style="position:absolute;left:0;top:60px;transform:translateY(-50%);width:250px;text-align:center;">&nu;AG template</div>
           <div class="obox fragment fade-in" data-fragment-index="5" data-devio style="position:absolute;left:0;top:176px;transform:translateY(-50%);width:250px;text-align:center;">Flask template</div>
-          <!-- groups (centre) - the split -->
           <div class="crowd-actor fragment fade-in" data-fragment-index="4" data-groups data-split data-notes="We split the students into two groups, A and B." style="position:absolute;left:330px;top:60px;transform:translateY(-50%);width:240px;"><svg class="crowd" viewBox="0 0 120 44" style="height:59px;"><g fill="#1f2836"><circle cx="18" cy="15" r="7"/><path d="M5 43Q5 23 18 23Q31 23 31 43Z"/><circle cx="46" cy="15" r="7"/><path d="M33 43Q33 23 46 23Q59 23 59 43Z"/><circle cx="74" cy="15" r="7"/><path d="M61 43Q61 23 74 23Q87 23 87 43Z"/><circle cx="102" cy="15" r="7"/><path d="M89 43Q89 23 102 23Q115 23 115 43Z"/></g></svg><div class="cl">Group A</div></div>
           <div class="crowd-actor fragment fade-in" data-fragment-index="4" data-groups style="position:absolute;left:330px;top:176px;transform:translateY(-50%);width:240px;"><svg class="crowd" viewBox="0 0 120 44" style="height:59px;"><g fill="#1f2836"><circle cx="18" cy="15" r="7"/><path d="M5 43Q5 23 18 23Q31 23 31 43Z"/><circle cx="46" cy="15" r="7"/><path d="M33 43Q33 23 46 23Q59 23 59 43Z"/><circle cx="74" cy="15" r="7"/><path d="M61 43Q61 23 74 23Q87 23 87 43Z"/><circle cx="102" cy="15" r="7"/><path d="M89 43Q89 23 102 23Q115 23 115 43Z"/></g></svg><div class="cl">Group B</div></div>
-          <!-- outputs (right) -->
           <div class="obox fragment fade-in" data-fragment-index="5" data-devio style="position:absolute;left:650px;top:60px;transform:translateY(-50%);width:250px;text-align:center;">&nu;AG privacy model</div>
           <div class="obox fragment fade-in" data-fragment-index="5" data-devio style="position:absolute;left:650px;top:176px;transform:translateY(-50%);width:250px;text-align:center;">Python implementation</div>
 
-          <!-- Dev I duration (removed at Dev II), then Dev II duration (removed at Evolve) -->
           <div class="dur fragment fade-in" data-fragment-index="6" data-until-dev2 data-notes="This phase lasts two weeks." style="position:absolute;left:0;width:900px;top:236px;text-align:center;">Duration: 2 weeks</div>
           <div class="dur fragment fade-in" data-fragment-index="9" data-until-evolve data-notes="This phase is also two weeks." style="position:absolute;left:0;width:900px;top:236px;text-align:center;">Duration: 2 weeks</div>
 
-          <!-- ===== EVOLVE (phase 3): inputs/outputs & duration clear, groups stay; then groups merge back to Students; new evolved I/O; 1 week ===== -->
-          <!-- merged students (appears when the two groups merge back) -->
           <div class="crowd-actor fragment fade-in" data-fragment-index="11" data-merge data-notes="" style="position:absolute;left:330px;top:118px;transform:translateY(-50%);width:240px;"><svg class="crowd" viewBox="0 0 120 84" style="height:112px;"><g fill="#1f2836"><circle cx="18" cy="15" r="7"/><path d="M5 43Q5 23 18 23Q31 23 31 43Z"/><circle cx="46" cy="15" r="7"/><path d="M33 43Q33 23 46 23Q59 23 59 43Z"/><circle cx="74" cy="15" r="7"/><path d="M61 43Q61 23 74 23Q87 23 87 43Z"/><circle cx="102" cy="15" r="7"/><path d="M89 43Q89 23 102 23Q115 23 115 43Z"/><circle cx="18" cy="53" r="7"/><path d="M5 81Q5 61 18 61Q31 61 31 81Z"/><circle cx="46" cy="53" r="7"/><path d="M33 81Q33 61 46 61Q59 61 59 81Z"/><circle cx="74" cy="53" r="7"/><path d="M61 81Q61 61 74 61Q87 61 87 81Z"/><circle cx="102" cy="53" r="7"/><path d="M89 81Q89 61 102 61Q115 61 115 81Z"/></g></svg><div class="cl">Students</div></div>
-          <!-- evolved I/O wiring: two inputs -> students -> two outputs (black, converge/diverge) -->
           <svg class="fragment fade-in" data-fragment-index="12" data-until-survey data-notes="We provide both groups with patches that implement the new functional requirements, and ask them to reflect the new privacy requirements in both approaches. At the end, they submit an updated privacy model and an updated Python implementation." viewBox="0 0 900 224" style="position:absolute;left:0;top:0;width:900px;height:224px;overflow:visible;">
             <defs><marker id="ahE" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
             <g stroke="#1e2b45" stroke-width="2.5" fill="none" marker-end="url(#ahE)">
@@ -2361,7 +2046,6 @@ def view_event(request):
           <div class="obox fragment fade-in" data-fragment-index="12" data-until-survey style="position:absolute;left:650px;top:176px;transform:translateY(-50%);width:250px;text-align:center;"><span style="color:#c0392b;">Updated<br></span> Python implementation</div>
           <div class="dur fragment fade-in" data-fragment-index="13" data-until-survey data-notes="This lasts one week." style="position:absolute;left:0;width:900px;top:236px;text-align:center;">Duration: 1 week</div>
 
-          <!-- ===== SURVEY (phase 4): evolved I/O clears, the students stay; Questionnaire -> students -> Anonymous response; 1 week ===== -->
           <svg class="fragment fade-in" data-fragment-index="15" data-notes="we ask the students to fill out an anonymous survey questionnaire." viewBox="0 0 900 224" style="position:absolute;left:0;top:0;width:900px;height:224px;overflow:visible;">
             <defs><marker id="ahV" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1e2b45"/></marker></defs>
             <g stroke="#1e2b45" stroke-width="2.5" fill="none" marker-end="url(#ahV)"><line x1="256" y1="118" x2="322" y2="118"/><line x1="578" y1="118" x2="644" y2="118"/></g>
@@ -2374,12 +2058,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- Privacy requirements slide moved up to directly follow the Event management app slide. -->
-
-  <!-- Standalone "Organization" timeline slide removed - merged into the per-phase
-       progress strip (.ptl) on the five Project-organization slides above. -->
-
-  <!-- ============ EMPIRICAL STUDY - participation (thesis Table 9.1) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Participation</h2>
@@ -2429,7 +2107,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - evaluation methodology ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Evaluation</h2>
@@ -2467,7 +2144,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - results: privacy correctness (RQ3, RQ4, RQ5) ============ -->
   <section class="cc" id="results" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <div class="cc-kick">Results</div>
@@ -2486,9 +2162,7 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- vertical stack: effort on top, challenges below (down-arrow) -->
   <section>
-  <!-- ============ EMPIRICAL STUDY - results: effort (RQ6, RQ7) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <div class="cc-kick">Results</div>
@@ -2507,28 +2181,8 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - results: challenges (privacy hotspots) ============ -->
-  <!-- <section class="cc" data-background-color="#fbfaf7">
-    <div class="cc-wrap">
-      <div class="cc-kick">Empirical study &middot; Results &middot; Challenges</div>
-      <h2 class="cc-title">Where is privacy hardest to get right?</h2>
-      <div class="cc-hr"></div>
-      <p class="pmlead" style="margin:0 0 6px;font-size:19px;">Most violated privacy policies, by <b>endpoint</b> &times; <b>personal data</b>. Both tools share the <b>same hotspots</b>: <b>name</b> &amp; <b>surname</b> in <span class="mono">manage_event</span> and <span class="mono">view_category</span>, and <b>role</b> in <span class="mono">update_user</span>.</p>
-      <div class="hmcols">
-        <figure class="fragment fade-in" data-fragment-index="0">
-          <img src="rq9_privacy_nag.png" alt="nuActionGUI privacy-test failures by endpoint and personal data; hotspots at name/surname in manage_event and view_category, and role in update_user.">
-          <figcaption class="cap-nag">&nu;ActionGUI</figcaption>
-        </figure>
-        <figure class="fragment fade-in" data-fragment-index="1">
-          <img src="rq9_privacy_flask.png" alt="Flask privacy-test failures by endpoint and personal data; same hotspots, with far higher counts.">
-          <figcaption class="cap-flask">Flask</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section> -->
   </section>
 
-  <!-- ============ EMPIRICAL STUDY - qualitative results (thesis 9.4.2) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <div class="cc-kick">Results</div>
@@ -2555,7 +2209,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- ============ SUMMARY (ccs-talk slide 55 style) ============ -->
   <section class="cc" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Modeling privacy is <span style="color:#2f8f4e;">worth it!</span></h2>
@@ -2572,7 +2225,6 @@ def view_event(request):
     </div>
   </section>
 
-  <!-- thank you -->
   <section class="cc thanks" data-background-color="#fbfaf7">
     <div class="cc-wrap">
       <h2 class="cc-title">Thank you for your attention!</h2>
@@ -2590,7 +2242,6 @@ def view_event(request):
 </div>
 </div>
 
-<!-- reveal.js core + plugins (vendored locally for offline use) -->
 <script src="dist/reveal.js"></script>
 <script src="plugin/notes/notes.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
@@ -2608,8 +2259,6 @@ Reveal.initialize({
   plugins: [ RevealHighlight, RevealNotes ]
 });
 
-/* Data-model / privacy-model tuple slides: light up the tuple element(s) whose bullet is
-   currently revealed. Scoped to the current slide so multiple tuples never interfere. */
 function dmHighlight(slide, keys){
   (slide || document).querySelectorAll('.dmtuple .te').forEach(t =>
     t.classList.toggle('hl', keys.indexOf(t.dataset.el) !== -1));
@@ -2627,29 +2276,21 @@ Reveal.on('fragmentshown',  e => { if (e.fragment.classList.contains('dmbul')) d
 Reveal.on('fragmenthidden', e => { if (e.fragment.classList.contains('dmbul')) dmRefresh(); });
 Reveal.on('slidechanged', dmRefresh);
 
-/* Training slide: advance the phase-map highlight (0 -> 1) and split the single crowd into two groups. */
 function trainApply(slide){
   const pmap = slide.querySelector('.pmap[data-base-phase]');
-  if (!pmap) return;                                   // only the training slide opts in
+  if (!pmap) return;
   const phaseFrags = [...slide.querySelectorAll('.fragment[data-active-phase]')].filter(f => f.classList.contains('visible'));
   const cur = phaseFrags[phaseFrags.length - 1];
   const active = cur ? +cur.getAttribute('data-active-phase') : +pmap.getAttribute('data-base-phase');
   pmap.querySelectorAll('.tp').forEach((tp, i) => tp.classList.toggle('on', i === active));
-  // moving to Dev I clears the training material and the 6-weeks line
   slide.querySelectorAll('[data-until-dev]').forEach(el => el.classList.toggle('is-hidden', active >= 1));
-  // moving to Dev II clears the Dev I duration
   slide.querySelectorAll('[data-until-dev2]').forEach(el => el.classList.toggle('is-hidden', active >= 2));
-  // moving to Evolve clears the Dev I/II wiring & I/O boxes and the Dev II duration (groups stay)
   slide.querySelectorAll('[data-devio]').forEach(el => el.classList.toggle('is-hidden', active >= 3));
   slide.querySelectorAll('[data-until-evolve]').forEach(el => el.classList.toggle('is-hidden', active >= 3));
-  // moving to Survey clears the evolved I/O and duration (the students stay)
   slide.querySelectorAll('[data-until-survey]').forEach(el => el.classList.toggle('is-hidden', active >= 4));
-  // the single students crowd hides once it has split into the two group rows
   const split = !!slide.querySelector('.fragment[data-split].visible');
   slide.querySelectorAll('[data-crowd-single]').forEach(el => el.classList.toggle('is-hidden', split));
-  // the straight (Dev I) wiring is removed the moment Dev II lights up (before the crossover arrows)
   slide.querySelectorAll('[data-straight]').forEach(el => el.classList.toggle('is-hidden', active >= 2));
-  // at Evolve the two groups merge back into one crowd
   const merge = !!slide.querySelector('.fragment[data-merge].visible');
   slide.querySelectorAll('[data-groups]').forEach(el => el.classList.toggle('is-hidden', merge));
 }
@@ -2658,18 +2299,16 @@ Reveal.on('fragmentshown', trainRefresh);
 Reveal.on('fragmenthidden', trainRefresh);
 Reveal.on('slidechanged', trainRefresh);
 
-// consolidated methodology build: show/hide/replace elements by step
 function methApply(slide){
   const stage = slide.querySelector('.methstage');
   if(!stage) return;
   const markers = [...slide.querySelectorAll('.methmark')];
-  const step = markers.filter(m => m.classList.contains('visible')).length - 1; // -1 = initial
+  const step = markers.filter(m => m.classList.contains('visible')).length - 1;
   stage.querySelectorAll('[data-show]').forEach(el => {
     const show = +el.getAttribute('data-show');
     const hide = el.hasAttribute('data-hide') ? +el.getAttribute('data-hide') : Infinity;
     el.classList.toggle('meth-on', step >= show && step < hide);
   });
-  // elements that slide into a new spot at a given step (generated stub -> application-code box)
   stage.querySelectorAll('[data-move-at]').forEach(el => {
     el.classList.toggle('meth-moved', step >= +el.getAttribute('data-move-at'));
   });
@@ -2679,9 +2318,6 @@ Reveal.on('fragmentshown', methRefresh);
 Reveal.on('fragmenthidden', methRefresh);
 Reveal.on('slidechanged', methRefresh);
 
-/* Apply every JS-driven build to every slide/clone. In PDF export reveal clones each
-   slide into one page per fragment step, and the live nav events (fragmentshown, etc.)
-   never fire on those clones - so without this the JS-driven slides print blank/wrong. */
 function refreshAllSlides(){
   document.querySelectorAll('.reveal .slides section').forEach(s => { dmApply(s); trainApply(s); methApply(s); });
 }
@@ -2690,9 +2326,6 @@ window.refreshAllSlides = refreshAllSlides;
 Reveal.on('ready', () => {
   methRefresh(); dmRefresh(); trainRefresh();
   if (/(?:^|[?&])print-pdf(?:$|[=&])/.test(location.search)) {
-    // reveal builds the print pages (slide clones) asynchronously as images load;
-    // re-apply the build state a few times so it lands after the clones exist.
-    // (The PDF export tooling also calls refreshAllSlides() explicitly once clones settle.)
     [200, 600, 1200, 2500, 4500, 7000].forEach(t => setTimeout(refreshAllSlides, t));
   }
 });

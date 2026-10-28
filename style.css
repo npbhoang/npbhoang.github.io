@@ -1,7 +1,3 @@
-/* ---------------------------------------------------------------------------
-   Hoang Nguyen — personal academic page
-   Plain HTML/CSS. Light + dark themes via the [data-theme] attribute on <html>.
-   --------------------------------------------------------------------------- */
 
 :root {
   --max-width: 820px;
@@ -15,12 +11,10 @@
   --accent-hover: #084a8a;
   --fig-threat: #c0392b;
 
-  /* Research areas: formal methods, software engineering, IT security. */
   --area-fm: #6b3fa0;
   --area-se: #1f7a44;
   --area-sec: #c2410c;
 
-  /* Topic status (traffic-light) and degree-level chips. */
   --status-open: #0b5fb0;
   --status-ongoing: #b26a00;
   --status-completed: #1f7a44;
@@ -45,7 +39,6 @@
   --level-color: #99a1ac;
 }
 
-/* No-JS fallback: honour the OS preference when no explicit theme is set. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --bg: #0f1115;
@@ -101,8 +94,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---- Header ------------------------------------------------------------- */
-
 header {
   margin-bottom: 2.5rem;
 }
@@ -134,8 +125,6 @@ h1 {
   font-size: 0.97rem;
 }
 
-/* ---- Sections ----------------------------------------------------------- */
-
 section {
   margin-top: 2.6rem;
 }
@@ -158,8 +147,6 @@ p {
 .lead {
   margin-bottom: 0;
 }
-
-/* Education-style entries: title + date on one line, details below. */
 
 .entry {
   margin-bottom: 1.4rem;
@@ -197,8 +184,6 @@ p {
   font-size: 0.95rem;
 }
 
-/* Two-column rows: employment, awards. */
-
 .row {
   display: grid;
   grid-template-columns: 165px 1fr;
@@ -210,8 +195,6 @@ p {
   color: var(--muted);
   font-size: 0.92rem;
 }
-
-/* People lists: supervision, mentoring. */
 
 .people {
   list-style: none;
@@ -247,7 +230,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Running count for supervision entries (oldest = 1). */
 .supervision li {
   position: relative;
   padding-left: 2.3rem;
@@ -265,7 +247,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Definition-style lists: security / privacy properties. */
 .deflist {
   margin: 0.2rem 0 0;
   padding-left: 1.15rem;
@@ -290,7 +271,6 @@ p {
   white-space: nowrap;
 }
 
-/* Research Venn: formal methods ∩ software engineering ∩ IT security. */
 .venn-fig {
   margin: 1.7rem 0 0.4rem;
 }
@@ -318,7 +298,6 @@ p {
   text-anchor: middle;
 }
 
-/* Research-area colours, shared by the Venn, inline terms and topic chips. */
 .area-fm {
   --area: var(--area-fm);
 }
@@ -369,13 +348,11 @@ strong.area {
   letter-spacing: 0.05em;
 }
 
-/* Degree level, shown as plain descriptor text on the topic's meta row. */
 .entry-level {
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-/* Status chip: traffic-light pill, shown as a prefix to the topic title. */
 .status-chip {
   display: inline-block;
   vertical-align: middle;
@@ -402,7 +379,6 @@ strong.area {
   --status: var(--status-completed);
 }
 
-/* Legend: three stacked rows (area, level, status). */
 .topic-legend {
   margin-top: 1rem;
 }
@@ -415,7 +391,6 @@ strong.area {
   margin-top: 0;
 }
 
-/* Filter bar — progressive enhancement, shown only with JS. */
 .topic-filters {
   display: none;
   flex-wrap: wrap;
@@ -478,7 +453,6 @@ section[hidden] {
   display: none;
 }
 
-/* Security & privacy property figure (ported from the defense slides). */
 .propfig {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -608,7 +582,6 @@ section[hidden] {
   }
 }
 
-/* Under-construction placeholder. */
 .construction {
   text-align: center;
   padding: 2.5rem 0;
@@ -624,8 +597,6 @@ section[hidden] {
   margin-bottom: 0.35rem;
 }
 
-/* Publications. */
-
 .pubs {
   margin: 0;
   padding-left: 0;
@@ -637,8 +608,6 @@ section[hidden] {
   line-height: 1.5;
 }
 
-/* Spelled-out type label (conference, journal, draft, tool, thesis),
-   shown as a pill above each entry. */
 .pub-tag {
   display: inline-block;
   margin-bottom: 0.35rem;
@@ -653,7 +622,6 @@ section[hidden] {
   letter-spacing: 0.06em;
 }
 
-/* Colour-coded publication types. */
 .tag-conference {
   color: #0b5fb0;
   background: rgba(11, 95, 176, 0.1);
@@ -751,8 +719,6 @@ section[hidden] {
   margin-top: 0;
 }
 
-/* ---- Footer ------------------------------------------------------------- */
-
 footer {
   margin-top: 3rem;
   padding-top: 1.2rem;
@@ -761,10 +727,8 @@ footer {
   font-size: 0.88rem;
 }
 
-/* ---- Theme toggle ------------------------------------------------------- */
-
 .theme-toggle {
-  display: none; /* shown only when JS is available */
+  display: none;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -785,8 +749,6 @@ footer {
 html.js .theme-toggle {
   display: inline-flex;
 }
-
-/* ---- Print -------------------------------------------------------------- */
 
 @media print {
   .theme-toggle,

@@ -8,10 +8,8 @@
       name="description"
       content="Master's and Bachelor's theses and semester projects supervised by Hoang Nguyen at ETH Zürich and the Vietnamese-German University."
     />
-    <!-- Kept noindex: this page lists students and is intentionally not indexed. -->
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
 
-    <!-- Open Graph / social sharing (no student names are exposed here). -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hoang Nguyen" />
     <meta property="og:title" content="Hoang Nguyen – Supervised Theses and Projects" />
@@ -40,7 +38,6 @@
     <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="stylesheet" href="../style.css" />
 
-    <!-- Set the theme before paint to avoid a flash of the wrong colors. -->
     <script>
       (function () {
         var el = document.documentElement;
@@ -210,8 +207,6 @@
       })();
     </script>
 
-    <!-- Identity is injected at runtime so it is not present in the static
-         HTML source that simple scrapers / harvesters read. -->
     <script>
       (function () {
         function dec(b) {
@@ -240,8 +235,6 @@
           em.textContent = addr;
         }
 
-        // Student names are stored base64-encoded in data-n so they are not
-        // present in the static HTML source that simple scrapers read.
         var people = document.querySelectorAll('.person[data-n]');
         for (var j = 0; j < people.length; j++) {
           people[j].textContent = dec(people[j].getAttribute('data-n'));
