@@ -723,6 +723,201 @@ section[hidden] {
   margin-top: 0;
 }
 
+/* --- Miscellany (misc/) ------------------------------------------------- */
+
+.misc-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.misc-index li {
+  margin-bottom: 0.55rem;
+}
+
+.misc-index a {
+  font-weight: 600;
+}
+
+.misc-gloss {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.misc-gloss::before {
+  content: ' — ';
+}
+
+/* Photo wall: masonry of slightly tilted cards with washi tape and a
+   sticky-note label (same look as the wedding page). */
+
+.photo-wall {
+  column-count: 1;
+  column-gap: 1.1rem;
+  padding: 0.4rem 0.3rem 0;
+}
+
+@media (min-width: 560px) {
+  .photo-wall {
+    column-count: 2;
+  }
+}
+
+.photo-card {
+  --rotate: 0deg;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+  transform: rotate(var(--rotate));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+}
+
+.photo-card:nth-child(6n + 1) { --rotate: -0.9deg; }
+.photo-card:nth-child(6n + 2) { --rotate: 0.7deg; }
+.photo-card:nth-child(6n + 3) { --rotate: -0.5deg; }
+.photo-card:nth-child(6n + 4) { --rotate: 1.1deg; }
+.photo-card:nth-child(6n + 5) { --rotate: -1.2deg; }
+.photo-card:nth-child(6n + 6) { --rotate: 0.5deg; }
+
+.photo-card:hover {
+  z-index: 2;
+  transform: rotate(0deg) scale(1.02) translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Washi tape strip at the top of each card */
+.photo-card::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  z-index: 3;
+  width: 58px;
+  height: 16px;
+  border-radius: 2px;
+  background: rgba(255, 190, 210, 0.7);
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.photo-card:nth-child(2n)::before {
+  left: 35%;
+  width: 68px;
+  background: rgba(180, 220, 180, 0.7);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.photo-card:nth-child(3n)::before {
+  left: 65%;
+  width: 50px;
+  background: rgba(255, 215, 170, 0.75);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.photo-card:nth-child(4n)::before {
+  left: 55%;
+  background: rgba(190, 205, 255, 0.7);
+  transform: translateX(-50%) rotate(1.5deg);
+}
+
+.photo-card a {
+  display: block;
+}
+
+.photo-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
+/* Sticky note with where/when the photo was taken. Paper colours stay
+   the same in dark mode, like real paper. */
+.sticker {
+  --tilt: -3deg;
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.8rem;
+  z-index: 3;
+  max-width: 78%;
+  padding: 0.4rem 0.75rem 0.45rem;
+  border-radius: 2px;
+  background: #fff6a8;
+  color: #3b3427;
+  font-family: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
+  transform: rotate(var(--tilt));
+}
+
+/* A bit of tape holding the sticker on */
+.sticker::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 34px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%) rotate(4deg);
+}
+
+.photo-card:nth-child(4n + 2) .sticker {
+  --tilt: 2.5deg;
+  right: auto;
+  left: 0.7rem;
+  background: #ffd6e0;
+}
+
+.photo-card:nth-child(4n + 3) .sticker {
+  --tilt: -1.5deg;
+  background: #d4f0d8;
+}
+
+.photo-card:nth-child(4n + 4) .sticker {
+  --tilt: 3deg;
+  right: auto;
+  left: 0.7rem;
+  background: #d6e4ff;
+}
+
+.sticker-date {
+  display: block;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-card {
+    transition: none;
+  }
+}
+
+.photo-empty,
+.ledger-empty {
+  column-span: all;
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.ledger .person,
+.ledger .thanks-for {
+  display: block;
+}
+
+.ledger .thanks-for {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 footer {
   margin-top: 3rem;
   padding-top: 1.2rem;

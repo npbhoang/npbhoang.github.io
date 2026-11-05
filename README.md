@@ -13,6 +13,7 @@ A plain static site: hand-written HTML and CSS, no build step, no dependencies.
 | `resume.pdf` | Full CV (kept in the repo; not linked from the page). |
 | `*.pdf` | Posters and publication summary. |
 | `robots.txt` | Asks search engines / AI crawlers not to index the site. |
+| `misc/index.html` | The Miscellaneous hub + a Photos section. Photos go in `misc/img/`. |
 
 ## Editing
 
