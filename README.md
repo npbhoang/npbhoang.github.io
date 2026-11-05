@@ -35,7 +35,11 @@ to `master` updates the live site.
 
 - `robots.txt` plus a `noindex` meta tag ask search engines and AI crawlers to
   stay away. Compliant bots obey; malicious scrapers can ignore both.
-- The name and email address are injected by JavaScript at runtime (base64), so
-  they are not in the static HTML that simple harvesters read — but they are
-  fully visible to real visitors. Note this is partial: the publication titles
-  and co-authors still identify the author to anyone who reads the page.
+- The name is injected by JavaScript at runtime (base64), so it is not in the
+  static HTML that simple harvesters read — but it is fully visible to real
+  visitors. Note this is partial: the publication titles and co-authors still
+  identify the author to anyone who reads the page.
+- The email address is behind Mailhide (https://mailhide.io): visitors solve a
+  CAPTCHA to reveal it. Note that `pgp-vgu.asc` (the public PGP key linked in
+  the header) necessarily contains the address in its user ID, so a scraper
+  that downloads and parses the key can still recover it.

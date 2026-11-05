@@ -83,10 +83,13 @@
           Faculty of Engineering, Vietnamese-German University
         </p>
         <ul class="links">
+          <li><a href="https://mailhide.io/e/jeg468lL" onclick="popup=window.open('https://mailhide.io/e/jeg468lL','mailhidepopup','width=580,height=635'); return false;">h......@vgu.edu.vn</a></li>
+          <li><a href="../../pgp-vgu.asc">PGP key</a></li>
+        </ul>
+        <ul class="links links-more">
           <li><a href="./">Thesis topics</a></li>
           <li><a href="../">Research interests</a></li>
           <li><a href="../../">Homepage</a></li>
-          <li><a id="email" href="#">Email</a></li>
           <li><a href="../../Hoang_Nguyen_CV.pdf">CV</a></li>
         </ul>
       </header>
@@ -187,19 +190,11 @@
         }
         var name = dec('SG9hbmcgTmd1eWVu');
         var full = dec('Tmd1eeG7hW4gUGjGsOG7m2MgQuG6o28gSG/DoG5n');
-        var user = dec('aG9hbmcubnBi');
-        var domain = dec('dmd1LmVkdS52bg==');
 
         var n = document.getElementById('name');
         if (n) n.textContent = name;
         var f = document.getElementById('fullname');
         if (f) f.textContent = full;
-        var addr = user + '@' + domain;
-        var em = document.getElementById('email');
-        if (em) {
-          em.href = 'mail' + 'to:' + addr;
-          em.textContent = addr;
-        }
         var contacts = document.getElementsByClassName('contact');
         for (var i = 0; i < contacts.length; i++) {
           contacts[i].href = 'mail' + 'to:' + addr;
